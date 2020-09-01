@@ -7,8 +7,8 @@
 namespace sorting {
 
 template <typename T> class MergeSorter_t : public Sorter_t<T> {
-  public:
-    void sort(vector<T> &);
+public:
+  void sort(vector<T> &);
 };
 
 template <typename T> using MergeSorter = MergeSorter_t<T> &;
