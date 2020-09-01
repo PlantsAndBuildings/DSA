@@ -9,4 +9,9 @@ sorting::SorterFactory::getSorter(sorting::SortingAlgorithm sortingAlgorithm) {
   return *m;
 }
 
+template <typename T>
+void sorting::SorterFactory::deleteSorter(sorting::Sorter<T> &sorter) {
+  delete &sorter;
+}
+
 #endif

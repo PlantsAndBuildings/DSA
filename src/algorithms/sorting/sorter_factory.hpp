@@ -14,7 +14,7 @@ class SorterFactory final {
 public:
   template <typename T> static Sorter<T> getSorter(SortingAlgorithm);
 
-  // static void deleteSorter(Sorter);
+  template <typename T> static void deleteSorter(Sorter<T> &);
 };
 } // namespace sorting
 

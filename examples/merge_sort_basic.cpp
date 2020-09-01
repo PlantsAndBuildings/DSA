@@ -13,6 +13,6 @@ int main() {
   // sorting::Sorter<int> s =
   // sorting::SorterFactory::getSorter<int>(sorting::SortingAlgorithm::MergeSort);
   s.sort(v);
-  // sorting::SorterFactory::deleteSorter(s);
+  sorting::SorterFactory::deleteSorter(s);
   return 0;
 }
