@@ -11,13 +11,34 @@ using sorting::SorterFactory;
 using sorting::MergeSorter;
 using sorting::Sorter;
 
-Sorter SorterFactory::getSorter(SortingAlgorithm sortingAlgorithm) {
-  MergeSorter_t * m = new MergeSorter_t();
-  cout << "getSorter(char*) called" << endl;
+// template <typename T>
+// Sorter<T> SorterFactory::getSorter(SortingAlgorithm sortingAlgorithm) {
+//   MergeSorter_t<T> * m = new MergeSorter_t<T>();
+//   cout << "getSorter<T>() called" << endl;
+//   return *m;
+// }
+
+// template <>
+// Sorter<std::string> SorterFactory::getSorter(SortingAlgorithm sortingAlgorithm) {
+//   MergeSorter_t<std::string> * m = new MergeSorter_t<std::string>();
+//   cout << "getSorter<std::string>() called!" << endl;
+//   return *m;
+// }
+
+template <>
+Sorter<int> SorterFactory::getSorter(SortingAlgorithm sortingAlgorithm) {
+  MergeSorter_t<int> * m = new MergeSorter_t<int>();
+  cout << "getSorter<int>() called!" << endl;
   return *m;
 }
 
-
-void SorterFactory::deleteSorter(Sorter sorter) {
-  delete &sorter;
+template <>
+Sorter<long long> SorterFactory::getSorter(SortingAlgorithm sortingAlgorithm) {
+  MergeSorter_t<long long> * m = new MergeSorter_t<long long>();
+  cout << "getSorter<long long>() called!" << endl;
+  return *m;
 }
+
+// void SorterFactory::deleteSorter(Sorter sorter) {
+//   delete &sorter;
+// }

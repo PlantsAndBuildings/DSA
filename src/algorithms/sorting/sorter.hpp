@@ -6,17 +6,18 @@
 using std::vector;
 
 namespace sorting {
+
+template <typename T>
 class Sorter_t {
   public:
-    virtual void sort(vector<long long>&) = 0;
-
-    virtual void sort(vector<int>&) = 0;
+    virtual void sort(vector<T>&) = 0;
 
     virtual ~Sorter_t() {};
 
 };
 
-typedef Sorter_t& Sorter;
+template <typename T> using Sorter = Sorter_t<T>&;
+
 }
 
 #endif
