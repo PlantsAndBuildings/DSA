@@ -4,9 +4,15 @@
 template <typename T>
 sorting::Sorter<T>
 sorting::SorterFactory::getSorter(sorting::SortingAlgorithm sortingAlgorithm) {
-  MergeSorter_t<T> *m = new MergeSorter_t<T>();
-  std::cout << "getSorter<T>() called!" << std::endl;
-  return *m;
+  Sorter_t<T> *sorter;
+  switch (sortingAlgorithm) {
+  case sorting::SortingAlgorithm::MergeSort:
+    sorter = new MergeSorter_t<T>();
+    break;
+  case sorting::SortingAlgorithm::BubbleSort:
+    break;
+  }
+  return *sorter;
 }
 
 template <typename T>

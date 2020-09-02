@@ -5,20 +5,32 @@ using sorting::MergeSorter_t;
 using std::cout;
 using std::endl;
 
-template <> void MergeSorter_t<long long>::sort(vector<long long> &list) {
-  sort(list);
+template <> void MergeSorter_t<float>::sort(vector<float> &list) {
+  if (list.empty())
+    return;
+  sorting::MergeSorter_t<float>::sortUtilNumeric(list, 0, list.size() - 1);
+}
+
+template <> void MergeSorter_t<double>::sort(vector<double> &list) {
+  if (list.empty())
+    return;
+  sorting::MergeSorter_t<double>::sortUtilNumeric(list, 0, list.size() - 1);
 }
 
 template <> void MergeSorter_t<int>::sort(vector<int> &list) {
-  cout << "Sorting a vector<int> using merge sort!" << endl;
+  if (list.empty())
+    return;
+  sorting::MergeSorter_t<int>::sortUtilNumeric(list, 0, list.size() - 1);
 }
 
-// template <>
-// void MergeSorter_t<std::string>::sort(vector<std::string>& list) {
-//   cout << "Sorting a vector<std::string> using merge sort!" << endl;
-// }
+template <> void MergeSorter_t<long>::sort(vector<long> &list) {
+  if (list.empty())
+    return;
+  sorting::MergeSorter_t<long>::sortUtilNumeric(list, 0, list.size() - 1);
+}
 
-// template <typename T>
-// void MergeSorter_t<T>::sort(vector<T>& list) {
-//   cout << "Sorting a vector<T> using merge sort!" << endl;
-// }
+template <> void MergeSorter_t<long long>::sort(vector<long long> &list) {
+  if (list.empty())
+    return;
+  sorting::MergeSorter_t<long long>::sortUtilNumeric(list, 0, list.size() - 1);
+}

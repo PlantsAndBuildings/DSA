@@ -12,4 +12,4 @@ set(SORTING_ALGORITHMS_BASE_DIR ${PROJECT_SOURCE_DIR}/src/algorithms/sorting)
 set(EXAMPLES_BASE_DIR ${PROJECT_SOURCE_DIR}/examples)
 
 # add executables
-add_executable(merge_sort_basic ${EXAMPLES_BASE_DIR}/merge_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/merge_sort/merge_sort.cpp ${SORTING_ALGORITHMS_BASE_DIR}/sorter_factory.cpp)
+add_executable(merge_sort_basic ${EXAMPLES_BASE_DIR}/merge_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/merge_sort/merge_sort.cpp)
