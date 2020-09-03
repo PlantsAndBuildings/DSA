@@ -5,15 +5,23 @@ template <typename T> void sorting::MergeSorter_t<T>::sort(vector<T> &list) {
   LOG_ERROR << "Sorting vector<T> using merge sort not implemented!";
 }
 
-template <typename T> void sorting::MergeSorter_t<T>::sortUtilNumeric(vector<T>& list, unsigned int begIdx, unsigned int endIdx) {
-  if (endIdx <= begIdx) return;
-  unsigned int midIdx = (begIdx + endIdx)/2;
+template <typename T>
+void sorting::MergeSorter_t<T>::sortUtilNumeric(vector<T> &list,
+                                                unsigned int begIdx,
+                                                unsigned int endIdx) {
+  if (endIdx <= begIdx)
+    return;
+  unsigned int midIdx = (begIdx + endIdx) / 2;
   sorting::MergeSorter_t<T>::sortUtilNumeric(list, begIdx, midIdx);
-  sorting::MergeSorter_t<T>::sortUtilNumeric(list, midIdx+1, endIdx);
+  sorting::MergeSorter_t<T>::sortUtilNumeric(list, midIdx + 1, endIdx);
   sorting::MergeSorter_t<T>::mergeUtilNumeric(list, begIdx, midIdx, endIdx);
 }
 
-template <typename T> void sorting::MergeSorter_t<T>::mergeUtilNumeric(vector<T>& list, unsigned int begIdx, unsigned int midIdx, unsigned int endIdx) {
+template <typename T>
+void sorting::MergeSorter_t<T>::mergeUtilNumeric(vector<T> &list,
+                                                 unsigned int begIdx,
+                                                 unsigned int midIdx,
+                                                 unsigned int endIdx) {
   vector<T> first(list.begin() + begIdx, list.begin() + midIdx + 1);
   vector<T> last(list.begin() + midIdx + 1, list.begin() + endIdx + 1);
 

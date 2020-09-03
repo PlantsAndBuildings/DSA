@@ -1,9 +1,9 @@
 #ifndef MERGE_SORT
 #define MERGE_SORT
 
+#include "../../../../utils/boost/logging_utils.hpp"
 #include "../sorter.hpp"
 #include <iostream>
-#include "../../../../utils/boost/logging_utils.hpp"
 
 namespace sorting {
 
