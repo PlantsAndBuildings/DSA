@@ -12,7 +12,7 @@ public:
   void sort(vector<T> &);
 
 private:
-  void sortUtilNumeric(vector<T> &, unsigned int, unsigned int);
+  void sortUtilNumeric(vector<T> &, int, int);
 };
 
 template <typename T> using SelectionSorter = SelectionSorter_t<T> &;

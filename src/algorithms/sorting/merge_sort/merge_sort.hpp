@@ -12,8 +12,8 @@ public:
   void sort(vector<T> &);
 
 private:
-  void sortUtilNumeric(vector<T> &, unsigned int, unsigned int);
-  void mergeUtilNumeric(vector<T> &, unsigned int, unsigned int, unsigned int);
+  void sortUtilNumeric(vector<T> &, int, int);
+  void mergeUtilNumeric(vector<T> &, int, int, int);
 };
 
 template <typename T> using MergeSorter = MergeSorter_t<T> &;

@@ -15,6 +15,9 @@ sorting::SorterFactory::getSorter(sorting::SortingAlgorithm sortingAlgorithm) {
   case sorting::SortingAlgorithm::BubbleSort:
     sorter = new BubbleSorter_t<T>();
     break;
+  case sorting::SortingAlgorithm::InsertionSort:
+    sorter = new InsertionSorter_t<T>();
+    break;
   }
   return *sorter;
 }

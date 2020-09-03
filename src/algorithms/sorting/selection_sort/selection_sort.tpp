@@ -9,11 +9,10 @@ void sorting::SelectionSorter_t<T>::sort(vector<T> &list) {
 }
 
 template <typename T>
-void sorting::SelectionSorter_t<T>::sortUtilNumeric(vector<T> &list,
-                                                    unsigned int begIdx,
-                                                    unsigned int endIdx) {
-  for (unsigned int i = begIdx; i <= endIdx; i++) {
-    for (unsigned int j = i + 1; j <= endIdx; j++) {
+void sorting::SelectionSorter_t<T>::sortUtilNumeric(vector<T> &list, int begIdx,
+                                                    int endIdx) {
+  for (int i = begIdx; i <= endIdx; i++) {
+    for (int j = i + 1; j <= endIdx; j++) {
       if (list[i] > list[j]) {
         // swap the values
         T tmp = list[i];

@@ -8,11 +8,10 @@ template <typename T> void sorting::BubbleSorter_t<T>::sort(vector<T> &list) {
 }
 
 template <typename T>
-void sorting::BubbleSorter_t<T>::sortUtilNumeric(vector<T> &list,
-                                                 unsigned int begIdx,
-                                                 unsigned int endIdx) {
-  for (unsigned int i = begIdx; i <= endIdx; i++) {
-    for (unsigned int j = begIdx; j <= endIdx - 1; j++) {
+void sorting::BubbleSorter_t<T>::sortUtilNumeric(vector<T> &list, int begIdx,
+                                                 int endIdx) {
+  for (int i = begIdx; i <= endIdx; i++) {
+    for (int j = begIdx; j <= endIdx - 1; j++) {
       if (list[j] > list[j + 1]) {
         // swap the values
         T tmp = list[j];
