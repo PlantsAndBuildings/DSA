@@ -2,7 +2,7 @@
 #define MERGE_SORT_TPP
 
 template <typename T> void sorting::MergeSorter_t<T>::sort(vector<T> &list) {
-  std::cout << "Sorting vector<T> using merge sort not implemented!" << std::endl;
+  LOG_ERROR << "Sorting vector<T> using merge sort not implemented!";
 }
 
 template <typename T> void sorting::MergeSorter_t<T>::sortUtilNumeric(vector<T>& list, unsigned int begIdx, unsigned int endIdx) {

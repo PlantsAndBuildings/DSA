@@ -3,6 +3,7 @@
 
 #include "../sorter.hpp"
 #include <iostream>
+#include "../../../../utils/boost/logging_utils.hpp"
 
 namespace sorting {
 

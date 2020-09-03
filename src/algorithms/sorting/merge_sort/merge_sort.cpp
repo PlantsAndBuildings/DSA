@@ -2,8 +2,6 @@
 #include <iostream>
 
 using sorting::MergeSorter_t;
-using std::cout;
-using std::endl;
 
 template <> void MergeSorter_t<float>::sort(vector<float> &list) {
   if (list.empty())
