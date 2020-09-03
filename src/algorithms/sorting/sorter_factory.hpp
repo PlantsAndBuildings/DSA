@@ -1,6 +1,7 @@
 #ifndef SORTER_FACTORY_HPP
 #define SORTER_FACTORY_HPP
 
+#include "bubble_sort/bubble_sort.hpp"
 #include "merge_sort/merge_sort.hpp"
 #include "selection_sort/selection_sort.hpp"
 #include "sorter.hpp"

@@ -13,6 +13,7 @@ sorting::SorterFactory::getSorter(sorting::SortingAlgorithm sortingAlgorithm) {
     sorter = new SelectionSorter_t<T>();
     break;
   case sorting::SortingAlgorithm::BubbleSort:
+    sorter = new BubbleSorter_t<T>();
     break;
   }
   return *sorter;
