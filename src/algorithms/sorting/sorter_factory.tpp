@@ -9,6 +9,9 @@ sorting::SorterFactory::getSorter(sorting::SortingAlgorithm sortingAlgorithm) {
   case sorting::SortingAlgorithm::MergeSort:
     sorter = new MergeSorter_t<T>();
     break;
+  case sorting::SortingAlgorithm::SelectionSort:
+    sorter = new SelectionSorter_t<T>();
+    break;
   case sorting::SortingAlgorithm::BubbleSort:
     break;
   }

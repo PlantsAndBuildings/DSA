@@ -2,6 +2,7 @@
 #define SORTER_FACTORY_HPP
 
 #include "merge_sort/merge_sort.hpp"
+#include "selection_sort/selection_sort.hpp"
 #include "sorter.hpp"
 #include "sorting_algorithm.hpp"
 #include <iostream>

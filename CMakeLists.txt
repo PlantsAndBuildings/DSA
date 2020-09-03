@@ -18,22 +18,37 @@ set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 
+# set the directory to place examples executables in
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 add_definitions(-DBOOST_ALL_DYN_LINK)
 
 find_package(Boost 1.65 REQUIRED COMPONENTS log unit_test_framework)
 
 # add executables for examples
+
+# Merge Sort
 add_executable(merge_sort_basic ${EXAMPLES_BASE_DIR}/merge_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/merge_sort/merge_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
 target_link_libraries(merge_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
+# Selection Sort
+add_executable(selection_sort_basic ${EXAMPLES_BASE_DIR}/selection_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/selection_sort/selection_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
+target_link_libraries(selection_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
 enable_testing()
 
+# set the directory to place examples executables in
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/test)
+
 # add executables for tests
+
+# Merge Sort
 add_executable(merge_sort_test ${TESTS_BASE_DIR}/merge_sort.cpp ${SORTING_ALGORITHMS_BASE_DIR}/merge_sort/merge_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
-# target_include_directories(merge_sort_test PRIVATE ${Boost_INCLUDE_DIRS})
-# target_compile_definitions(merge_sort_test PRIVATE "BOOST_TEST_DYN_LINK=1")
 target_link_libraries(merge_sort_test ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
+# Selection Sort
+add_executable(selection_sort_test ${TESTS_BASE_DIR}/selection_sort.cpp ${SORTING_ALGORITHMS_BASE_DIR}/selection_sort/selection_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
+target_link_libraries(selection_sort_test ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
 add_test(NAME merge_sort_test COMMAND merge_sort_test)
+add_test(NAME selection_sort_test COMMAND selection_sort_test)

@@ -2,7 +2,7 @@
 #define SORTING_ALGORITHM_HPP
 
 namespace sorting {
-enum SortingAlgorithm { MergeSort, BubbleSort };
+enum SortingAlgorithm { MergeSort, BubbleSort, SelectionSort };
 }
 
 #endif
