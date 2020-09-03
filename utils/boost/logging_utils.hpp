@@ -13,9 +13,9 @@
 namespace logging {
 void loggerInit();
 void loggerInit(const char *);
-std::string str(vector<int> &);
-std::string str(vector<double> &);
-std::string str(vector<std::string> &);
+std::string str(std::vector<int> &);
+std::string str(std::vector<double> &);
+std::string str(std::vector<std::string> &);
 } // namespace logging
 
 #endif
