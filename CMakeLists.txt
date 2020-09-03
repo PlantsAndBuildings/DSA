@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # some useful paths in the project tree
 set(SORTING_ALGORITHMS_BASE_DIR ${PROJECT_SOURCE_DIR}/src/algorithms/sorting)
+set(DATA_STRUCTURES_BASE_DIR ${PROJECT_SOURCE_DIR}/src/data_structures)
 set(EXAMPLES_BASE_DIR ${PROJECT_SOURCE_DIR}/examples)
 set(UTILS_BASE_DIR ${PROJECT_SOURCE_DIR}/utils)
 set(TESTS_BASE_DIR ${PROJECT_SOURCE_DIR}/test)
@@ -25,7 +26,9 @@ add_definitions(-DBOOST_ALL_DYN_LINK)
 
 find_package(Boost 1.65 REQUIRED COMPONENTS log unit_test_framework)
 
-# add executables for examples
+######### ALGORITHMS
+
+# Add executables for sorting algorithm examples
 
 # Merge Sort
 add_executable(merge_sort_basic ${EXAMPLES_BASE_DIR}/merge_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/merge_sort/merge_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
@@ -42,6 +45,12 @@ target_link_libraries(bubble_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBR
 # Insertion Sort
 add_executable(insertion_sort_basic ${EXAMPLES_BASE_DIR}/insertion_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/insertion_sort/insertion_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
 target_link_libraries(insertion_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
+
+######### DATA STRUCTURES
+
+# Heap
+add_executable(max_heap_basic ${EXAMPLES_BASE_DIR}/max_heap.cpp ${DATA_STRUCTURES_BASE_DIR}/heap/heap.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
+target_link_libraries(max_heap_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
 enable_testing()
 
