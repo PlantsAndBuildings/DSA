@@ -1,0 +1,143 @@
+\hypertarget{namespacesorting}{}\doxysection{sorting Namespace Reference}
+\label{namespacesorting}\index{sorting@{sorting}}
+
+
+Namespace to contain sorters and sorter factory.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{Insertion\+Sorter\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{Merge\+Sorter\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{Quick\+Sorter\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{Selection\+Sorter\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classsorting_1_1Sorter__t}{Sorter\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for various sorting implementations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsorting_1_1SorterFactory}{Sorter\+Factory}}
+\begin{DoxyCompactList}\small\item\em Factory class for creating sorter objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesorting_ab9abf3ef2cd526da76a5ce01aa10ac45}\label{namespacesorting_ab9abf3ef2cd526da76a5ce01aa10ac45}} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries Bubble\+Sorter} = \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter\+\_\+t}}$<$ T $>$ \&
+\item 
+\mbox{\Hypertarget{namespacesorting_a2990133fa96b28c156a21efa6206e9bd}\label{namespacesorting_a2990133fa96b28c156a21efa6206e9bd}} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries Heap\+Sorter} = \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter\+\_\+t}}$<$ T $>$ \&
+\item 
+\mbox{\Hypertarget{namespacesorting_adc58aef1fd83dd2afb8af96663fefe24}\label{namespacesorting_adc58aef1fd83dd2afb8af96663fefe24}} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries Insertion\+Sorter} = \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{Insertion\+Sorter\+\_\+t}}$<$ T $>$ \&
+\item 
+\mbox{\Hypertarget{namespacesorting_a590f623890d37ea8dcfaaeae89e73540}\label{namespacesorting_a590f623890d37ea8dcfaaeae89e73540}} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries Merge\+Sorter} = \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{Merge\+Sorter\+\_\+t}}$<$ T $>$ \&
+\item 
+\mbox{\Hypertarget{namespacesorting_aefc1f3d023ac5ba960d9a50e633df07d}\label{namespacesorting_aefc1f3d023ac5ba960d9a50e633df07d}} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries Quick\+Sorter} = \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{Quick\+Sorter\+\_\+t}}$<$ T $>$ \&
+\item 
+\mbox{\Hypertarget{namespacesorting_ad5d26c5f9be46afa25b1be982dcdebcd}\label{namespacesorting_ad5d26c5f9be46afa25b1be982dcdebcd}} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries Selection\+Sorter} = \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{Selection\+Sorter\+\_\+t}}$<$ T $>$ \&
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacesorting_aac47bffab829ac8bce6f28ef93cf91c2}{Sorter}} = \mbox{\hyperlink{classsorting_1_1Sorter__t}{Sorter\+\_\+t}}$<$ T $>$ \&
+\begin{DoxyCompactList}\small\item\em When \mbox{\hyperlink{classsorting_1_1SorterFactory}{Sorter\+Factory}} is invoked to create a new concrete sorter, we want to return a reference rather than the object itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916}{Sorting\+Algorithm}} \{ \newline
+\mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916ab3a89e36e93b9db3b72ae970976570f5}{Merge\+Sort}}, 
+\mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a30b639479d4450f090ea303baae95ca0}{Bubble\+Sort}}, 
+\mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a8f03fa4b8824c951046a1445d6d07dba}{Selection\+Sort}}, 
+\mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a38699d8ca474b56af04969c090431d11}{Insertion\+Sort}}, 
+\newline
+\mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916acbafa8b42962caf7cdb97dfb2c88040b}{Heap\+Sort}}, 
+\mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a337bd5c2e3024ad653f6066fd89b1a7e}{Quick\+Sort}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for various sorting algorithms that are implemented. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace to contain sorters and sorter factory. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacesorting_aac47bffab829ac8bce6f28ef93cf91c2}\label{namespacesorting_aac47bffab829ac8bce6f28ef93cf91c2}} 
+\index{sorting@{sorting}!Sorter@{Sorter}}
+\index{Sorter@{Sorter}!sorting@{sorting}}
+\doxysubsubsection{\texorpdfstring{Sorter}{Sorter}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{namespacesorting_aac47bffab829ac8bce6f28ef93cf91c2}{sorting\+::\+Sorter}} = typedef \mbox{\hyperlink{classsorting_1_1Sorter__t}{Sorter\+\_\+t}}$<$T$>$ \&}
+
+
+
+When \mbox{\hyperlink{classsorting_1_1SorterFactory}{Sorter\+Factory}} is invoked to create a new concrete sorter, we want to return a reference rather than the object itself. 
+
+This is a convenience typedef for that purpose. 
+
+Definition at line 44 of file sorter.\+hpp.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916}\label{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916}} 
+\index{sorting@{sorting}!SortingAlgorithm@{SortingAlgorithm}}
+\index{SortingAlgorithm@{SortingAlgorithm}!sorting@{sorting}}
+\doxysubsubsection{\texorpdfstring{SortingAlgorithm}{SortingAlgorithm}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916}{sorting\+::\+Sorting\+Algorithm}}}
+
+
+
+Enum for various sorting algorithms that are implemented. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MergeSort@{MergeSort}!sorting@{sorting}}\index{sorting@{sorting}!MergeSort@{MergeSort}}}\mbox{\Hypertarget{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916ab3a89e36e93b9db3b72ae970976570f5}\label{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916ab3a89e36e93b9db3b72ae970976570f5}} 
+Merge\+Sort&Merge Sort. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BubbleSort@{BubbleSort}!sorting@{sorting}}\index{sorting@{sorting}!BubbleSort@{BubbleSort}}}\mbox{\Hypertarget{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a30b639479d4450f090ea303baae95ca0}\label{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a30b639479d4450f090ea303baae95ca0}} 
+Bubble\+Sort&Bubble Sort. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SelectionSort@{SelectionSort}!sorting@{sorting}}\index{sorting@{sorting}!SelectionSort@{SelectionSort}}}\mbox{\Hypertarget{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a8f03fa4b8824c951046a1445d6d07dba}\label{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a8f03fa4b8824c951046a1445d6d07dba}} 
+Selection\+Sort&Selection Sort. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InsertionSort@{InsertionSort}!sorting@{sorting}}\index{sorting@{sorting}!InsertionSort@{InsertionSort}}}\mbox{\Hypertarget{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a38699d8ca474b56af04969c090431d11}\label{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a38699d8ca474b56af04969c090431d11}} 
+Insertion\+Sort&Insertion Sort. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HeapSort@{HeapSort}!sorting@{sorting}}\index{sorting@{sorting}!HeapSort@{HeapSort}}}\mbox{\Hypertarget{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916acbafa8b42962caf7cdb97dfb2c88040b}\label{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916acbafa8b42962caf7cdb97dfb2c88040b}} 
+Heap\+Sort&\mbox{\hyperlink{classHeap}{Heap}} Sort. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QuickSort@{QuickSort}!sorting@{sorting}}\index{sorting@{sorting}!QuickSort@{QuickSort}}}\mbox{\Hypertarget{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a337bd5c2e3024ad653f6066fd89b1a7e}\label{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a337bd5c2e3024ad653f6066fd89b1a7e}} 
+Quick\+Sort&Quick Sort. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 8 of file sorting\+\_\+algorithm.\+hpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8                       \{}
+\DoxyCodeLine{10   \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916ab3a89e36e93b9db3b72ae970976570f5}{MergeSort}}, }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{13   \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a30b639479d4450f090ea303baae95ca0}{BubbleSort}},}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16   \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a8f03fa4b8824c951046a1445d6d07dba}{SelectionSort}},}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{19   \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a38699d8ca474b56af04969c090431d11}{InsertionSort}},}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22   \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916acbafa8b42962caf7cdb97dfb2c88040b}{HeapSort}},}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25   \mbox{\hyperlink{namespacesorting_ad308a3a085dbe1d3cd4a495e1a69f916a337bd5c2e3024ad653f6066fd89b1a7e}{QuickSort}}}
+\DoxyCodeLine{26 \};}
+
+\end{DoxyCode}
