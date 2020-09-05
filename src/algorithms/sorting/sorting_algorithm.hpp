@@ -7,7 +7,8 @@ enum SortingAlgorithm {
   BubbleSort,
   SelectionSort,
   InsertionSort,
-  HeapSort
+  HeapSort,
+  QuickSort
 };
 }
 

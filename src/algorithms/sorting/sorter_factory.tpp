@@ -21,6 +21,9 @@ sorting::SorterFactory::getSorter(sorting::SortingAlgorithm sortingAlgorithm) {
   case sorting::SortingAlgorithm::HeapSort:
     sorter = new HeapSorter_t<T>();
     break;
+  case sorting::SortingAlgorithm::QuickSort:
+    sorter = new QuickSorter_t<T>();
+    break;
   }
   return *sorter;
 }

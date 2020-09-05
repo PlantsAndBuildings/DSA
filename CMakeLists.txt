@@ -39,6 +39,10 @@ target_link_libraries(merge_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRA
 add_executable(heap_sort_basic ${EXAMPLES_BASE_DIR}/heap_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/heap_sort/heap_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp ${DATA_STRUCTURES_BASE_DIR}/heap/heap.cpp)
 target_link_libraries(heap_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
+# Quick Sort
+add_executable(quick_sort_basic ${EXAMPLES_BASE_DIR}/quick_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/quick_sort/quick_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
+target_link_libraries(quick_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
+
 # Selection Sort
 add_executable(selection_sort_basic ${EXAMPLES_BASE_DIR}/selection_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/selection_sort/selection_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
 target_link_libraries(selection_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)

@@ -5,6 +5,7 @@
 #include "heap_sort/heap_sort.hpp"
 #include "insertion_sort/insertion_sort.hpp"
 #include "merge_sort/merge_sort.hpp"
+#include "quick_sort/quick_sort.hpp"
 #include "selection_sort/selection_sort.hpp"
 #include "sorter.hpp"
 #include "sorting_algorithm.hpp"
