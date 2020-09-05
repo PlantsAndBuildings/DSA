@@ -6,6 +6,7 @@ project(dsa-implementations)
 # set c++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # some useful paths in the project tree
 set(SORTING_ALGORITHMS_BASE_DIR ${PROJECT_SOURCE_DIR}/src/algorithms/sorting)
@@ -33,6 +34,10 @@ find_package(Boost 1.65 REQUIRED COMPONENTS log unit_test_framework)
 # Merge Sort
 add_executable(merge_sort_basic ${EXAMPLES_BASE_DIR}/merge_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/merge_sort/merge_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
 target_link_libraries(merge_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
+
+# Heap Sort
+add_executable(heap_sort_basic ${EXAMPLES_BASE_DIR}/heap_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/heap_sort/heap_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp ${DATA_STRUCTURES_BASE_DIR}/heap/heap.cpp)
+target_link_libraries(heap_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
 # Selection Sort
 add_executable(selection_sort_basic ${EXAMPLES_BASE_DIR}/selection_sort_basic.cpp ${SORTING_ALGORITHMS_BASE_DIR}/selection_sort/selection_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)

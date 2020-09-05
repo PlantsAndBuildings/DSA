@@ -2,6 +2,7 @@
 #define SORTER_FACTORY_HPP
 
 #include "bubble_sort/bubble_sort.hpp"
+#include "heap_sort/heap_sort.hpp"
 #include "insertion_sort/insertion_sort.hpp"
 #include "merge_sort/merge_sort.hpp"
 #include "selection_sort/selection_sort.hpp"

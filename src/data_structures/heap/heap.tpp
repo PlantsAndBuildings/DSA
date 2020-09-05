@@ -65,6 +65,44 @@ Heap<T>::findIdxToBePropagated(typename Heap<T>::idx_t idx) {
 
   typename Heap<T>::idx_t idxToBePropagated = idx;
 
+  LOG_ERROR << "Generic findIdxToBePropagated not implemented";
+
+  // TODO
+  // Handle case for MaxHeap
+  // if (type == HeapType::MaxHeap) {
+  //   if (lIdx<this->sz & this->heap[lIdx] > this->heap[idxToBePropagated]) {
+  //     idxToBePropagated = lIdx;
+  //   }
+  //   if (rIdx < this->sz && this->heap[rIdx] > this->heap[idxToBePropagated])
+  //   {
+  //     idxToBePropagated = rIdx;
+  //   }
+  // }
+
+  // TODO
+  // Handle case for MinHeap
+  // if (type == HeapType::MinHeap) {
+  //   if (lIdx < this->sz && this->heap[lIdx] < this->heap[idxToBePropagated])
+  //   {
+  //     idxToBePropagated = lIdx;
+  //   }
+  //   if (rIdx < this->sz && this->heap[rIdx] < this->heap[idxToBePropagated])
+  //   {
+  //     idxToBePropagated = rIdx;
+  //   }
+  // }
+
+  return idxToBePropagated;
+}
+
+template <typename T>
+typename Heap<T>::idx_t
+Heap<T>::findIdxToBePropagatedForNumericHeap(typename Heap<T>::idx_t idx) {
+  typename Heap<T>::idx_t lIdx = left(idx);
+  typename Heap<T>::idx_t rIdx = right(idx);
+
+  typename Heap<T>::idx_t idxToBePropagated = idx;
+
   // Handle case for MaxHeap
   if (type == HeapType::MaxHeap) {
     if (lIdx<this->sz & this->heap[lIdx]> this->heap[idxToBePropagated]) {
@@ -88,9 +126,25 @@ Heap<T>::findIdxToBePropagated(typename Heap<T>::idx_t idx) {
   return idxToBePropagated;
 }
 
+template <typename T> void Heap<T>::heapify(typename Heap<T>::idx_t idx) {
+  typename Heap<T>::idx_t idxToBePropagated = findIdxToBePropagated(idx);
+
+  if (idxToBePropagated == idx)
+    return;
+
+  // Swap value at idx with value at idxToBePropagated
+  T tmp = this->heap[idx];
+  this->heap[idx] = this->heap[idxToBePropagated];
+  this->heap[idxToBePropagated] = tmp;
+
+  // Call heapfiy on idxToBePropagated
+  heapify(idxToBePropagated);
+}
+
 template <typename T>
 void Heap<T>::heapifyNumeric(typename Heap<T>::idx_t idx) {
-  typename Heap<T>::idx_t idxToBePropagated = findIdxToBePropagated(idx);
+  typename Heap<T>::idx_t idxToBePropagated =
+      findIdxToBePropagatedForNumericHeap(idx);
 
   if (idxToBePropagated == idx)
     return;
@@ -117,9 +171,54 @@ template <typename T> T &Heap<T>::top() {
 template <typename T> void Heap<T>::buildHeap() {
   if (!this->empty()) {
     for (typename Heap<T>::idx_t idx = (this->sz) / 2; idx > 0; idx--) {
+      this->heapify(idx);
+    }
+    this->heapify(0);
+  }
+}
+
+template <typename T> void Heap<T>::buildHeapNumeric() {
+  if (!this->empty()) {
+    for (typename Heap<T>::idx_t idx = (this->sz) / 2; idx > 0; idx--) {
       this->heapifyNumeric(idx);
     }
     this->heapifyNumeric(0);
+  }
+}
+
+template <typename T> T Heap<T>::extractTop() {
+  if (!this->empty()) {
+    T ret = this->heap[0];
+
+    // Move the last element to heap[0]
+    this->heap[0] = this->heap[sz - 1];
+
+    // reduce size of heap by one
+    this->sz--;
+    this->heap.pop_back();
+
+    // heapify on root node
+    this->heapify(0);
+
+    return ret;
+  }
+}
+
+template <typename T> T Heap<T>::extractTopForNumericHeap() {
+  if (!this->empty()) {
+    T ret = this->heap[0];
+
+    // Move the last element to heap[0]
+    this->heap[0] = this->heap[sz - 1];
+
+    // reduce size of heap by one
+    this->sz--;
+    this->heap.pop_back();
+
+    // heapify on root node
+    this->heapifyNumeric(0);
+
+    return ret;
   }
 }
 

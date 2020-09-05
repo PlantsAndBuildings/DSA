@@ -14,7 +14,10 @@ namespace logging {
 void loggerInit();
 void loggerInit(const char *);
 std::string str(std::vector<int> &);
+std::string str(std::vector<float> &);
 std::string str(std::vector<double> &);
+std::string str(std::vector<long> &);
+std::string str(std::vector<long long> &);
 std::string str(std::vector<std::string> &);
 } // namespace logging
 

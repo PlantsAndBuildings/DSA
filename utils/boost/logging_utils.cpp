@@ -42,7 +42,13 @@ template <typename T> std::string __str__(std::vector<T> &vec) {
 
 std::string str(std::vector<int> &vec) { return __str__(vec); }
 
+std::string str(std::vector<float> &vec) { return __str__(vec); }
+
 std::string str(std::vector<double> &vec) { return __str__(vec); }
+
+std::string str(std::vector<long> &vec) { return __str__(vec); }
+
+std::string str(std::vector<long long> &vec) { return __str__(vec); }
 
 std::string str(std::vector<std::string> &vec) { return __str__(vec); }
 } // namespace logging
