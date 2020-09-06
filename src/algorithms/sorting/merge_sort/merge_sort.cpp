@@ -1,3 +1,8 @@
+/**
+ * \file merge_sort.cpp
+ *
+ * Merge sort implementation for specialized types
+ */
 #include "merge_sort.hpp"
 #include <iostream>
 

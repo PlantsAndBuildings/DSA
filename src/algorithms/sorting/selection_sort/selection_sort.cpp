@@ -1,3 +1,8 @@
+/**
+ * \file selection_sort.cpp
+ *
+ * Selection sort implementation for specialized types
+ */
 #include "selection_sort.hpp"
 #include <iostream>
 

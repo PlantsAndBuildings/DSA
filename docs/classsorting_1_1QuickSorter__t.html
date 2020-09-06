@@ -74,6 +74,11 @@ $(function() {
 <div class="title">sorting::QuickSorter_t&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>&#x202A;Sorter that implements quick sort.  
+ <a href="classsorting_1_1QuickSorter__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="quick__sort_8hpp_source.html">quick_sort.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sorting::QuickSorter_t&lt; T &gt;:</div>
 <div class="dyncontent">
@@ -87,21 +92,30 @@ Inheritance diagram for sorting::QuickSorter_t&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d89aabe60e6b0b0b414dae1bc7e64ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">sort</a> (vector&lt; T &gt; &amp;)</td></tr>
-<tr class="memdesc:a1d89aabe60e6b0b0b414dae1bc7e64ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Sort virtual method.  <a href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">More...</a><br /></td></tr>
+<tr class="memdesc:a1d89aabe60e6b0b0b414dae1bc7e64ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Implementation of quick sort for generic type.  <a href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">More...</a><br /></td></tr>
 <tr class="separator:a1d89aabe60e6b0b0b414dae1bc7e64ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a6ca8eababf2a355ef29520da5d66e987"><td class="memItemLeft" align="right" valign="top"><a id="a6ca8eababf2a355ef29520da5d66e987"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sortUtilNumeric</b> (vector&lt; T &gt; &amp;, int, int)</td></tr>
+<tr class="memitem:a6ca8eababf2a355ef29520da5d66e987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsorting_1_1QuickSorter__t.html#a6ca8eababf2a355ef29520da5d66e987">sortUtilNumeric</a> (vector&lt; T &gt; &amp;, int, int)</td></tr>
+<tr class="memdesc:a6ca8eababf2a355ef29520da5d66e987"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;utility method to sort a vector containing numeric data types using quick sort  <a href="classsorting_1_1QuickSorter__t.html#a6ca8eababf2a355ef29520da5d66e987">More...</a><br /></td></tr>
 <tr class="separator:a6ca8eababf2a355ef29520da5d66e987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class sorting::QuickSorter_t&lt; T &gt;</h3>
 
+<p class="DocNodeLTR">Sorter that implements quick sort. </p>
+<p class="DocNodeLTR">Quick sort is a popular sorting algorithm which runs in O(N*lg(N)) time where N represents the length of the array. The idea behind quick sort is to select a pivot element and partition the array into two parts - one part containing all the array elements less than the pivot; and the other containing all the array elements greater than the pivot. Then, quicksort is called recursively on each of the two parts. Please refer to any text on algorithms (preferably Introduction to Algorithms by Cormen et al) for complete details.</p>
+<p class="DocNodeLTR">This class extends from the <a class="el" href="classsorting_1_1Sorter__t.html">Sorter</a> abstract class and implements the <a class="el" href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sort()</a> pure function.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>&#x202A;type of data to be sorted </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="quick__sort_8hpp_source.html#l00011">11</a> of file <a class="el" href="quick__sort_8hpp_source.html">quick_sort.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="quick__sort_8hpp_source.html#l00027">27</a> of file <a class="el" href="quick__sort_8hpp_source.html">quick_sort.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1d89aabe60e6b0b0b414dae1bc7e64ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d89aabe60e6b0b0b414dae1bc7e64ea">&#9670;&nbsp;</a></span>sort()</h2>
@@ -118,7 +132,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">void <a class="el" href="classsorting_1_1QuickSorter__t.html">sorting::QuickSorter_t</a>&lt; T &gt;::sort </td>
           <td>(</td>
           <td class="paramtype">vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -129,21 +143,154 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>&#x202A;Sort virtual method. </p>
-<p class="DocNodeLTR">This is implemented in various concrete sorter child classes like <a class="el" href="classsorting_1_1BubbleSorter__t.html">BubbleSorter</a>, <a class="el" href="classsorting_1_1HeapSorter__t.html">HeapSorter</a> etc. The passed vector is expected to be sorted in place.</p>
+<p>&#x202A;Implementation of quick sort for generic type. </p>
+<p class="DocNodeLTR">Please check <a class="el" href="quick__sort_8cpp.html">quick_sort.cpp</a> for specializations of this function.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>&#x202A;type of data to be sorted</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">list</td><td>&#x202A;vector to be sorted </td></tr>
+    <tr><td class="paramname">list</td><td>&#x202A;input list to be sorted </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Implements <a class="el" href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sorting::Sorter_t&lt; T &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="quick__sort_8hpp_source.html#l00021">21</a> of file <a class="el" href="quick__sort_8hpp_source.html">quick_sort.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                                                 {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;Sorting vector&lt;T&gt; using quick sort not implemented!&quot;</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="quick__sort_8hpp_source.html#l00063">63</a> of file <a class="el" href="quick__sort_8hpp_source.html">quick_sort.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;Sorting vector&lt;T&gt; using quick sort not implemented!&quot;</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6ca8eababf2a355ef29520da5d66e987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca8eababf2a355ef29520da5d66e987">&#9670;&nbsp;</a></span>sortUtilNumeric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsorting_1_1QuickSorter__t.html">sorting::QuickSorter_t</a>&lt; T &gt;::sortUtilNumeric </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>begIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIdx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&#x202A;utility method to sort a vector containing numeric data types using quick sort </p>
+<p class="DocNodeLTR">The <a class="el" href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">sort()</a> public method has a number of template specializations present in <a class="el" href="quick__sort_8cpp.html">quick_sort.cpp</a>. All the specializations for numeric data types like <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code> etc will have the exact same implementation of quick sort. This method caters to all such template specializations.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>&#x202A;input list to be sorted using quick sort</td></tr>
+    <tr><td class="paramname">begIdx</td><td>&#x202A;beginning index for the range of input list that needs to be sorted</td></tr>
+    <tr><td class="paramname">endIdx</td><td>&#x202A;end index for the range of input list that needs to be sorted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="quick__sort_8hpp_source.html#l00068">68</a> of file <a class="el" href="quick__sort_8hpp_source.html">quick_sort.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                   {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// N denotes the size of the range that needs to be sorted</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">int</span> N = endIdx - begIdx + 1;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// Handle base cases</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span> (N &lt;= 0 || N == 1)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// Pivot element is selected randomly from the range. This is some boilerplate</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">// code for generating the pivot randomly</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  std::random_device</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      rd; <span class="comment">// Will be used to obtain a seed for the random number engine</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  std::mt19937 gen(rd()); <span class="comment">// Standard mersenne_twister_engine seeded with rd()</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::uniform_int_distribution&lt;&gt; distrib(begIdx, endIdx);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// Select the pivot randomly from the range list[begIdx..endIdx]</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">int</span> pivotIdx = distrib(gen);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  T pivot = list[pivotIdx];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// We want to partition the list[begIdx..endIdx] as follows:</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// 1. list[begIdx .. smallIdx] &lt; pivot</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// 2. list[smallIdx+1 .. bigIdx - 1] == pivot</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// 3. list[bigIdx .. endIdx] &gt; pivot</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// Initialize smallIdx and bigIdx</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">int</span> smallIdx = begIdx - 1;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">int</span> bigIdx = endIdx + 1;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// We will use idx to iterate over the array range</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">int</span> idx = begIdx;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// idx is used to iterate through list[begIdx..endIdx]</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="comment">// At every iteration, we will check whether list[idx] is less than; greater</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// than; or equal to the pivot element All the list elements within the range</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="comment">// that are less than the pivot element will be moved to the beginning of the</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// range. Ie. list[begIdx..smallIdx] will contain all the elements in range</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// smaller than the pivot Similarly, all the list elements within the range</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">// that are greater than the pivot will be moved to the end of the range. Ie.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="comment">// list[bigIdx..endIdx] will contain all the elements in the range greater</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="comment">// than the pivot list[smallIdx+1..bigIdx-1] will contain list elements ==</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// pivot Once we have achieved the partitioning descibed above, we can run</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="comment">// this method recursively on subranges list[begIdx..smallIdx] and</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// list[bigIdx..endIdx]</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">while</span> (bigIdx &gt; smallIdx &amp;&amp; bigIdx &gt;= begIdx &amp;&amp; smallIdx &lt;= endIdx &amp;&amp;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;         idx &lt; bigIdx) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (list[idx] &lt; pivot) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      smallIdx++;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      idx++;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (list[idx] &gt; pivot) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="comment">// swap list[idx] and list[bigIdx - 1]</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      T tmp = list[idx];</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      list[idx] = list[bigIdx - 1];</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      list[bigIdx - 1] = tmp;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="comment">// decrement bigIdx</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      bigIdx--;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="comment">// increment only idx</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      idx++;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="comment">// At the end of the above loop:</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="comment">// 1. list[begIdx .. smallIdx] &lt; pivot</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="comment">// 2. list[smallIdx+1 .. bigIdx - 1] == pivot</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="comment">// 3. list[bigIdx .. endIdx] &gt; pivot</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="comment">// Run quicksort on list[begIdx .. smallIdx] and list[bigIdx .. endIdx]</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  this-&gt;<a class="code" href="classsorting_1_1QuickSorter__t.html#a6ca8eababf2a355ef29520da5d66e987">sortUtilNumeric</a>(list, begIdx, smallIdx);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  this-&gt;<a class="code" href="classsorting_1_1QuickSorter__t.html#a6ca8eababf2a355ef29520da5d66e987">sortUtilNumeric</a>(list, bigIdx, endIdx);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -151,6 +298,7 @@ template&lt;typename T &gt; </div>
 <li>src/algorithms/sorting/quick_sort/<a class="el" href="quick__sort_8hpp_source.html">quick_sort.hpp</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclasssorting_1_1QuickSorter__t_html_a6ca8eababf2a355ef29520da5d66e987"><div class="ttname"><a href="classsorting_1_1QuickSorter__t.html#a6ca8eababf2a355ef29520da5d66e987">sorting::QuickSorter_t::sortUtilNumeric</a></div><div class="ttdeci">void sortUtilNumeric(vector&lt; T &gt; &amp;, int, int)</div><div class="ttdoc">utility method to sort a vector containing numeric data types using quick sort</div><div class="ttdef"><b>Definition:</b> <a href="quick__sort_8hpp_source.html#l00068">quick_sort.hpp:68</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

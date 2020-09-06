@@ -1,3 +1,8 @@
+/**
+ * \file insertion_sort.cpp
+ *
+ * Insertion sort implementation for specialized types
+ */
 #include "insertion_sort.hpp"
 #include <iostream>
 

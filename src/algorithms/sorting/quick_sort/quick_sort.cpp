@@ -1,3 +1,8 @@
+/**
+ * \file quick_sort.cpp
+ *
+ * Quick sort implementation for specialized types
+ */
 #include "quick_sort.hpp"
 #include <iostream>
 
