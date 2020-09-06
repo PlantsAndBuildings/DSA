@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bubblesorter_190',['BubbleSorter',['../namespacesorting.html#ab9abf3ef2cd526da76a5ce01aa10ac45',1,'sorting']]]
+  ['sorter_57',['Sorter',['../namespacesorting.html#aac47bffab829ac8bce6f28ef93cf91c2',1,'sorting']]]
 ];

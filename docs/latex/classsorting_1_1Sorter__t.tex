@@ -1,5 +1,14 @@
 \hypertarget{classsorting_1_1Sorter__t}{}\doxysection{sorting\+::Sorter\+\_\+t$<$ T $>$ Class Template Reference}
 \label{classsorting_1_1Sorter__t}\index{sorting::Sorter\_t$<$ T $>$@{sorting::Sorter\_t$<$ T $>$}}
+
+
+Abstract base class for various sorting implementations.  
+
+
+
+
+{\ttfamily \#include $<$sorter.\+hpp$>$}
+
 Inheritance diagram for sorting\+::Sorter\+\_\+t$<$ T $>$\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,18 +18,51 @@ Inheritance diagram for sorting\+::Sorter\+\_\+t$<$ T $>$\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}\label{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}} 
-virtual void {\bfseries sort} (vector$<$ T $>$ \&)=0
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}{sort}} (vector$<$ T $>$ \&)=0
+\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$\newline
 class sorting\+::\+Sorter\+\_\+t$<$ T $>$}
 
+Abstract base class for various sorting implementations. 
+
+Various concrete sorter implementations such as \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}} and \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{Merge\+Sorter}} implement the method in this class. A \mbox{\hyperlink{classsorting_1_1SorterFactory}{Sorter\+Factory}} is used to generate objects of this type. A sorter requires (as template argument) a data type -\/ indicating the type of data it is expected to sort. For example, a \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{Merge\+Sorter$<$int$>$}} will be used to sort a vector of {\ttfamily int}s via the Merge Sort algorithm
 
 
-Definition at line 9 of file sorter.\+hpp.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & data type of elements to be sorted \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 26 of file sorter.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}\label{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}} 
+\index{sorting::Sorter\_t$<$ T $>$@{sorting::Sorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::Sorter\_t$<$ T $>$@{sorting::Sorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classsorting_1_1Sorter__t}{sorting\+::\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sort virtual method. 
+
+This is implemented in various concrete sorter child classes like \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}}, \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter}} etc. The passed vector is expected to be sorted in place.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sorting\+::\+Bubble\+Sorter\+\_\+t$<$ T $>$}}, \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sorting\+::\+Selection\+Sorter\+\_\+t$<$ T $>$}}, \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sorting\+::\+Quick\+Sorter\+\_\+t$<$ T $>$}}, \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}{sorting\+::\+Merge\+Sorter\+\_\+t$<$ T $>$}}, \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sorting\+::\+Insertion\+Sorter\+\_\+t$<$ T $>$}}, and \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sorting\+::\+Heap\+Sorter\+\_\+t$<$ T $>$}}.
 
 
 

@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>&#x202A;sorting</b></li><li class="navelem"><a class="el" href="classsorting_1_1Sorter__t.html">&#x202A;Sorter_t</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesorting.html">&#x202A;sorting</a></li><li class="navelem"><a class="el" href="classsorting_1_1Sorter__t.html">&#x202A;Sorter_t</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,6 +73,11 @@ $(function() {
 <div class="title">sorting::Sorter_t&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>&#x202A;Abstract base class for various sorting implementations.  
+ <a href="classsorting_1_1Sorter__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sorter_8hpp_source.html">sorter.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sorting::Sorter_t&lt; T &gt;:</div>
 <div class="dyncontent">
@@ -90,17 +95,65 @@ Inheritance diagram for sorting::Sorter_t&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a678c820dbe686d9ce840f15f6ddc63bf"><td class="memItemLeft" align="right" valign="top"><a id="a678c820dbe686d9ce840f15f6ddc63bf"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sort</b> (vector&lt; T &gt; &amp;)=0</td></tr>
+<tr class="memitem:a678c820dbe686d9ce840f15f6ddc63bf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sort</a> (vector&lt; T &gt; &amp;)=0</td></tr>
+<tr class="memdesc:a678c820dbe686d9ce840f15f6ddc63bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Sort virtual method.  <a href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">More...</a><br /></td></tr>
 <tr class="separator:a678c820dbe686d9ce840f15f6ddc63bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class sorting::Sorter_t&lt; T &gt;</h3>
 
+<p class="DocNodeLTR">Abstract base class for various sorting implementations. </p>
+<p class="DocNodeLTR">Various concrete sorter implementations such as <a class="el" href="classsorting_1_1BubbleSorter__t.html">BubbleSorter</a> and <a class="el" href="classsorting_1_1MergeSorter__t.html">MergeSorter</a> implement the method in this class. A <a class="el" href="classsorting_1_1SorterFactory.html">SorterFactory</a> is used to generate objects of this type. A sorter requires (as template argument) a data type - indicating the type of data it is expected to sort. For example, a <a class="el" href="classsorting_1_1MergeSorter__t.html">MergeSorter&lt;int&gt;</a> will be used to sort a vector of <code>int</code>s via the Merge Sort algorithm</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>&#x202A;data type of elements to be sorted </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="sorter_8hpp_source.html#l00009">9</a> of file <a class="el" href="sorter_8hpp_source.html">sorter.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="sorter_8hpp_source.html#l00026">26</a> of file <a class="el" href="sorter_8hpp_source.html">sorter.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a678c820dbe686d9ce840f15f6ddc63bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678c820dbe686d9ce840f15f6ddc63bf">&#9670;&nbsp;</a></span>sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a>&lt; T &gt;::sort </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&#x202A;Sort virtual method. </p>
+<p class="DocNodeLTR">This is implemented in various concrete sorter child classes like <a class="el" href="classsorting_1_1BubbleSorter__t.html">BubbleSorter</a>, <a class="el" href="classsorting_1_1HeapSorter__t.html">HeapSorter</a> etc. The passed vector is expected to be sorted in place.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>&#x202A;vector to be sorted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classsorting_1_1BubbleSorter__t.html#aa0ae86e1218b9a902646fc359bd43988">sorting::BubbleSorter_t&lt; T &gt;</a>, <a class="el" href="classsorting_1_1SelectionSorter__t.html#ade3f13b1e82775bcea8a108d4cb1d5e6">sorting::SelectionSorter_t&lt; T &gt;</a>, <a class="el" href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">sorting::QuickSorter_t&lt; T &gt;</a>, <a class="el" href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">sorting::MergeSorter_t&lt; T &gt;</a>, <a class="el" href="classsorting_1_1InsertionSorter__t.html#a6ad4d218991cd2b5c5fa9031a9455440">sorting::InsertionSorter_t&lt; T &gt;</a>, and <a class="el" href="classsorting_1_1HeapSorter__t.html#ab112e5c676332b3a663a370c969f12ab">sorting::HeapSorter_t&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/algorithms/sorting/<a class="el" href="sorter_8hpp_source.html">sorter.hpp</a></li>
 </ul>
 </div><!-- contents -->

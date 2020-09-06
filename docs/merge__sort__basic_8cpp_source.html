@@ -84,7 +84,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;int&gt;</a> s = sorting::SorterFactory::getSorter&lt;int&gt;(</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      sorting::SortingAlgorithm::MergeSort);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  s.sort(v);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sort</a>(v);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
@@ -94,7 +94,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;double&gt;</a> s = sorting::SorterFactory::getSorter&lt;double&gt;(</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      sorting::SortingAlgorithm::MergeSort);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  s.sort(v);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sort</a>(v);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;std::string&gt;</a> s =</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      sorting::SorterFactory::getSorter&lt;std::string&gt;(</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          sorting::SortingAlgorithm::MergeSort);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  s.sort(v);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sort</a>(v);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
@@ -121,8 +121,9 @@ $(function() {
 <div class="ttc" id="amerge__sort__basic_8cpp_html_a1b7a8236702cbf3111d997b1c2b64221"><div class="ttname"><a href="merge__sort__basic_8cpp.html#a1b7a8236702cbf3111d997b1c2b64221">sortInts</a></div><div class="ttdeci">void sortInts()</div><div class="ttdoc">Example for sorting an vector of ints.</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort__basic_8cpp_source.html#l00017">merge_sort_basic.cpp:17</a></div></div>
 <div class="ttc" id="amerge__sort__basic_8cpp_html_a293d27f032070f9aed232af0ee3a5c04"><div class="ttname"><a href="merge__sort__basic_8cpp.html#a293d27f032070f9aed232af0ee3a5c04">sortStrings</a></div><div class="ttdeci">void sortStrings()</div><div class="ttdoc">Example for sorting an vector of strings.</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort__basic_8cpp_source.html#l00043">merge_sort_basic.cpp:43</a></div></div>
 <div class="ttc" id="amerge__sort__basic_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="merge__sort__basic_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">driver function</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort__basic_8cpp_source.html#l00057">merge_sort_basic.cpp:57</a></div></div>
+<div class="ttc" id="aclasssorting_1_1Sorter__t_html_a678c820dbe686d9ce840f15f6ddc63bf"><div class="ttname"><a href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sorting::Sorter_t::sort</a></div><div class="ttdeci">virtual void sort(vector&lt; T &gt; &amp;)=0</div><div class="ttdoc">Sort virtual method.</div></div>
 <div class="ttc" id="amerge__sort__basic_8cpp_html_a0d3670167001f10ff95557d7798ae946"><div class="ttname"><a href="merge__sort__basic_8cpp.html#a0d3670167001f10ff95557d7798ae946">sortDoubles</a></div><div class="ttdeci">void sortDoubles()</div><div class="ttdoc">Example for sorting an vector of doubles.</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort__basic_8cpp_source.html#l00030">merge_sort_basic.cpp:30</a></div></div>
-<div class="ttc" id="aclasssorting_1_1Sorter__t_html"><div class="ttname"><a href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="sorter_8hpp_source.html#l00009">sorter.hpp:9</a></div></div>
+<div class="ttc" id="aclasssorting_1_1Sorter__t_html"><div class="ttname"><a href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a></div><div class="ttdoc">Abstract base class for various sorting implementations.</div><div class="ttdef"><b>Definition:</b> <a href="sorter_8hpp_source.html#l00026">sorter.hpp:26</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

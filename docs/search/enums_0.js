@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['heaptype_198',['HeapType',['../heap__type_8hpp.html#a3323bceff3e6a898901853c6a56f223a',1,'heap_type.hpp']]]
+  ['sortingalgorithm_58',['SortingAlgorithm',['../namespacesorting.html#ad308a3a085dbe1d3cd4a495e1a69f916',1,'sorting']]]
 ];
