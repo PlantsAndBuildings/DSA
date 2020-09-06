@@ -39,4 +39,7 @@ var menudata={children:[
 {text:"\u202AAll",url:"functions.html"},
 {text:"\u202AFunctions",url:"functions_func.html"}]}]},
 {text:"\u202AFiles",url:"files.html",children:[
-{text:"\u202AFile List",url:"files.html"}]}]}
+{text:"\u202AFile List",url:"files.html"},
+{text:"\u202AFile Members",url:"globals.html",children:[
+{text:"\u202AAll",url:"globals.html"},
+{text:"\u202AFunctions",url:"globals_func.html"}]}]}]}

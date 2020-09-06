@@ -70,53 +70,58 @@ $(function() {
 <div class="title">heap_sort_basic.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../src/algorithms/sorting/sorter.hpp&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../src/algorithms/sorting/sorter_factory.hpp&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../src/algorithms/sorting/sorting_algorithm.hpp&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils/boost/logging_utils.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;boost/log/trivial.hpp&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> sortInts() {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  std::vector&lt;int&gt; v = {2, 3, 1};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;int&gt;</a> s = sorting::SorterFactory::getSorter&lt;int&gt;(</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      sorting::SortingAlgorithm::HeapSort);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a6cfda2ad239d2d0d0a8441184d57a5a4">sort</a>(v);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> sortDoubles() {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  std::vector&lt;double&gt; v = {3.234, 4.567, 1.03};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;double&gt;</a> s = sorting::SorterFactory::getSorter&lt;double&gt;(</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      sorting::SortingAlgorithm::HeapSort);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a6cfda2ad239d2d0d0a8441184d57a5a4">sort</a>(v);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> sortStrings() {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  std::vector&lt;std::string&gt; v = {<span class="stringliteral">&quot;Robert Plant&quot;</span>, <span class="stringliteral">&quot;Jimmy Page&quot;</span>, <span class="stringliteral">&quot;John Bonham&quot;</span>};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;std::string&gt;</a> s =</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      sorting::SorterFactory::getSorter&lt;std::string&gt;(</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          sorting::SortingAlgorithm::HeapSort);</div>
+<a href="heap__sort__basic_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../src/algorithms/sorting/sorter.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../src/algorithms/sorting/sorter_factory.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../src/algorithms/sorting/sorting_algorithm.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../utils/boost/logging_utils.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;boost/log/trivial.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="heap__sort__basic_8cpp.html#a1b7a8236702cbf3111d997b1c2b64221">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="heap__sort__basic_8cpp.html#a1b7a8236702cbf3111d997b1c2b64221">sortInts</a>() {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::vector&lt;int&gt; v = {2, 3, 1};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;int&gt;</a> s = sorting::SorterFactory::getSorter&lt;int&gt;(</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      sorting::SortingAlgorithm::HeapSort);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a6cfda2ad239d2d0d0a8441184d57a5a4">sort</a>(v);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="heap__sort__basic_8cpp.html#a0d3670167001f10ff95557d7798ae946">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="heap__sort__basic_8cpp.html#a0d3670167001f10ff95557d7798ae946">sortDoubles</a>() {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  std::vector&lt;double&gt; v = {3.234, 4.567, 1.03};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;double&gt;</a> s = sorting::SorterFactory::getSorter&lt;double&gt;(</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      sorting::SortingAlgorithm::HeapSort);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a6cfda2ad239d2d0d0a8441184d57a5a4">sort</a>(v);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">int</span> main() {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  logging::loggerInit(<span class="stringliteral">&quot;INFO&quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  sortInts();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  sortDoubles();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  sortStrings();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="heap__sort__basic_8cpp.html#a293d27f032070f9aed232af0ee3a5c04">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="heap__sort__basic_8cpp.html#a293d27f032070f9aed232af0ee3a5c04">sortStrings</a>() {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  std::vector&lt;std::string&gt; v = {<span class="stringliteral">&quot;Robert Plant&quot;</span>, <span class="stringliteral">&quot;Jimmy Page&quot;</span>, <span class="stringliteral">&quot;John Bonham&quot;</span>};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Initial array: &quot;</span> &lt;&lt; logging::str(v);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classsorting_1_1Sorter__t.html">sorting::Sorter&lt;std::string&gt;</a> s =</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      sorting::SorterFactory::getSorter&lt;std::string&gt;(</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          sorting::SortingAlgorithm::HeapSort);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  s.<a class="code" href="classsorting_1_1Sorter__t.html#a6cfda2ad239d2d0d0a8441184d57a5a4">sort</a>(v);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Final array: &quot;</span> &lt;&lt; logging::str(v);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  sorting::SorterFactory::deleteSorter(s);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="heap__sort__basic_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   57</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="heap__sort__basic_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  logging::loggerInit(<span class="stringliteral">&quot;INFO&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="heap__sort__basic_8cpp.html#a1b7a8236702cbf3111d997b1c2b64221">sortInts</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="heap__sort__basic_8cpp.html#a0d3670167001f10ff95557d7798ae946">sortDoubles</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="heap__sort__basic_8cpp.html#a293d27f032070f9aed232af0ee3a5c04">sortStrings</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aheap__sort__basic_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="heap__sort__basic_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">driver function</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort__basic_8cpp_source.html#l00057">heap_sort_basic.cpp:57</a></div></div>
+<div class="ttc" id="aheap__sort__basic_8cpp_html_a293d27f032070f9aed232af0ee3a5c04"><div class="ttname"><a href="heap__sort__basic_8cpp.html#a293d27f032070f9aed232af0ee3a5c04">sortStrings</a></div><div class="ttdeci">void sortStrings()</div><div class="ttdoc">Example for sorting an vector of strings.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort__basic_8cpp_source.html#l00043">heap_sort_basic.cpp:43</a></div></div>
+<div class="ttc" id="aheap__sort__basic_8cpp_html_a0d3670167001f10ff95557d7798ae946"><div class="ttname"><a href="heap__sort__basic_8cpp.html#a0d3670167001f10ff95557d7798ae946">sortDoubles</a></div><div class="ttdeci">void sortDoubles()</div><div class="ttdoc">Example for sorting an vector of doubles.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort__basic_8cpp_source.html#l00030">heap_sort_basic.cpp:30</a></div></div>
+<div class="ttc" id="aheap__sort__basic_8cpp_html_a1b7a8236702cbf3111d997b1c2b64221"><div class="ttname"><a href="heap__sort__basic_8cpp.html#a1b7a8236702cbf3111d997b1c2b64221">sortInts</a></div><div class="ttdeci">void sortInts()</div><div class="ttdoc">Example for sorting an vector of ints.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort__basic_8cpp_source.html#l00017">heap_sort_basic.cpp:17</a></div></div>
 <div class="ttc" id="aclasssorting_1_1Sorter__t_html"><div class="ttname"><a href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a></div><div class="ttdoc">Abstract base class for various sorting implementations.</div><div class="ttdef"><b>Definition:</b> <a href="sorter_8hpp_source.html#l00025">sorter.hpp:25</a></div></div>
 <div class="ttc" id="aclasssorting_1_1Sorter__t_html_a6cfda2ad239d2d0d0a8441184d57a5a4"><div class="ttname"><a href="classsorting_1_1Sorter__t.html#a6cfda2ad239d2d0d0a8441184d57a5a4">sorting::Sorter_t::sort</a></div><div class="ttdeci">virtual void sort(vector&lt; T &gt; &amp;list)=0</div><div class="ttdoc">Sort virtual method.</div></div>
 <!-- start footer part -->
