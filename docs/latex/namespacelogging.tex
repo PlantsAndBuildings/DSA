@@ -1,0 +1,188 @@
+\hypertarget{namespacelogging}{}\doxysection{logging Namespace Reference}
+\label{namespacelogging}\index{logging@{logging}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacelogging_aa3d6f6c1bafb320e6001fcd6223cd646}{logger\+Init}} ()
+\item 
+void \mbox{\hyperlink{namespacelogging_a733039be02ecdd9d4d6b0ab7144930b4}{logger\+Init}} (const char $\ast$level)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacelogging_a6475f50ac7e014e693026d7994184bcc}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (std\+::vector$<$ T $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a5c072af06dd61a380365969c27b15d3e}{str}} (std\+::vector$<$ int $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_ac161b9fb7888c881559a2d8bdcb0ff8e}{str}} (std\+::vector$<$ float $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a9f0b64f800b0dea88093ac30bc2e8a1d}{str}} (std\+::vector$<$ double $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a98b2089bbbdcf5cba9822c950b374a27}{str}} (std\+::vector$<$ long $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a683656a8cd3fb08fb2afadfcd17da391}{str}} (std\+::vector$<$ long long $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_ab04c14c03c7e0bb6b61fa11970d69a9b}{str}} (std\+::vector$<$ std\+::string $>$ \&vec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelogging_a6475f50ac7e014e693026d7994184bcc}\label{namespacelogging_a6475f50ac7e014e693026d7994184bcc}} 
+\index{logging@{logging}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string logging\+::\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                                            \{}
+\DoxyCodeLine{30   std::ostringstream oss;}
+\DoxyCodeLine{31   oss << \textcolor{stringliteral}{"{}[ "{}};}
+\DoxyCodeLine{32   \textcolor{keywordflow}{if} (!vec.empty()) \{}
+\DoxyCodeLine{33     \textcolor{comment}{// Convert all but the last element to avoid a trailing "{},"{}}}
+\DoxyCodeLine{34     std::copy(vec.begin(), vec.end() -\/ 1, std::ostream\_iterator<T>(oss, \textcolor{stringliteral}{"{}, "{}}));}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{comment}{// Now add the last element with no delimiter}}
+\DoxyCodeLine{37     oss << vec.back();}
+\DoxyCodeLine{38   \}}
+\DoxyCodeLine{39   oss << \textcolor{stringliteral}{"{} ]"{}};}
+\DoxyCodeLine{40   \textcolor{keywordflow}{return} oss.str();}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_aa3d6f6c1bafb320e6001fcd6223cd646}\label{namespacelogging_aa3d6f6c1bafb320e6001fcd6223cd646}} 
+\index{logging@{logging}!loggerInit@{loggerInit}}
+\index{loggerInit@{loggerInit}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{loggerInit()}{loggerInit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void logging\+::logger\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                   \{}
+\DoxyCodeLine{12   boost::log::core::get()-\/>set\_filter(boost::log::trivial::severity >=}
+\DoxyCodeLine{13                                       boost::log::trivial::info);}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_a733039be02ecdd9d4d6b0ab7144930b4}\label{namespacelogging_a733039be02ecdd9d4d6b0ab7144930b4}} 
+\index{logging@{logging}!loggerInit@{loggerInit}}
+\index{loggerInit@{loggerInit}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{loggerInit()}{loggerInit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void logging\+::logger\+Init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                    \{}
+\DoxyCodeLine{17   \textcolor{keywordflow}{if} (!std::string(\textcolor{stringliteral}{"{}DEBUG"{}}).compare(level)) \{}
+\DoxyCodeLine{18     boost::log::core::get()-\/>set\_filter(boost::log::trivial::severity >=}
+\DoxyCodeLine{19                                         boost::log::trivial::debug);}
+\DoxyCodeLine{20   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!std::string(\textcolor{stringliteral}{"{}INFO"{}}).compare(level)) \{}
+\DoxyCodeLine{21     boost::log::core::get()-\/>set\_filter(boost::log::trivial::severity >=}
+\DoxyCodeLine{22                                         boost::log::trivial::info);}
+\DoxyCodeLine{23   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{24     boost::log::core::get()-\/>set\_filter(boost::log::trivial::severity >=}
+\DoxyCodeLine{25                                         boost::log::trivial::info);}
+\DoxyCodeLine{26   \}}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_a9f0b64f800b0dea88093ac30bc2e8a1d}\label{namespacelogging_a9f0b64f800b0dea88093ac30bc2e8a1d}} 
+\index{logging@{logging}!str@{str}}
+\index{str@{str}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily std\+::string logging\+::str (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelogging_a6475f50ac7e014e693026d7994184bcc}{\_\_str\_\_}}(vec); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_ac161b9fb7888c881559a2d8bdcb0ff8e}\label{namespacelogging_ac161b9fb7888c881559a2d8bdcb0ff8e}} 
+\index{logging@{logging}!str@{str}}
+\index{str@{str}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily std\+::string logging\+::str (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelogging_a6475f50ac7e014e693026d7994184bcc}{\_\_str\_\_}}(vec); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_a5c072af06dd61a380365969c27b15d3e}\label{namespacelogging_a5c072af06dd61a380365969c27b15d3e}} 
+\index{logging@{logging}!str@{str}}
+\index{str@{str}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily std\+::string logging\+::str (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelogging_a6475f50ac7e014e693026d7994184bcc}{\_\_str\_\_}}(vec); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_a98b2089bbbdcf5cba9822c950b374a27}\label{namespacelogging_a98b2089bbbdcf5cba9822c950b374a27}} 
+\index{logging@{logging}!str@{str}}
+\index{str@{str}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily std\+::string logging\+::str (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelogging_a6475f50ac7e014e693026d7994184bcc}{\_\_str\_\_}}(vec); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_a683656a8cd3fb08fb2afadfcd17da391}\label{namespacelogging_a683656a8cd3fb08fb2afadfcd17da391}} 
+\index{logging@{logging}!str@{str}}
+\index{str@{str}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily std\+::string logging\+::str (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long long $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelogging_a6475f50ac7e014e693026d7994184bcc}{\_\_str\_\_}}(vec); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelogging_ab04c14c03c7e0bb6b61fa11970d69a9b}\label{namespacelogging_ab04c14c03c7e0bb6b61fa11970d69a9b}} 
+\index{logging@{logging}!str@{str}}
+\index{str@{str}!logging@{logging}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily std\+::string logging\+::str (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file logging\+\_\+utils.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacelogging_a6475f50ac7e014e693026d7994184bcc}{\_\_str\_\_}}(vec); \}}
+
+\end{DoxyCode}

@@ -75,29 +75,30 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classsorting_1_1BubbleSorter__t.html#a41601d03d653794fab2ced9dd3b54ecb">    6</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1BubbleSorter__t.html#a41601d03d653794fab2ced9dd3b54ecb">sorting::BubbleSorter_t&lt;T&gt;::sort</a>(vector&lt;T&gt; &amp;list) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classsorting_1_1BubbleSorter__t.html#aa0ae86e1218b9a902646fc359bd43988">    6</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1BubbleSorter__t.html#aa0ae86e1218b9a902646fc359bd43988">sorting::BubbleSorter_t&lt;T&gt;::sort</a>(vector&lt;T&gt; &amp;list) {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;Sorting vector&lt;T&gt; using bubble sort not implemented!&quot;</span>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1BubbleSorter__t.html">sorting::BubbleSorter_t&lt;T&gt;::sortUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsorting_1_1BubbleSorter__t.html#ab11998602a4779bc61ebf183b94baf14">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1BubbleSorter__t.html#ab11998602a4779bc61ebf183b94baf14">sorting::BubbleSorter_t&lt;T&gt;::sortUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                 <span class="keywordtype">int</span> endIdx) {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = begIdx; i &lt;= endIdx; i++) {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = begIdx; j &lt;= endIdx - 1; j++) {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">if</span> (list[j] &gt; list[j + 1]) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">// swap the values</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        T tmp = list[j];</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        list[j] = list[j + 1];</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        list[j + 1] = tmp;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="comment">// Compare adjacent elements</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <span class="keywordflow">if</span> (list[j] &gt; list[j + 1]) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// Swap the values if they&#39;re in the wrong order</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        T tmp = list[j];</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        list[j] = list[j + 1];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        list[j + 1] = tmp;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssorting_1_1BubbleSorter__t_html_a41601d03d653794fab2ced9dd3b54ecb"><div class="ttname"><a href="classsorting_1_1BubbleSorter__t.html#a41601d03d653794fab2ced9dd3b54ecb">sorting::BubbleSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Sort virtual method.</div><div class="ttdef"><b>Definition:</b> <a href="bubble__sort_8tpp_source.html#l00006">bubble_sort.tpp:6</a></div></div>
-<div class="ttc" id="aclasssorting_1_1BubbleSorter__t_html"><div class="ttname"><a href="classsorting_1_1BubbleSorter__t.html">sorting::BubbleSorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="bubble__sort_8hpp_source.html#l00010">bubble_sort.hpp:10</a></div></div>
+<div class="ttc" id="aclasssorting_1_1BubbleSorter__t_html_aa0ae86e1218b9a902646fc359bd43988"><div class="ttname"><a href="classsorting_1_1BubbleSorter__t.html#aa0ae86e1218b9a902646fc359bd43988">sorting::BubbleSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;list)</div><div class="ttdoc">Implementation of bubble sort for generic type.</div><div class="ttdef"><b>Definition:</b> <a href="bubble__sort_8tpp_source.html#l00006">bubble_sort.tpp:6</a></div></div>
+<div class="ttc" id="aclasssorting_1_1BubbleSorter__t_html_ab11998602a4779bc61ebf183b94baf14"><div class="ttname"><a href="classsorting_1_1BubbleSorter__t.html#ab11998602a4779bc61ebf183b94baf14">sorting::BubbleSorter_t::sortUtilNumeric</a></div><div class="ttdeci">void sortUtilNumeric(vector&lt; T &gt; &amp;, int, int)</div><div class="ttdoc">utility method to sort a vector containing numeric data types using bubble sort</div><div class="ttdef"><b>Definition:</b> <a href="bubble__sort_8tpp_source.html#l00011">bubble_sort.tpp:11</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

@@ -9,8 +9,18 @@ Inheritance diagram for sorting\+::Merge\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}\label{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}} 
+void {\bfseries sort} (vector$<$ T $>$ \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_a4bde5b8bee1a28e76d3e2059400109bb}\label{classsorting_1_1MergeSorter__t_a4bde5b8bee1a28e76d3e2059400109bb}} 
+void {\bfseries sort\+Util\+Numeric} (vector$<$ T $>$ \&, int, int)
+\item 
+\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_aae15aba916d7c3c218acf2c49f0d0c44}\label{classsorting_1_1MergeSorter__t_aae15aba916d7c3c218acf2c49f0d0c44}} 
+void {\bfseries merge\+Util\+Numeric} (vector$<$ T $>$ \&, int, int, int)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -21,42 +31,6 @@ class sorting\+::\+Merge\+Sorter\+\_\+t$<$ T $>$}
 
 Definition at line 10 of file merge\+\_\+sort.\+hpp.
 
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}\label{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}} 
-\index{sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}!sort@{sort}}
-\index{sort@{sort}!sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{sorting\+::\+Merge\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Sort virtual method. 
-
-This is implemented in various concrete sorter child classes like \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}}, \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter}} etc. The passed vector is expected to be sorted in place.
-
-
-\begin{DoxyParams}{Parameters}
-{\em list} & vector to be sorted \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classsorting_1_1Sorter__t_a6cfda2ad239d2d0d0a8441184d57a5a4}{sorting\+::\+Sorter\+\_\+t$<$ T $>$}}.
-
-
-
-Definition at line 4 of file merge\+\_\+sort.\+tpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{4                                                                         \{}
-\DoxyCodeLine{5   LOG\_ERROR << \textcolor{stringliteral}{"{}Sorting vector<T> using merge sort not implemented!"{}};}
-\DoxyCodeLine{6 \}}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

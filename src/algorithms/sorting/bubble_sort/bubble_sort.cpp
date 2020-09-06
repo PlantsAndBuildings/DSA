@@ -1,8 +1,18 @@
+/**
+ * \file bubble_sort.cpp
+ *
+ * Bubble sort implementation for specialized types
+ */
 #include "bubble_sort.hpp"
 #include <iostream>
 
 using sorting::BubbleSorter_t;
 
+/**
+ * \brief sort a vector of floating point numbers using bubble sort
+ *
+ * \param list list to be sorted
+ */
 template <> void BubbleSorter_t<float>::sort(vector<float> &list) {
   if (list.empty())
     return;

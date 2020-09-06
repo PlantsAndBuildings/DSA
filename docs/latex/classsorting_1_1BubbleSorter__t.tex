@@ -1,5 +1,14 @@
 \hypertarget{classsorting_1_1BubbleSorter__t}{}\doxysection{sorting\+::Bubble\+Sorter\+\_\+t$<$ T $>$ Class Template Reference}
 \label{classsorting_1_1BubbleSorter__t}\index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
+
+
+Sorter that implements bubble sort.  
+
+
+
+
+{\ttfamily \#include $<$bubble\+\_\+sort.\+hpp$>$}
+
 Inheritance diagram for sorting\+::Bubble\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,22 +18,38 @@ Inheritance diagram for sorting\+::Bubble\+Sorter\+\_\+t$<$ T $>$\+:\begin{figur
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_a41601d03d653794fab2ced9dd3b54ecb}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort}} (vector$<$ T $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Implementation of bubble sort for generic type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sort\+Util\+Numeric}} (vector$<$ T $>$ \&, int, int)
+\begin{DoxyCompactList}\small\item\em utility method to sort a vector containing numeric data types using bubble sort \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$\newline
 class sorting\+::\+Bubble\+Sorter\+\_\+t$<$ T $>$}
 
+Sorter that implements bubble sort. 
+
+Bubble sort is a popular sorting algorithm which runs in O(\+N$^\wedge$2) time where N represents the length of the array. The idea behind bubble sort is to iterate over an array while comparing adjacent elements and swapping them if they are in the wrong order. The array must be iterated over N times for it to be completely sorted. Please refer to any text on algorithms (preferably Introduction to Algorithms by Cormen et al) for complete details.
+
+This class extends from the \mbox{\hyperlink{classsorting_1_1Sorter__t}{Sorter}} abstract class and implements the sort() pure function.
 
 
-Definition at line 10 of file bubble\+\_\+sort.\+hpp.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 25 of file bubble\+\_\+sort.\+hpp.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_a41601d03d653794fab2ced9dd3b54ecb}\label{classsorting_1_1BubbleSorter__t_a41601d03d653794fab2ced9dd3b54ecb}} 
+\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}\label{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}} 
 \index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sort@{sort}}
 \index{sort@{sort}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{sort()}{sort()}}
@@ -33,18 +58,23 @@ void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sort
 
 
 
-Sort virtual method. 
+Implementation of bubble sort for generic type. 
 
-This is implemented in various concrete sorter child classes like \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}}, \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter}} etc. The passed vector is expected to be sorted in place.
+Please check \mbox{\hyperlink{bubble__sort_8cpp}{bubble\+\_\+sort.\+cpp}} for specializations of this function.
 
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted\\
+\hline
+\end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em list} & vector to be sorted \\
+{\em list} & input list to be sorted \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classsorting_1_1Sorter__t_a6cfda2ad239d2d0d0a8441184d57a5a4}{sorting\+::\+Sorter\+\_\+t$<$ T $>$}}.
+Implements \mbox{\hyperlink{classsorting_1_1Sorter__t}{sorting\+::\+Sorter\+\_\+t$<$ T $>$}}.
 
 
 
@@ -55,6 +85,49 @@ Definition at line 6 of file bubble\+\_\+sort.\+tpp.
 \DoxyCodeLine{6                                                                          \{}
 \DoxyCodeLine{7   LOG\_ERROR << \textcolor{stringliteral}{"{}Sorting vector<T> using bubble sort not implemented!"{}};}
 \DoxyCodeLine{8 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}\label{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}} 
+\index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sortUtilNumeric@{sortUtilNumeric}}
+\index{sortUtilNumeric@{sortUtilNumeric}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sortUtilNumeric()}{sortUtilNumeric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sorter\+\_\+t}}$<$ T $>$\+::sort\+Util\+Numeric (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list,  }\item[{int}]{beg\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+utility method to sort a vector containing numeric data types using bubble sort 
+
+The \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} public method has a number of template specializations present in \mbox{\hyperlink{bubble__sort_8cpp}{bubble\+\_\+sort.cpp}}. All the specializations for numeric data types like {\ttfamily int}, {\ttfamily long}, {\ttfamily float}, {\ttfamily double} etc will have the exact same implementation of bubble sort. This method caters to all such template specializations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & input list to be sorted using bubble sort\\
+\hline
+{\em beg\+Idx} & beginning index for the range of input list that needs to be sorted\\
+\hline
+{\em end\+Idx} & end index for the range of input list that needs to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file bubble\+\_\+sort.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12                                                              \{}
+\DoxyCodeLine{13   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = begIdx; i <= endIdx; i++) \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = begIdx; j <= endIdx -\/ 1; j++) \{}
+\DoxyCodeLine{15       \textcolor{comment}{// Compare adjacent elements}}
+\DoxyCodeLine{16       \textcolor{keywordflow}{if} (list[j] > list[j + 1]) \{}
+\DoxyCodeLine{17         \textcolor{comment}{// Swap the values if they're in the wrong order}}
+\DoxyCodeLine{18         T tmp = list[j];}
+\DoxyCodeLine{19         list[j] = list[j + 1];}
+\DoxyCodeLine{20         list[j + 1] = tmp;}
+\DoxyCodeLine{21       \}}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23   \}}
+\DoxyCodeLine{24 \}}
 
 \end{DoxyCode}
 

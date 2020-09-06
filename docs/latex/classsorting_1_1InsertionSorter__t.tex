@@ -9,8 +9,15 @@ Inheritance diagram for sorting\+::Insertion\+Sorter\+\_\+t$<$ T $>$\+:\begin{fi
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}\label{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}} 
+void {\bfseries sort} (vector$<$ T $>$ \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}\label{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}} 
+void {\bfseries sort\+Util\+Numeric} (vector$<$ T $>$ \&, int, int)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -21,42 +28,6 @@ class sorting\+::\+Insertion\+Sorter\+\_\+t$<$ T $>$}
 
 Definition at line 10 of file insertion\+\_\+sort.\+hpp.
 
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}\label{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}} 
-\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sort@{sort}}
-\index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Sort virtual method. 
-
-This is implemented in various concrete sorter child classes like \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}}, \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter}} etc. The passed vector is expected to be sorted in place.
-
-
-\begin{DoxyParams}{Parameters}
-{\em list} & vector to be sorted \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classsorting_1_1Sorter__t_a6cfda2ad239d2d0d0a8441184d57a5a4}{sorting\+::\+Sorter\+\_\+t$<$ T $>$}}.
-
-
-
-Definition at line 7 of file insertion\+\_\+sort.\+tpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{7                                                       \{}
-\DoxyCodeLine{8   LOG\_ERROR << \textcolor{stringliteral}{"{}Sorting vector<T> using insertion sort not implemented!"{}};}
-\DoxyCodeLine{9 \}}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

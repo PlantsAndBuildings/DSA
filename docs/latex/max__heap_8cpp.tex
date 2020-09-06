@@ -1,0 +1,38 @@
+\hypertarget{max__heap_8cpp}{}\doxysection{examples/max\+\_\+heap.cpp File Reference}
+\label{max__heap_8cpp}\index{examples/max\_heap.cpp@{examples/max\_heap.cpp}}
+{\ttfamily \#include \char`\"{}../src/data\+\_\+structures/heap/heap.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../src/data\+\_\+structures/heap/heap\+\_\+type.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../utils/boost/logging\+\_\+utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$boost/log/trivial.\+hpp$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{max__heap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{max__heap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{max__heap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{max\_heap.cpp@{max\_heap.cpp}!main@{main}}
+\index{main@{main}!max\_heap.cpp@{max\_heap.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file max\+\_\+heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7            \{}
+\DoxyCodeLine{8   \mbox{\hyperlink{namespacelogging_aa3d6f6c1bafb320e6001fcd6223cd646}{logging::loggerInit}}(\textcolor{stringliteral}{"{}DEBUG"{}});}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10   std::vector<int> v = \{1, 2, 3\};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12   \mbox{\hyperlink{classHeap}{Heap<int>}} h(v, \mbox{\hyperlink{heap__type_8hpp_a3323bceff3e6a898901853c6a56f223aa85d67ecdba19460aa7620fa7cb54d507}{HeapType::MaxHeap}});}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}

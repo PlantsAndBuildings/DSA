@@ -78,11 +78,11 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesorting.html">sorting</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>sorting {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsorting_1_1QuickSorter__t.html">   11</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classsorting_1_1QuickSorter__t.html">QuickSorter_t</a> : <span class="keyword">public</span> <a class="code" href="classsorting_1_1Sorter__t.html">Sorter_t</a>&lt;T&gt; {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">sort</a>(vector&lt;T&gt; &amp;);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">void</span> sort(vector&lt;T&gt; &amp;);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">void</span> sortUtilNumeric(vector&lt;T&gt; &amp;, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
@@ -90,12 +90,12 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">using</span> <a class="code" href="classsorting_1_1QuickSorter__t.html">QuickSorter</a> = <a class="code" href="classsorting_1_1QuickSorter__t.html">QuickSorter_t&lt;T&gt;</a> &amp;;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">   21</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">QuickSorter_t&lt;T&gt;::sort</a>(vector&lt;T&gt; &amp;list) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1QuickSorter__t.html">QuickSorter_t&lt;T&gt;::sort</a>(vector&lt;T&gt; &amp;list) {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;Sorting vector&lt;T&gt; using quick sort not implemented!&quot;</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1QuickSorter__t.html">QuickSorter_t&lt;T&gt;::sortUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> QuickSorter_t&lt;T&gt;::sortUtilNumeric(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                       <span class="keywordtype">int</span> endIdx) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">int</span> N = endIdx - begIdx + 1;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (N &lt;= 0 || N == 1)</div>
@@ -146,9 +146,7 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssorting_1_1QuickSorter__t_html_a1d89aabe60e6b0b0b414dae1bc7e64ea"><div class="ttname"><a href="classsorting_1_1QuickSorter__t.html#a1d89aabe60e6b0b0b414dae1bc7e64ea">sorting::QuickSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Sort virtual method.</div><div class="ttdef"><b>Definition:</b> <a href="quick__sort_8hpp_source.html#l00021">quick_sort.hpp:21</a></div></div>
-<div class="ttc" id="anamespacesorting_html"><div class="ttname"><a href="namespacesorting.html">sorting</a></div><div class="ttdoc">Namespace to contain sorters and sorter factory.</div><div class="ttdef"><b>Definition:</b> <a href="bubble__sort_8hpp_source.html#l00008">bubble_sort.hpp:8</a></div></div>
-<div class="ttc" id="aclasssorting_1_1Sorter__t_html"><div class="ttname"><a href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a></div><div class="ttdoc">Abstract base class for various sorting implementations.</div><div class="ttdef"><b>Definition:</b> <a href="sorter_8hpp_source.html#l00025">sorter.hpp:25</a></div></div>
+<div class="ttc" id="aclasssorting_1_1Sorter__t_html"><div class="ttname"><a href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="sorter_8hpp_source.html#l00009">sorter.hpp:9</a></div></div>
 <div class="ttc" id="aclasssorting_1_1QuickSorter__t_html"><div class="ttname"><a href="classsorting_1_1QuickSorter__t.html">sorting::QuickSorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="quick__sort_8hpp_source.html#l00011">quick_sort.hpp:11</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

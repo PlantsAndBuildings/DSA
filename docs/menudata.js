@@ -24,13 +24,6 @@
 */
 var menudata={children:[
 {text:"\u202AMain Page",url:"index.html"},
-{text:"\u202ANamespaces",url:"namespaces.html",children:[
-{text:"\u202ANamespace List",url:"namespaces.html"},
-{text:"\u202ANamespace Members",url:"namespacemembers.html",children:[
-{text:"\u202AAll",url:"namespacemembers.html"},
-{text:"\u202ATypedefs",url:"namespacemembers_type.html"},
-{text:"\u202AEnumerations",url:"namespacemembers_enum.html"},
-{text:"\u202AEnumerator",url:"namespacemembers_eval.html"}]}]},
 {text:"\u202AClasses",url:"annotated.html",children:[
 {text:"\u202AClass List",url:"annotated.html"},
 {text:"\u202AClass Index",url:"classes.html"},

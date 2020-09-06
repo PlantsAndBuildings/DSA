@@ -45,6 +45,75 @@ long long {\bfseries extract\+Top} ()
 \mbox{\Hypertarget{classHeap_a88acb3a350c161422b57479098076eb0}\label{classHeap_a88acb3a350c161422b57479098076eb0}} 
 Heap\+Type {\bfseries type}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHeap_a3e9f63d95149f4457455cc75f6e3f317}\label{classHeap_a3e9f63d95149f4457455cc75f6e3f317}} 
+typedef unsigned int {\bfseries idx\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHeap_aaad337182ad10b61d2eedf9b0f14cd35}\label{classHeap_aaad337182ad10b61d2eedf9b0f14cd35}} 
+void {\bfseries heapify} (unsigned int)
+\item 
+\mbox{\Hypertarget{classHeap_aa441ac4cdf4a4f7f453ece84259a6f05}\label{classHeap_aa441ac4cdf4a4f7f453ece84259a6f05}} 
+void {\bfseries heapify\+Numeric} (unsigned int)
+\item 
+\mbox{\Hypertarget{classHeap_a64a5918663af12f9356d72a98ae25612}\label{classHeap_a64a5918663af12f9356d72a98ae25612}} 
+void {\bfseries build\+Heap} ()
+\item 
+\mbox{\Hypertarget{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}\label{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}} 
+void {\bfseries build\+Heap\+Numeric} ()
+\item 
+\mbox{\Hypertarget{classHeap_af9dba1d55fc52470da90af6cd2c97a11}\label{classHeap_af9dba1d55fc52470da90af6cd2c97a11}} 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries left} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
+\item 
+\mbox{\Hypertarget{classHeap_ad38bf99419b8dadc4992f576e62a56e6}\label{classHeap_ad38bf99419b8dadc4992f576e62a56e6}} 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries right} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
+\item 
+\mbox{\Hypertarget{classHeap_a1675b8708277bec603837605effd5e30}\label{classHeap_a1675b8708277bec603837605effd5e30}} 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries parent} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
+\item 
+\mbox{\Hypertarget{classHeap_a05ba9c60afcb74ad33e1792156104305}\label{classHeap_a05ba9c60afcb74ad33e1792156104305}} 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries find\+Idx\+To\+Be\+Propagated} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
+\item 
+\mbox{\Hypertarget{classHeap_a7f1bf6adc156167979634ad45f224a1b}\label{classHeap_a7f1bf6adc156167979634ad45f224a1b}} 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries find\+Idx\+To\+Be\+Propagated\+For\+Numeric\+Heap} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
+\item 
+\mbox{\Hypertarget{classHeap_af0ded1af29485d70a113fb0ae4d85a40}\label{classHeap_af0ded1af29485d70a113fb0ae4d85a40}} 
+T {\bfseries extract\+Top\+For\+Numeric\+Heap} ()
+\item 
+\mbox{\Hypertarget{classHeap_a5e8a4d1b880aa9a099588fca29081541}\label{classHeap_a5e8a4d1b880aa9a099588fca29081541}} 
+void {\bfseries build\+Heap} ()
+\item 
+\mbox{\Hypertarget{classHeap_a3315a05e70491f1c9932ce49c9065f87}\label{classHeap_a3315a05e70491f1c9932ce49c9065f87}} 
+void {\bfseries build\+Heap} ()
+\item 
+\mbox{\Hypertarget{classHeap_a8948d5305b5e802787cfde6dccf6ebb5}\label{classHeap_a8948d5305b5e802787cfde6dccf6ebb5}} 
+void {\bfseries build\+Heap} ()
+\item 
+\mbox{\Hypertarget{classHeap_ae11689116e2fe1feed11c85ce6df6fd5}\label{classHeap_ae11689116e2fe1feed11c85ce6df6fd5}} 
+void {\bfseries build\+Heap} ()
+\item 
+\mbox{\Hypertarget{classHeap_a69368c1e8ab521430eefb04d25431f51}\label{classHeap_a69368c1e8ab521430eefb04d25431f51}} 
+void {\bfseries build\+Heap} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHeap_aaee776b06ea7198acce4b0608d3f5b33}\label{classHeap_aaee776b06ea7198acce4b0608d3f5b33}} 
+std\+::vector$<$ T $>$ {\bfseries heap}
+\item 
+\mbox{\Hypertarget{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}\label{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}} 
+unsigned int {\bfseries sz}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}\label{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}} 
+static const \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries T\+OP} = 0
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

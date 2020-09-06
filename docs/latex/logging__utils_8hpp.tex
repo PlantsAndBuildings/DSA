@@ -1,0 +1,83 @@
+\hypertarget{logging__utils_8hpp}{}\doxysection{utils/boost/logging\+\_\+utils.hpp File Reference}
+\label{logging__utils_8hpp}\index{utils/boost/logging\_utils.hpp@{utils/boost/logging\_utils.hpp}}
+{\ttfamily \#include $<$boost/log/trivial.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelogging}{logging}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logging__utils_8hpp_af7abc145380f1916838e42f9272aa0f6}{L\+O\+G\+\_\+\+T\+R\+A\+CE}}~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(trace)
+\item 
+\#define \mbox{\hyperlink{logging__utils_8hpp_a6ff63e8955665c4a58b1598f2b07c51a}{L\+O\+G\+\_\+\+D\+E\+B\+UG}}~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(debug)
+\item 
+\#define \mbox{\hyperlink{logging__utils_8hpp_aeb4f36db01bd128c7afeac5889dac311}{L\+O\+G\+\_\+\+I\+N\+FO}}~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(info)
+\item 
+\#define \mbox{\hyperlink{logging__utils_8hpp_aced66975c154ea0e2a8ec3bc818b4e08}{L\+O\+G\+\_\+\+E\+R\+R\+OR}}~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(error)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacelogging_aa3d6f6c1bafb320e6001fcd6223cd646}{logging\+::logger\+Init}} ()
+\item 
+void \mbox{\hyperlink{namespacelogging_a733039be02ecdd9d4d6b0ab7144930b4}{logging\+::logger\+Init}} (const char $\ast$level)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a5c072af06dd61a380365969c27b15d3e}{logging\+::str}} (std\+::vector$<$ int $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_ac161b9fb7888c881559a2d8bdcb0ff8e}{logging\+::str}} (std\+::vector$<$ float $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a9f0b64f800b0dea88093ac30bc2e8a1d}{logging\+::str}} (std\+::vector$<$ double $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a98b2089bbbdcf5cba9822c950b374a27}{logging\+::str}} (std\+::vector$<$ long $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_a683656a8cd3fb08fb2afadfcd17da391}{logging\+::str}} (std\+::vector$<$ long long $>$ \&vec)
+\item 
+std\+::string \mbox{\hyperlink{namespacelogging_ab04c14c03c7e0bb6b61fa11970d69a9b}{logging\+::str}} (std\+::vector$<$ std\+::string $>$ \&vec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logging__utils_8hpp_a6ff63e8955665c4a58b1598f2b07c51a}\label{logging__utils_8hpp_a6ff63e8955665c4a58b1598f2b07c51a}} 
+\index{logging\_utils.hpp@{logging\_utils.hpp}!LOG\_DEBUG@{LOG\_DEBUG}}
+\index{LOG\_DEBUG@{LOG\_DEBUG}!logging\_utils.hpp@{logging\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{LOG\_DEBUG}{LOG\_DEBUG}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+D\+E\+B\+UG~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(debug)}
+
+
+
+Definition at line 9 of file logging\+\_\+utils.\+hpp.
+
+\mbox{\Hypertarget{logging__utils_8hpp_aced66975c154ea0e2a8ec3bc818b4e08}\label{logging__utils_8hpp_aced66975c154ea0e2a8ec3bc818b4e08}} 
+\index{logging\_utils.hpp@{logging\_utils.hpp}!LOG\_ERROR@{LOG\_ERROR}}
+\index{LOG\_ERROR@{LOG\_ERROR}!logging\_utils.hpp@{logging\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{LOG\_ERROR}{LOG\_ERROR}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+R\+R\+OR~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(error)}
+
+
+
+Definition at line 11 of file logging\+\_\+utils.\+hpp.
+
+\mbox{\Hypertarget{logging__utils_8hpp_aeb4f36db01bd128c7afeac5889dac311}\label{logging__utils_8hpp_aeb4f36db01bd128c7afeac5889dac311}} 
+\index{logging\_utils.hpp@{logging\_utils.hpp}!LOG\_INFO@{LOG\_INFO}}
+\index{LOG\_INFO@{LOG\_INFO}!logging\_utils.hpp@{logging\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{LOG\_INFO}{LOG\_INFO}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+I\+N\+FO~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(info)}
+
+
+
+Definition at line 10 of file logging\+\_\+utils.\+hpp.
+
+\mbox{\Hypertarget{logging__utils_8hpp_af7abc145380f1916838e42f9272aa0f6}\label{logging__utils_8hpp_af7abc145380f1916838e42f9272aa0f6}} 
+\index{logging\_utils.hpp@{logging\_utils.hpp}!LOG\_TRACE@{LOG\_TRACE}}
+\index{LOG\_TRACE@{LOG\_TRACE}!logging\_utils.hpp@{logging\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{LOG\_TRACE}{LOG\_TRACE}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+R\+A\+CE~B\+O\+O\+S\+T\+\_\+\+L\+O\+G\+\_\+\+T\+R\+I\+V\+I\+AL(trace)}
+
+
+
+Definition at line 8 of file logging\+\_\+utils.\+hpp.
+

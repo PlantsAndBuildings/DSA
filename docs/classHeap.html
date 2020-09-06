@@ -65,6 +65,10 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classHeap-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Heap&lt; T &gt; Class Template Reference</div>  </div>
@@ -115,6 +119,75 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a88acb3a350c161422b57479098076eb0"><td class="memItemLeft" align="right" valign="top"><a id="a88acb3a350c161422b57479098076eb0"></a>
 HeapType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
 <tr class="separator:a88acb3a350c161422b57479098076eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a3e9f63d95149f4457455cc75f6e3f317"><td class="memItemLeft" align="right" valign="top"><a id="a3e9f63d95149f4457455cc75f6e3f317"></a>
+typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>idx_t</b></td></tr>
+<tr class="separator:a3e9f63d95149f4457455cc75f6e3f317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aaad337182ad10b61d2eedf9b0f14cd35"><td class="memItemLeft" align="right" valign="top"><a id="aaad337182ad10b61d2eedf9b0f14cd35"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>heapify</b> (unsigned int)</td></tr>
+<tr class="separator:aaad337182ad10b61d2eedf9b0f14cd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa441ac4cdf4a4f7f453ece84259a6f05"><td class="memItemLeft" align="right" valign="top"><a id="aa441ac4cdf4a4f7f453ece84259a6f05"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>heapifyNumeric</b> (unsigned int)</td></tr>
+<tr class="separator:aa441ac4cdf4a4f7f453ece84259a6f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a5918663af12f9356d72a98ae25612"><td class="memItemLeft" align="right" valign="top"><a id="a64a5918663af12f9356d72a98ae25612"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>buildHeap</b> ()</td></tr>
+<tr class="separator:a64a5918663af12f9356d72a98ae25612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae49d29fe5f892875a3faa240f4a4d2"><td class="memItemLeft" align="right" valign="top"><a id="aaae49d29fe5f892875a3faa240f4a4d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>buildHeapNumeric</b> ()</td></tr>
+<tr class="separator:aaae49d29fe5f892875a3faa240f4a4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9dba1d55fc52470da90af6cd2c97a11"><td class="memItemLeft" align="right" valign="top"><a id="af9dba1d55fc52470da90af6cd2c97a11"></a>
+<a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> (typename <a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t)</td></tr>
+<tr class="separator:af9dba1d55fc52470da90af6cd2c97a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38bf99419b8dadc4992f576e62a56e6"><td class="memItemLeft" align="right" valign="top"><a id="ad38bf99419b8dadc4992f576e62a56e6"></a>
+<a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> (typename <a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t)</td></tr>
+<tr class="separator:ad38bf99419b8dadc4992f576e62a56e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1675b8708277bec603837605effd5e30"><td class="memItemLeft" align="right" valign="top"><a id="a1675b8708277bec603837605effd5e30"></a>
+<a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b> (typename <a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t)</td></tr>
+<tr class="separator:a1675b8708277bec603837605effd5e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ba9c60afcb74ad33e1792156104305"><td class="memItemLeft" align="right" valign="top"><a id="a05ba9c60afcb74ad33e1792156104305"></a>
+<a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t&#160;</td><td class="memItemRight" valign="bottom"><b>findIdxToBePropagated</b> (typename <a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t)</td></tr>
+<tr class="separator:a05ba9c60afcb74ad33e1792156104305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1bf6adc156167979634ad45f224a1b"><td class="memItemLeft" align="right" valign="top"><a id="a7f1bf6adc156167979634ad45f224a1b"></a>
+<a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t&#160;</td><td class="memItemRight" valign="bottom"><b>findIdxToBePropagatedForNumericHeap</b> (typename <a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t)</td></tr>
+<tr class="separator:a7f1bf6adc156167979634ad45f224a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ded1af29485d70a113fb0ae4d85a40"><td class="memItemLeft" align="right" valign="top"><a id="af0ded1af29485d70a113fb0ae4d85a40"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>extractTopForNumericHeap</b> ()</td></tr>
+<tr class="separator:af0ded1af29485d70a113fb0ae4d85a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8a4d1b880aa9a099588fca29081541"><td class="memItemLeft" align="right" valign="top"><a id="a5e8a4d1b880aa9a099588fca29081541"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>buildHeap</b> ()</td></tr>
+<tr class="separator:a5e8a4d1b880aa9a099588fca29081541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3315a05e70491f1c9932ce49c9065f87"><td class="memItemLeft" align="right" valign="top"><a id="a3315a05e70491f1c9932ce49c9065f87"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>buildHeap</b> ()</td></tr>
+<tr class="separator:a3315a05e70491f1c9932ce49c9065f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8948d5305b5e802787cfde6dccf6ebb5"><td class="memItemLeft" align="right" valign="top"><a id="a8948d5305b5e802787cfde6dccf6ebb5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>buildHeap</b> ()</td></tr>
+<tr class="separator:a8948d5305b5e802787cfde6dccf6ebb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11689116e2fe1feed11c85ce6df6fd5"><td class="memItemLeft" align="right" valign="top"><a id="ae11689116e2fe1feed11c85ce6df6fd5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>buildHeap</b> ()</td></tr>
+<tr class="separator:ae11689116e2fe1feed11c85ce6df6fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69368c1e8ab521430eefb04d25431f51"><td class="memItemLeft" align="right" valign="top"><a id="a69368c1e8ab521430eefb04d25431f51"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>buildHeap</b> ()</td></tr>
+<tr class="separator:a69368c1e8ab521430eefb04d25431f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aaee776b06ea7198acce4b0608d3f5b33"><td class="memItemLeft" align="right" valign="top"><a id="aaee776b06ea7198acce4b0608d3f5b33"></a>
+std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>heap</b></td></tr>
+<tr class="separator:aaee776b06ea7198acce4b0608d3f5b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fdacc05180e5688eeb3239e9b33ebe9"><td class="memItemLeft" align="right" valign="top"><a id="a0fdacc05180e5688eeb3239e9b33ebe9"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>sz</b></td></tr>
+<tr class="separator:a0fdacc05180e5688eeb3239e9b33ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a0e73ea85e67ea7bfa226e9b4f5268dcc"><td class="memItemLeft" align="right" valign="top"><a id="a0e73ea85e67ea7bfa226e9b4f5268dcc"></a>
+static const <a class="el" href="classHeap.html">Heap</a>&lt; T &gt;::idx_t&#160;</td><td class="memItemRight" valign="bottom"><b>TOP</b> = 0</td></tr>
+<tr class="separator:a0e73ea85e67ea7bfa226e9b4f5268dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
