@@ -19,7 +19,17 @@ Inheritance diagram for sorting\+::Bubble\+Sorter\+\_\+t$<$ T $>$\+:\begin{figur
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort}} (vector$<$ T $>$ \&list)
-\begin{DoxyCompactList}\small\item\em Implementation of bubble sort for generic type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementation of bubble sort for generic type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_abb3c294ceb776257c1c4bd3f5ec353ee}{sort}} (vector$<$ float $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_a2f1df27d408b3043147ce8d632b30d56}{sort}} (vector$<$ double $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily double} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aae2d8ac41b4ece055e7908f7dffd7187}{sort}} (vector$<$ int $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily int} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ae3bb8d827fc210509f83c9e2acaf0c76}{sort}} (vector$<$ long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily long} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_a1479552ddaa6c79b71e3332641dcb70f}{sort}} (vector$<$ long long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily long long int} data type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,10 +59,160 @@ Definition at line 25 of file bubble\+\_\+sort.\+hpp.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_a2f1df27d408b3043147ce8d632b30d56}\label{classsorting_1_1BubbleSorter__t_a2f1df27d408b3043147ce8d632b30d56}} 
+\index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sorter\+\_\+t}}$<$ double $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily double} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily double}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file bubble\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                                          \{}
+\DoxyCodeLine{33   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{35   \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sorting::BubbleSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_abb3c294ceb776257c1c4bd3f5ec353ee}\label{classsorting_1_1BubbleSorter__t_abb3c294ceb776257c1c4bd3f5ec353ee}} 
+\index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sorter\+\_\+t}}$<$ float $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ float $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily float} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily float}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file bubble\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                        \{}
+\DoxyCodeLine{18   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sorting::BubbleSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_aae2d8ac41b4ece055e7908f7dffd7187}\label{classsorting_1_1BubbleSorter__t_aae2d8ac41b4ece055e7908f7dffd7187}} 
+\index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sorter\+\_\+t}}$<$ int $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily int} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily int}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file bubble\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                                                    \{}
+\DoxyCodeLine{48   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{50   \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sorting::BubbleSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_ae3bb8d827fc210509f83c9e2acaf0c76}\label{classsorting_1_1BubbleSorter__t_ae3bb8d827fc210509f83c9e2acaf0c76}} 
+\index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sorter\+\_\+t}}$<$ long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily long} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file bubble\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                                                                      \{}
+\DoxyCodeLine{63   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{64     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{65   \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sorting::BubbleSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_a1479552ddaa6c79b71e3332641dcb70f}\label{classsorting_1_1BubbleSorter__t_a1479552ddaa6c79b71e3332641dcb70f}} 
+\index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sorter\+\_\+t}}$<$ long long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}{sort()}} function specialization for {\ttfamily long long int} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long long int}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file bubble\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                    \{}
+\DoxyCodeLine{79   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{80     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{81   \mbox{\hyperlink{classsorting_1_1BubbleSorter__t_ab11998602a4779bc61ebf183b94baf14}{sorting::BubbleSorter\_t<long long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}\label{classsorting_1_1BubbleSorter__t_aa0ae86e1218b9a902646fc359bd43988}} 
 \index{sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}!sort@{sort}}
 \index{sort@{sort}!sorting::BubbleSorter\_t$<$ T $>$@{sorting::BubbleSorter\_t$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{sorting\+::\+Bubble\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 

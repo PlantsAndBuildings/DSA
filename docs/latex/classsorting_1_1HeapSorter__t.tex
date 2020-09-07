@@ -10,7 +10,17 @@ Inheritance diagram for sorting\+::Heap\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a81049b1b2d877ef4c4b330ce9d54e72c}{sort}} (vector$<$ float $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a1b051d56024a50e6563fc45abcc5da5d}{sort}} (vector$<$ double $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily double} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_abcc8d4f745f5f8e0993d5a8b85fb7f61}{sort}} (vector$<$ int $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily int} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_aaaf261b3527f50a4e368c3a8917ad489}{sort}} (vector$<$ long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily long} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a25273020e599623f52853599979705ff}{sort}} (vector$<$ long long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily long long} data type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,10 +40,160 @@ Definition at line 13 of file heap\+\_\+sort.\+hpp.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsorting_1_1HeapSorter__t_a1b051d56024a50e6563fc45abcc5da5d}\label{classsorting_1_1HeapSorter__t_a1b051d56024a50e6563fc45abcc5da5d}} 
+\index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ double $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily double} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily double}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file heap\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                                        \{}
+\DoxyCodeLine{33   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{35   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1HeapSorter__t_a81049b1b2d877ef4c4b330ce9d54e72c}\label{classsorting_1_1HeapSorter__t_a81049b1b2d877ef4c4b330ce9d54e72c}} 
+\index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ float $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ float $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily float} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily float}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file heap\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                      \{}
+\DoxyCodeLine{18   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1HeapSorter__t_abcc8d4f745f5f8e0993d5a8b85fb7f61}\label{classsorting_1_1HeapSorter__t_abcc8d4f745f5f8e0993d5a8b85fb7f61}} 
+\index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ int $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily int} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily int}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file heap\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                                                  \{}
+\DoxyCodeLine{48   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{50   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1HeapSorter__t_aaaf261b3527f50a4e368c3a8917ad489}\label{classsorting_1_1HeapSorter__t_aaaf261b3527f50a4e368c3a8917ad489}} 
+\index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily long} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file heap\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                                                                    \{}
+\DoxyCodeLine{63   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{64     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{65   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1HeapSorter__t_a25273020e599623f52853599979705ff}\label{classsorting_1_1HeapSorter__t_a25273020e599623f52853599979705ff}} 
+\index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ long long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily long long} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file heap\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                  \{}
+\DoxyCodeLine{79   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{80     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{81   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<long long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}\label{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}} 
 \index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}!sort@{sort}}
 \index{sort@{sort}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 

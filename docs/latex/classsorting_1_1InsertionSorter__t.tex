@@ -10,7 +10,17 @@ Inheritance diagram for sorting\+::Insertion\+Sorter\+\_\+t$<$ T $>$\+:\begin{fi
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a8d9f0637b9a6d85f63b75cca053eed28}{sort}} (vector$<$ float $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_ac7d3c1b3d7125d9ea9d2e37ab33b82c9}{sort}} (vector$<$ double $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily double} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_abaf7184c3f3598cd57e60d2dbf5a1452}{sort}} (vector$<$ int $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily int} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_aaaf885cf8026d3efc96574987c9fc8aa}{sort}} (vector$<$ long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily long} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_ae02e23ff571578a3c0f63d4012718519}{sort}} (vector$<$ long long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily long long} data type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,10 +40,161 @@ Definition at line 10 of file insertion\+\_\+sort.\+hpp.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_ac7d3c1b3d7125d9ea9d2e37ab33b82c9}\label{classsorting_1_1InsertionSorter__t_ac7d3c1b3d7125d9ea9d2e37ab33b82c9}} 
+\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ double $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily double} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily double}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file insertion\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                                 \{}
+\DoxyCodeLine{34   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{36   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_a8d9f0637b9a6d85f63b75cca053eed28}\label{classsorting_1_1InsertionSorter__t_a8d9f0637b9a6d85f63b75cca053eed28}} 
+\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ float $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ float $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily float} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily float}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file insertion\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                           \{}
+\DoxyCodeLine{18   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_abaf7184c3f3598cd57e60d2dbf5a1452}\label{classsorting_1_1InsertionSorter__t_abaf7184c3f3598cd57e60d2dbf5a1452}} 
+\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ int $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily int} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily int}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file insertion\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                       \{}
+\DoxyCodeLine{49   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{51   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_aaaf885cf8026d3efc96574987c9fc8aa}\label{classsorting_1_1InsertionSorter__t_aaaf885cf8026d3efc96574987c9fc8aa}} 
+\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily long} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file insertion\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                                         \{}
+\DoxyCodeLine{64   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{66   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_ae02e23ff571578a3c0f63d4012718519}\label{classsorting_1_1InsertionSorter__t_ae02e23ff571578a3c0f63d4012718519}} 
+\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ long long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily long long} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file insertion\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                                                       \{}
+\DoxyCodeLine{80   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{81     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{82   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<long long>::sortUtilNumeric}}(list, 0,}
+\DoxyCodeLine{83                                                          list.size() -\/ 1);}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}\label{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}} 
 \index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sort@{sort}}
 \index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 

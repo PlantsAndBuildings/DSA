@@ -10,7 +10,17 @@ Inheritance diagram for sorting\+::Selection\+Sorter\+\_\+t$<$ T $>$\+:\begin{fi
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_adb735c3e875bd604b0a7104855eff8d3}{sort}} (vector$<$ float $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ac208d7f6e023b3ea56606748571ff95a}{sort}} (vector$<$ double $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily double} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_a7e5e5efd3171ba36ed445915162c28b9}{sort}} (vector$<$ int $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily int} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_affcce489829f695067fd46fe9dbbfe00}{sort}} (vector$<$ long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily long} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_a62b073945c5886c3ab5b63588f5a644d}{sort}} (vector$<$ long long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily long long} data type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,10 +40,161 @@ Definition at line 10 of file selection\+\_\+sort.\+hpp.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsorting_1_1SelectionSorter__t_ac208d7f6e023b3ea56606748571ff95a}\label{classsorting_1_1SelectionSorter__t_ac208d7f6e023b3ea56606748571ff95a}} 
+\index{sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting\+::\+Selection\+Sorter\+\_\+t}}$<$ double $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily double} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily double}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file selection\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                                 \{}
+\DoxyCodeLine{34   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{36   \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting::SelectionSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1SelectionSorter__t_adb735c3e875bd604b0a7104855eff8d3}\label{classsorting_1_1SelectionSorter__t_adb735c3e875bd604b0a7104855eff8d3}} 
+\index{sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting\+::\+Selection\+Sorter\+\_\+t}}$<$ float $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ float $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily float} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily float}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file selection\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                           \{}
+\DoxyCodeLine{18   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting::SelectionSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1SelectionSorter__t_a7e5e5efd3171ba36ed445915162c28b9}\label{classsorting_1_1SelectionSorter__t_a7e5e5efd3171ba36ed445915162c28b9}} 
+\index{sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting\+::\+Selection\+Sorter\+\_\+t}}$<$ int $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily int} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily int}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file selection\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                       \{}
+\DoxyCodeLine{49   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{51   \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting::SelectionSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1SelectionSorter__t_affcce489829f695067fd46fe9dbbfe00}\label{classsorting_1_1SelectionSorter__t_affcce489829f695067fd46fe9dbbfe00}} 
+\index{sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting\+::\+Selection\+Sorter\+\_\+t}}$<$ long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily long} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file selection\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                                         \{}
+\DoxyCodeLine{64   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{66   \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting::SelectionSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1SelectionSorter__t_a62b073945c5886c3ab5b63588f5a644d}\label{classsorting_1_1SelectionSorter__t_a62b073945c5886c3ab5b63588f5a644d}} 
+\index{sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting\+::\+Selection\+Sorter\+\_\+t}}$<$ long long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}{sort()}} function specialization for {\ttfamily long long} data type 
+
+Calls private method sort\+Util\+Numeric()
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file selection\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                                                       \{}
+\DoxyCodeLine{80   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{81     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{82   \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting::SelectionSorter\_t<long long>::sortUtilNumeric}}(list, 0,}
+\DoxyCodeLine{83                                                          list.size() -\/ 1);}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}\label{classsorting_1_1SelectionSorter__t_ade3f13b1e82775bcea8a108d4cb1d5e6}} 
 \index{sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}!sort@{sort}}
 \index{sort@{sort}!sorting::SelectionSorter\_t$<$ T $>$@{sorting::SelectionSorter\_t$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{classsorting_1_1SelectionSorter__t}{sorting\+::\+Selection\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 

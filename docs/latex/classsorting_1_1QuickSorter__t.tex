@@ -19,11 +19,21 @@ Inheritance diagram for sorting\+::Quick\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Implementation of quick sort for generic type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementation of quick sort for generic type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_af1646ea8d1a6614e51996152ed401590}{sort}} (vector$<$ float $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a55abc7ea5bef933d2871019d872106f6}{sort}} (vector$<$ double $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily double} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a69328fd71b2fe7b3d20099adaec30220}{sort}} (vector$<$ int $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily int} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_ad1baa564a203c9b5e197d7be18a05615}{sort}} (vector$<$ long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily long} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_aac3dfc06604220adfe117892d4e3ec81}{sort}} (vector$<$ long long $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily long long} data type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a6ca8eababf2a355ef29520da5d66e987}{sort\+Util\+Numeric}} (vector$<$ T $>$ \&, int, int)
+void \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sort\+Util\+Numeric}} (vector$<$ T $>$ \&, int, int)
 \begin{DoxyCompactList}\small\item\em utility method to sort a vector containing numeric data types using quick sort \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -49,12 +59,162 @@ Definition at line 27 of file quick\+\_\+sort.\+hpp.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsorting_1_1QuickSorter__t_a55abc7ea5bef933d2871019d872106f6}\label{classsorting_1_1QuickSorter__t_a55abc7ea5bef933d2871019d872106f6}} 
+\index{sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ double $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily double} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily double}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file quick\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                                         \{}
+\DoxyCodeLine{33   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{35   \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sorting::QuickSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1QuickSorter__t_af1646ea8d1a6614e51996152ed401590}\label{classsorting_1_1QuickSorter__t_af1646ea8d1a6614e51996152ed401590}} 
+\index{sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ float $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ float $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily float} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily float}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file quick\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                       \{}
+\DoxyCodeLine{18   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sorting::QuickSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1QuickSorter__t_a69328fd71b2fe7b3d20099adaec30220}\label{classsorting_1_1QuickSorter__t_a69328fd71b2fe7b3d20099adaec30220}} 
+\index{sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ int $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily int} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily int}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file quick\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                                                   \{}
+\DoxyCodeLine{48   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{50   \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sorting::QuickSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1QuickSorter__t_ad1baa564a203c9b5e197d7be18a05615}\label{classsorting_1_1QuickSorter__t_ad1baa564a203c9b5e197d7be18a05615}} 
+\index{sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily long} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file quick\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                                                                     \{}
+\DoxyCodeLine{63   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{64     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{65   \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sorting::QuickSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1QuickSorter__t_aac3dfc06604220adfe117892d4e3ec81}\label{classsorting_1_1QuickSorter__t_aac3dfc06604220adfe117892d4e3ec81}} 
+\index{sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ long long $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ long long $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}{sort()}} function specialization for {\ttfamily long long} data type 
+
+Calls private method \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sort\+Util\+Numeric()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector of {\ttfamily long long}s to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file quick\+\_\+sort.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                   \{}
+\DoxyCodeLine{79   \textcolor{keywordflow}{if} (list.empty())}
+\DoxyCodeLine{80     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{81   \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sorting::QuickSorter\_t<long long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}\label{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7e64ea}} 
 \index{sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}!sort@{sort}}
 \index{sort@{sort}!sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -76,23 +236,12 @@ Please check \mbox{\hyperlink{quick__sort_8cpp}{quick\+\_\+sort.\+cpp}} for spec
 
 Implements \mbox{\hyperlink{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}{sorting\+::\+Sorter\+\_\+t$<$ T $>$}}.
 
-
-
-Definition at line 63 of file quick\+\_\+sort.\+hpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{63                                                                  \{}
-\DoxyCodeLine{64   LOG\_ERROR << \textcolor{stringliteral}{"{}Sorting vector<T> using quick sort not implemented!"{}};}
-\DoxyCodeLine{65 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classsorting_1_1QuickSorter__t_a6ca8eababf2a355ef29520da5d66e987}\label{classsorting_1_1QuickSorter__t_a6ca8eababf2a355ef29520da5d66e987}} 
+\mbox{\Hypertarget{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}\label{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}} 
 \index{sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}!sortUtilNumeric@{sortUtilNumeric}}
 \index{sortUtilNumeric@{sortUtilNumeric}!sorting::QuickSorter\_t$<$ T $>$@{sorting::QuickSorter\_t$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{sortUtilNumeric()}{sortUtilNumeric()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classsorting_1_1QuickSorter__t}{sorting\+::\+Quick\+Sorter\+\_\+t}}$<$ T $>$\+::sort\+Util\+Numeric (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list,  }\item[{int}]{beg\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+void Quick\+Sorter\+\_\+t\+::sort\+Util\+Numeric (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list,  }\item[{int}]{beg\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -111,84 +260,96 @@ The \mbox{\hyperlink{classsorting_1_1QuickSorter__t_a1d89aabe60e6b0b0b414dae1bc7
 \end{DoxyParams}
 
 
-Definition at line 68 of file quick\+\_\+sort.\+hpp.
+Definition at line 9 of file quick\+\_\+sort.\+tpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{69                                                    \{}
-\DoxyCodeLine{70   \textcolor{comment}{// N denotes the size of the range that needs to be sorted}}
-\DoxyCodeLine{71   \textcolor{keywordtype}{int} N = endIdx -\/ begIdx + 1;}
+\DoxyCodeLine{10                                                    \{}
+\DoxyCodeLine{11   \textcolor{comment}{// N denotes the size of the range that needs to be sorted}}
+\DoxyCodeLine{12   \textcolor{keywordtype}{int} N = endIdx -\/ begIdx + 1;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14   \textcolor{comment}{// Handle base cases}}
+\DoxyCodeLine{15   \textcolor{keywordflow}{if} (N <= 0 || N == 1)}
+\DoxyCodeLine{16     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18   \textcolor{comment}{// Pivot element is selected randomly from the range. This is some boilerplate}}
+\DoxyCodeLine{19   \textcolor{comment}{// code for generating the pivot randomly}}
+\DoxyCodeLine{20   std::random\_device}
+\DoxyCodeLine{21       rd; \textcolor{comment}{// Will be used to obtain a seed for the random number engine}}
+\DoxyCodeLine{22   std::mt19937 gen(rd()); \textcolor{comment}{// Standard mersenne\_twister\_engine seeded with rd()}}
+\DoxyCodeLine{23   std::uniform\_int\_distribution<> distrib(begIdx, endIdx);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25   \textcolor{comment}{// Select the pivot randomly from the range list[begIdx..endIdx]}}
+\DoxyCodeLine{26   \textcolor{keywordtype}{int} pivotIdx = distrib(gen);}
+\DoxyCodeLine{27   T pivot = list[pivotIdx];}
+\DoxyCodeLine{28   LOG\_DEBUG << \textcolor{stringliteral}{"{}Pivot elem: "{}} << pivot;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30   \textcolor{comment}{// We want to partition the list[begIdx..endIdx] as follows:}}
+\DoxyCodeLine{31   \textcolor{comment}{// 1. list[begIdx .. smallIdx] < pivot}}
+\DoxyCodeLine{32   \textcolor{comment}{// 2. list[smallIdx+1 .. bigIdx -\/ 1] == pivot}}
+\DoxyCodeLine{33   \textcolor{comment}{// 3. list[bigIdx .. endIdx] > pivot}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35   \textcolor{comment}{// Initialize smallIdx and bigIdx}}
+\DoxyCodeLine{36   \textcolor{keywordtype}{int} smallIdx = begIdx -\/ 1;}
+\DoxyCodeLine{37   \textcolor{keywordtype}{int} bigIdx = endIdx + 1;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39   \textcolor{comment}{// We will use idx to iterate over the array range}}
+\DoxyCodeLine{40   \textcolor{keywordtype}{int} idx = begIdx;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \textcolor{comment}{// idx is used to iterate through list[begIdx..endIdx]}}
+\DoxyCodeLine{43   \textcolor{comment}{// At every iteration, we will check whether list[idx] is less than; greater}}
+\DoxyCodeLine{44   \textcolor{comment}{// than; or equal to the pivot element All the list elements within the range}}
+\DoxyCodeLine{45   \textcolor{comment}{// that are less than the pivot element will be moved to the beginning of the}}
+\DoxyCodeLine{46   \textcolor{comment}{// range. Ie. list[begIdx..smallIdx] will contain all the elements in range}}
+\DoxyCodeLine{47   \textcolor{comment}{// smaller than the pivot Similarly, all the list elements within the range}}
+\DoxyCodeLine{48   \textcolor{comment}{// that are greater than the pivot will be moved to the end of the range. Ie.}}
+\DoxyCodeLine{49   \textcolor{comment}{// list[bigIdx..endIdx] will contain all the elements in the range greater}}
+\DoxyCodeLine{50   \textcolor{comment}{// than the pivot list[smallIdx+1..bigIdx-\/1] will contain list elements ==}}
+\DoxyCodeLine{51   \textcolor{comment}{// pivot Once we have achieved the partitioning descibed above, we can run}}
+\DoxyCodeLine{52   \textcolor{comment}{// this method recursively on subranges list[begIdx..smallIdx] and}}
+\DoxyCodeLine{53   \textcolor{comment}{// list[bigIdx..endIdx]}}
+\DoxyCodeLine{54   \textcolor{keywordflow}{while} (bigIdx > smallIdx \&\& bigIdx >= begIdx \&\& smallIdx <= endIdx \&\&}
+\DoxyCodeLine{55          idx < bigIdx) \{}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (list[idx] < pivot) \{}
+\DoxyCodeLine{57       \textcolor{comment}{// swap list[idx] and list[smallIdx + 1]}}
+\DoxyCodeLine{58       T tmp = list[idx];}
+\DoxyCodeLine{59       list[idx] = list[smallIdx + 1];}
+\DoxyCodeLine{60       list[smallIdx + 1] = tmp;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62       \textcolor{comment}{// increment smallIdx}}
+\DoxyCodeLine{63       smallIdx++;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65       \textcolor{comment}{// increment idx}}
+\DoxyCodeLine{66       idx++;}
+\DoxyCodeLine{67     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (list[idx] > pivot) \{}
+\DoxyCodeLine{68       \textcolor{comment}{// swap list[idx] and list[bigIdx -\/ 1]}}
+\DoxyCodeLine{69       T tmp = list[idx];}
+\DoxyCodeLine{70       list[idx] = list[bigIdx -\/ 1];}
+\DoxyCodeLine{71       list[bigIdx -\/ 1] = tmp;}
 \DoxyCodeLine{72 }
-\DoxyCodeLine{73   \textcolor{comment}{// Handle base cases}}
-\DoxyCodeLine{74   \textcolor{keywordflow}{if} (N <= 0 || N == 1)}
-\DoxyCodeLine{75     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77   \textcolor{comment}{// Pivot element is selected randomly from the range. This is some boilerplate}}
-\DoxyCodeLine{78   \textcolor{comment}{// code for generating the pivot randomly}}
-\DoxyCodeLine{79   std::random\_device}
-\DoxyCodeLine{80       rd; \textcolor{comment}{// Will be used to obtain a seed for the random number engine}}
-\DoxyCodeLine{81   std::mt19937 gen(rd()); \textcolor{comment}{// Standard mersenne\_twister\_engine seeded with rd()}}
-\DoxyCodeLine{82   std::uniform\_int\_distribution<> distrib(begIdx, endIdx);}
-\DoxyCodeLine{83 }
-\DoxyCodeLine{84   \textcolor{comment}{// Select the pivot randomly from the range list[begIdx..endIdx]}}
-\DoxyCodeLine{85   \textcolor{keywordtype}{int} pivotIdx = distrib(gen);}
-\DoxyCodeLine{86   T pivot = list[pivotIdx];}
-\DoxyCodeLine{87 }
-\DoxyCodeLine{88   \textcolor{comment}{// We want to partition the list[begIdx..endIdx] as follows:}}
-\DoxyCodeLine{89   \textcolor{comment}{// 1. list[begIdx .. smallIdx] < pivot}}
-\DoxyCodeLine{90   \textcolor{comment}{// 2. list[smallIdx+1 .. bigIdx -\/ 1] == pivot}}
-\DoxyCodeLine{91   \textcolor{comment}{// 3. list[bigIdx .. endIdx] > pivot}}
-\DoxyCodeLine{92 }
-\DoxyCodeLine{93   \textcolor{comment}{// Initialize smallIdx and bigIdx}}
-\DoxyCodeLine{94   \textcolor{keywordtype}{int} smallIdx = begIdx -\/ 1;}
-\DoxyCodeLine{95   \textcolor{keywordtype}{int} bigIdx = endIdx + 1;}
-\DoxyCodeLine{96 }
-\DoxyCodeLine{97   \textcolor{comment}{// We will use idx to iterate over the array range}}
-\DoxyCodeLine{98   \textcolor{keywordtype}{int} idx = begIdx;}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{100   \textcolor{comment}{// idx is used to iterate through list[begIdx..endIdx]}}
-\DoxyCodeLine{101   \textcolor{comment}{// At every iteration, we will check whether list[idx] is less than; greater}}
-\DoxyCodeLine{102   \textcolor{comment}{// than; or equal to the pivot element All the list elements within the range}}
-\DoxyCodeLine{103   \textcolor{comment}{// that are less than the pivot element will be moved to the beginning of the}}
-\DoxyCodeLine{104   \textcolor{comment}{// range. Ie. list[begIdx..smallIdx] will contain all the elements in range}}
-\DoxyCodeLine{105   \textcolor{comment}{// smaller than the pivot Similarly, all the list elements within the range}}
-\DoxyCodeLine{106   \textcolor{comment}{// that are greater than the pivot will be moved to the end of the range. Ie.}}
-\DoxyCodeLine{107   \textcolor{comment}{// list[bigIdx..endIdx] will contain all the elements in the range greater}}
-\DoxyCodeLine{108   \textcolor{comment}{// than the pivot list[smallIdx+1..bigIdx-\/1] will contain list elements ==}}
-\DoxyCodeLine{109   \textcolor{comment}{// pivot Once we have achieved the partitioning descibed above, we can run}}
-\DoxyCodeLine{110   \textcolor{comment}{// this method recursively on subranges list[begIdx..smallIdx] and}}
-\DoxyCodeLine{111   \textcolor{comment}{// list[bigIdx..endIdx]}}
-\DoxyCodeLine{112   \textcolor{keywordflow}{while} (bigIdx > smallIdx \&\& bigIdx >= begIdx \&\& smallIdx <= endIdx \&\&}
-\DoxyCodeLine{113          idx < bigIdx) \{}
-\DoxyCodeLine{114     \textcolor{keywordflow}{if} (list[idx] < pivot) \{}
-\DoxyCodeLine{115       smallIdx++;}
-\DoxyCodeLine{116       idx++;}
-\DoxyCodeLine{117     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (list[idx] > pivot) \{}
-\DoxyCodeLine{118       \textcolor{comment}{// swap list[idx] and list[bigIdx -\/ 1]}}
-\DoxyCodeLine{119       T tmp = list[idx];}
-\DoxyCodeLine{120       list[idx] = list[bigIdx -\/ 1];}
-\DoxyCodeLine{121       list[bigIdx -\/ 1] = tmp;}
-\DoxyCodeLine{122 }
-\DoxyCodeLine{123       \textcolor{comment}{// decrement bigIdx}}
-\DoxyCodeLine{124       bigIdx-\/-\/;}
-\DoxyCodeLine{125     \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{126       \textcolor{comment}{// increment only idx}}
-\DoxyCodeLine{127       idx++;}
-\DoxyCodeLine{128     \}}
-\DoxyCodeLine{129   \}}
-\DoxyCodeLine{130   \textcolor{comment}{// At the end of the above loop:}}
-\DoxyCodeLine{131   \textcolor{comment}{// 1. list[begIdx .. smallIdx] < pivot}}
-\DoxyCodeLine{132   \textcolor{comment}{// 2. list[smallIdx+1 .. bigIdx -\/ 1] == pivot}}
-\DoxyCodeLine{133   \textcolor{comment}{// 3. list[bigIdx .. endIdx] > pivot}}
-\DoxyCodeLine{134 }
-\DoxyCodeLine{135   \textcolor{comment}{// Run quicksort on list[begIdx .. smallIdx] and list[bigIdx .. endIdx]}}
-\DoxyCodeLine{136   this-\/>\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a6ca8eababf2a355ef29520da5d66e987}{sortUtilNumeric}}(list, begIdx, smallIdx);}
-\DoxyCodeLine{137   this-\/>\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a6ca8eababf2a355ef29520da5d66e987}{sortUtilNumeric}}(list, bigIdx, endIdx);}
-\DoxyCodeLine{138 \}}
+\DoxyCodeLine{73       \textcolor{comment}{// decrement bigIdx}}
+\DoxyCodeLine{74       bigIdx-\/-\/;}
+\DoxyCodeLine{75     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{76       \textcolor{comment}{// increment only idx}}
+\DoxyCodeLine{77       idx++;}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79   \}}
+\DoxyCodeLine{80   \textcolor{comment}{// At the end of the above loop:}}
+\DoxyCodeLine{81   \textcolor{comment}{// 1. list[begIdx .. smallIdx] < pivot}}
+\DoxyCodeLine{82   \textcolor{comment}{// 2. list[smallIdx+1 .. bigIdx -\/ 1] == pivot}}
+\DoxyCodeLine{83   \textcolor{comment}{// 3. list[bigIdx .. endIdx] > pivot}}
+\DoxyCodeLine{84   std::vector<T> range(list.begin() + begIdx, list.begin() + endIdx + 1);}
+\DoxyCodeLine{85   LOG\_DEBUG << \textcolor{stringliteral}{"{}Range after partitioning: "{}} << logging::str(range);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87   \textcolor{comment}{// Run quicksort on list[begIdx .. smallIdx] and list[bigIdx .. endIdx]}}
+\DoxyCodeLine{88   this-\/>\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sortUtilNumeric}}(list, begIdx, smallIdx);}
+\DoxyCodeLine{89   this-\/>\mbox{\hyperlink{classsorting_1_1QuickSorter__t_a8ca78e65b7224b29e583b8e8a2b0f279}{sortUtilNumeric}}(list, bigIdx, endIdx);}
+\DoxyCodeLine{90 \}}
 
 \end{DoxyCode}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/algorithms/sorting/quick\+\_\+sort/quick\+\_\+sort.\+hpp\end{DoxyCompactItemize}
+src/algorithms/sorting/quick\+\_\+sort/quick\+\_\+sort.\+hpp\item 
+src/algorithms/sorting/quick\+\_\+sort/quick\+\_\+sort.\+tpp\end{DoxyCompactItemize}

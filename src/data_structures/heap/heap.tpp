@@ -19,8 +19,6 @@ template <typename T> Heap<T>::Heap(std::vector<T> &list) {
   this->heap = std::vector<T>(list);
   this->type = HeapType::MaxHeap;
   this->sz = this->heap.size();
-  LOG_DEBUG << "HeapType: " << this->type;
-  LOG_DEBUG << "Heap Size: " << this->sz;
   buildHeap();
   LOG_DEBUG << "buildHeap() completed: " << logging::str(heap);
 }
@@ -30,8 +28,6 @@ template <typename T> Heap<T>::Heap(std::vector<T> &list, HeapType type) {
   this->heap = std::vector<T>(list);
   this->type = type;
   this->sz = this->heap.size();
-  LOG_DEBUG << "HeapType: " << this->type;
-  LOG_DEBUG << "Heap Size: " << this->sz;
   buildHeap();
   LOG_DEBUG << "buildHeap() completed: " << logging::str(heap);
 }
@@ -52,8 +48,8 @@ inline typename Heap<T>::idx_t Heap<T>::right(typename Heap<T>::idx_t idx) {
 
 template <typename T>
 inline typename Heap<T>::idx_t Heap<T>::parent(typename Heap<T>::idx_t idx) {
-  if (idx == 0)
-    return 0;
+  if (idx == TOP)
+    return TOP;
   return (idx - 1) / 2;
 }
 
@@ -154,7 +150,7 @@ void Heap<T>::heapifyNumeric(typename Heap<T>::idx_t idx) {
   this->heap[idx] = this->heap[idxToBePropagated];
   this->heap[idxToBePropagated] = tmp;
 
-  // Call heapfiy on idxToBePropagated
+  // Call heapify on idxToBePropagated
   heapifyNumeric(idxToBePropagated);
 }
 
@@ -173,7 +169,7 @@ template <typename T> void Heap<T>::buildHeap() {
     for (typename Heap<T>::idx_t idx = (this->sz) / 2; idx > 0; idx--) {
       this->heapify(idx);
     }
-    this->heapify(0);
+    this->heapify(TOP);
   }
 }
 
@@ -182,23 +178,23 @@ template <typename T> void Heap<T>::buildHeapNumeric() {
     for (typename Heap<T>::idx_t idx = (this->sz) / 2; idx > 0; idx--) {
       this->heapifyNumeric(idx);
     }
-    this->heapifyNumeric(0);
+    this->heapifyNumeric(TOP);
   }
 }
 
 template <typename T> T Heap<T>::extractTop() {
   if (!this->empty()) {
-    T ret = this->heap[0];
+    T ret = this->heap[TOP];
 
-    // Move the last element to heap[0]
-    this->heap[0] = this->heap[sz - 1];
+    // Move the last element to top of heap
+    this->heap[TOP] = this->heap[sz - 1];
 
     // reduce size of heap by one
     this->sz--;
     this->heap.pop_back();
 
     // heapify on root node
-    this->heapify(0);
+    this->heapify(TOP);
 
     return ret;
   }
@@ -206,17 +202,17 @@ template <typename T> T Heap<T>::extractTop() {
 
 template <typename T> T Heap<T>::extractTopForNumericHeap() {
   if (!this->empty()) {
-    T ret = this->heap[0];
+    T ret = this->heap[TOP];
 
-    // Move the last element to heap[0]
-    this->heap[0] = this->heap[sz - 1];
+    // Move the last element to top of heap
+    this->heap[TOP] = this->heap[sz - 1];
 
     // reduce size of heap by one
     this->sz--;
     this->heap.pop_back();
 
     // heapify on root node
-    this->heapifyNumeric(0);
+    this->heapifyNumeric(TOP);
 
     return ret;
   }

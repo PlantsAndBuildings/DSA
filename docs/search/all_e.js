@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['top_105',['top',['../classHeap.html#a2da139404a3aff912ae8853fd84c19a6',1,'Heap::top()'],['../classHeap.html#a0e73ea85e67ea7bfa226e9b4f5268dcc',1,'Heap::TOP()']]],
-  ['type_106',['type',['../classHeap.html#a88acb3a350c161422b57479098076eb0',1,'Heap']]]
+  ['_7eheap_58',['~Heap',['../classHeap.html#a7887eec294f679fad13d8226ba7b3a44',1,'Heap']]]
 ];

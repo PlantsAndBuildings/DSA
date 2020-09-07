@@ -1,6 +1,14 @@
 #ifndef HEAP_TYPE_HPP
 #define HEAP_TYPE_HPP
 
-enum HeapType { MaxHeap, MinHeap };
+/**
+ * Enum representing the type of heap
+ */
+enum HeapType {
+  //! Max Heap
+  MaxHeap,
+  //! Min Heap
+  MinHeap
+};
 
 #endif

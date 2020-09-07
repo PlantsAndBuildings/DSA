@@ -70,39 +70,41 @@ $(function() {
 <div class="title">heap.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;heap.hpp&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html">Heap&lt;int&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html">Heap&lt;float&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html">Heap&lt;double&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html">Heap&lt;long&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html">Heap&lt;long long&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">int</span> <a class="code" href="classHeap.html">Heap&lt;int&gt;::extractTop</a>() {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">float</span> <a class="code" href="classHeap.html">Heap&lt;float&gt;::extractTop</a>() {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">double</span> <a class="code" href="classHeap.html">Heap&lt;double&gt;::extractTop</a>() {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">long</span> <a class="code" href="classHeap.html">Heap&lt;long&gt;::extractTop</a>() {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="classHeap.html">Heap&lt;long long&gt;::extractTop</a>() {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<a href="heap_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;heap.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classHeap.html#a5e8a4d1b880aa9a099588fca29081541">   14</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html#a64a5918663af12f9356d72a98ae25612">Heap&lt;int&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classHeap.html#a3315a05e70491f1c9932ce49c9065f87">   22</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html#a64a5918663af12f9356d72a98ae25612">Heap&lt;float&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classHeap.html#a8948d5305b5e802787cfde6dccf6ebb5">   30</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html#a64a5918663af12f9356d72a98ae25612">Heap&lt;double&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classHeap.html#ae11689116e2fe1feed11c85ce6df6fd5">   38</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html#a64a5918663af12f9356d72a98ae25612">Heap&lt;long&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classHeap.html#a69368c1e8ab521430eefb04d25431f51">   46</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">void</span> <a class="code" href="classHeap.html#a64a5918663af12f9356d72a98ae25612">Heap&lt;long long&gt;::buildHeap</a>() { this-&gt;buildHeapNumeric(); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classHeap.html#a468899082cc7fa8a8d582e1642c709aa">   54</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">int</span> <a class="code" href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">Heap&lt;int&gt;::extractTop</a>() {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classHeap.html#a89396a9d08922eab19bbe1c4410d927d">   64</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">float</span> <a class="code" href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">Heap&lt;float&gt;::extractTop</a>() {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classHeap.html#ab62024a5a6cbedb215d82da4ee38b650">   74</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">double</span> <a class="code" href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">Heap&lt;double&gt;::extractTop</a>() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classHeap.html#ad41acd50a0a252adf43e37a685b11847">   84</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">long</span> <a class="code" href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">Heap&lt;long&gt;::extractTop</a>() {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classHeap.html#a6486e34ae4deb0fa5d5fa349894e8d49">   94</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">Heap&lt;long long&gt;::extractTop</a>() {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">return</span> this-&gt;extractTopForNumericHeap();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassHeap_html"><div class="ttname"><a href="classHeap.html">Heap</a></div><div class="ttdef"><b>Definition:</b> <a href="heap_8hpp_source.html#l00007">heap.hpp:7</a></div></div>
+<div class="ttc" id="aclassHeap_html_a64a5918663af12f9356d72a98ae25612"><div class="ttname"><a href="classHeap.html#a64a5918663af12f9356d72a98ae25612">Heap::buildHeap</a></div><div class="ttdeci">void buildHeap()</div><div class="ttdoc">This function initializes the heap from a given input vector when the Heap class is instantiated.</div><div class="ttdef"><b>Definition:</b> <a href="heap_8tpp_source.html#l00167">heap.tpp:167</a></div></div>
+<div class="ttc" id="aclassHeap_html_ace8e7c804fa6bb6175e0665ad108feb8"><div class="ttname"><a href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">Heap::extractTop</a></div><div class="ttdeci">T extractTop()</div><div class="ttdoc">Remove the element at the top of the heap.</div><div class="ttdef"><b>Definition:</b> <a href="heap_8tpp_source.html#l00185">heap.tpp:185</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

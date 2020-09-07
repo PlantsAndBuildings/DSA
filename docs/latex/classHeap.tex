@@ -1,129 +1,911 @@
 \hypertarget{classHeap}{}\doxysection{Heap$<$ T $>$ Class Template Reference}
 \label{classHeap}\index{Heap$<$ T $>$@{Heap$<$ T $>$}}
+
+
+\mbox{\hyperlink{classHeap}{Heap}} data structure.  
+
+
+
+
+{\ttfamily \#include $<$heap.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classHeap_a77be124986fafcfc32d6e20d9228cf6d}\label{classHeap_a77be124986fafcfc32d6e20d9228cf6d}} 
-{\bfseries Heap} (std\+::vector$<$ T $>$ \&)
-\item 
-\mbox{\Hypertarget{classHeap_a982653fa0ef49223fa1b775cca4a3ada}\label{classHeap_a982653fa0ef49223fa1b775cca4a3ada}} 
-{\bfseries Heap} (std\+::vector$<$ T $>$ \&, Heap\+Type)
-\item 
-\mbox{\Hypertarget{classHeap_ac435b6349ffe7f7a8bd8559bd54f10f1}\label{classHeap_ac435b6349ffe7f7a8bd8559bd54f10f1}} 
-unsigned int {\bfseries size} ()
-\item 
-\mbox{\Hypertarget{classHeap_a3ca7c942399a695fc3ac5e93a4ce0322}\label{classHeap_a3ca7c942399a695fc3ac5e93a4ce0322}} 
-void {\bfseries insert} (T \&)
-\item 
-\mbox{\Hypertarget{classHeap_a2da139404a3aff912ae8853fd84c19a6}\label{classHeap_a2da139404a3aff912ae8853fd84c19a6}} 
-T \& {\bfseries top} ()
-\item 
-\mbox{\Hypertarget{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}\label{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}} 
-T {\bfseries extract\+Top} ()
-\item 
-\mbox{\Hypertarget{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}\label{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}} 
-bool {\bfseries empty} ()
-\item 
-\mbox{\Hypertarget{classHeap_a468899082cc7fa8a8d582e1642c709aa}\label{classHeap_a468899082cc7fa8a8d582e1642c709aa}} 
-int {\bfseries extract\+Top} ()
-\item 
-\mbox{\Hypertarget{classHeap_a89396a9d08922eab19bbe1c4410d927d}\label{classHeap_a89396a9d08922eab19bbe1c4410d927d}} 
-float {\bfseries extract\+Top} ()
-\item 
-\mbox{\Hypertarget{classHeap_ab62024a5a6cbedb215d82da4ee38b650}\label{classHeap_ab62024a5a6cbedb215d82da4ee38b650}} 
-double {\bfseries extract\+Top} ()
-\item 
-\mbox{\Hypertarget{classHeap_ad41acd50a0a252adf43e37a685b11847}\label{classHeap_ad41acd50a0a252adf43e37a685b11847}} 
-long {\bfseries extract\+Top} ()
-\item 
-\mbox{\Hypertarget{classHeap_a6486e34ae4deb0fa5d5fa349894e8d49}\label{classHeap_a6486e34ae4deb0fa5d5fa349894e8d49}} 
-long long {\bfseries extract\+Top} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classHeap_ae58ddd11cd62c7c9843558c7cf21590b}{Heap}} ()
+\begin{DoxyCompactList}\small\item\em default \mbox{\hyperlink{classHeap}{Heap}} constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap_a50017459fbe1c7c226c1d6bb18d067f2}{Heap}} (std\+::vector$<$ T $>$ \&list)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap}{Heap}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap_afce3e292c37746df9cd08bebca6d1799}{Heap}} (std\+::vector$<$ T $>$ \&list, Heap\+Type heap\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap}{Heap}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHeap_a7887eec294f679fad13d8226ba7b3a44}\label{classHeap_a7887eec294f679fad13d8226ba7b3a44}} 
+\mbox{\hyperlink{classHeap_a7887eec294f679fad13d8226ba7b3a44}{$\sim$\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classHeap_ac435b6349ffe7f7a8bd8559bd54f10f1}{size}} ()
+\begin{DoxyCompactList}\small\item\em number of elements in the heap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_ae43d12b9c7a42d723e7af3df895e5a1a}{insert}} (T \&elem)
+\begin{DoxyCompactList}\small\item\em Insert a new element into the heap. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classHeap_a2da139404a3aff912ae8853fd84c19a6}{top}} ()
+\begin{DoxyCompactList}\small\item\em View the element at the top of the heap (that is, at the root node) \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Remove the element at the top of the heap. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}{empty}} ()
+\begin{DoxyCompactList}\small\item\em Check if the heap is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHeap_a468899082cc7fa8a8d582e1642c709aa}{extract\+Top}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily int} data type \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classHeap_a89396a9d08922eab19bbe1c4410d927d}{extract\+Top}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classHeap_ab62024a5a6cbedb215d82da4ee38b650}{extract\+Top}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily double} data type \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classHeap_ad41acd50a0a252adf43e37a685b11847}{extract\+Top}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily long} data type \end{DoxyCompactList}\item 
+long long \mbox{\hyperlink{classHeap_a6486e34ae4deb0fa5d5fa349894e8d49}{extract\+Top}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily long long} data type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classHeap_a88acb3a350c161422b57479098076eb0}\label{classHeap_a88acb3a350c161422b57479098076eb0}} 
-Heap\+Type {\bfseries type}
-\end{DoxyCompactItemize}
+Heap\+Type \mbox{\hyperlink{classHeap_a88acb3a350c161422b57479098076eb0}{type}}
+\begin{DoxyCompactList}\small\item\em type of heap (Max Heap or Min Heap) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Types}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classHeap_a3e9f63d95149f4457455cc75f6e3f317}\label{classHeap_a3e9f63d95149f4457455cc75f6e3f317}} 
-typedef unsigned int {\bfseries idx\+\_\+t}
-\end{DoxyCompactItemize}
+typedef unsigned int \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Internal typedef defined for indexes in the {\ttfamily heap} vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classHeap_aaad337182ad10b61d2eedf9b0f14cd35}\label{classHeap_aaad337182ad10b61d2eedf9b0f14cd35}} 
-void {\bfseries heapify} (unsigned int)
-\item 
-\mbox{\Hypertarget{classHeap_aa441ac4cdf4a4f7f453ece84259a6f05}\label{classHeap_aa441ac4cdf4a4f7f453ece84259a6f05}} 
-void {\bfseries heapify\+Numeric} (unsigned int)
-\item 
-\mbox{\Hypertarget{classHeap_a64a5918663af12f9356d72a98ae25612}\label{classHeap_a64a5918663af12f9356d72a98ae25612}} 
-void {\bfseries build\+Heap} ()
-\item 
-\mbox{\Hypertarget{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}\label{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}} 
-void {\bfseries build\+Heap\+Numeric} ()
-\item 
-\mbox{\Hypertarget{classHeap_af9dba1d55fc52470da90af6cd2c97a11}\label{classHeap_af9dba1d55fc52470da90af6cd2c97a11}} 
-\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries left} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
-\item 
-\mbox{\Hypertarget{classHeap_ad38bf99419b8dadc4992f576e62a56e6}\label{classHeap_ad38bf99419b8dadc4992f576e62a56e6}} 
-\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries right} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
-\item 
-\mbox{\Hypertarget{classHeap_a1675b8708277bec603837605effd5e30}\label{classHeap_a1675b8708277bec603837605effd5e30}} 
-\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries parent} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
-\item 
-\mbox{\Hypertarget{classHeap_a05ba9c60afcb74ad33e1792156104305}\label{classHeap_a05ba9c60afcb74ad33e1792156104305}} 
-\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries find\+Idx\+To\+Be\+Propagated} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
-\item 
-\mbox{\Hypertarget{classHeap_a7f1bf6adc156167979634ad45f224a1b}\label{classHeap_a7f1bf6adc156167979634ad45f224a1b}} 
-\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries find\+Idx\+To\+Be\+Propagated\+For\+Numeric\+Heap} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t)
-\item 
+void \mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify}} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} idx)
+\begin{DoxyCompactList}\small\item\em Heapify method to restore the heap property after a node has been modified. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_a665c1dd788b5b10a0b6e6eb2913048ed}{heapify\+Numeric}} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} idx)
+\begin{DoxyCompactList}\small\item\em Heapify method to restore the heap property after a node has been modified. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em This function initializes the heap from a given input vector when the \mbox{\hyperlink{classHeap}{Heap}} class is instantiated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{build\+Heap\+Numeric}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} for numeric data types \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap_ab3203b124d8c5707bebae76b1cc03d25}{left}} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} idx)
+\begin{DoxyCompactList}\small\item\em utility method to get the index of left child for any given node index \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap_a3b06fac9fc1d350a51753fd0abdded78}{right}} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} idx)
+\begin{DoxyCompactList}\small\item\em utility method to get the index of right child for any given node index \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap_a3d492005d15ea5f9c391e639cef36aac}{parent}} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} idx)
+\begin{DoxyCompactList}\small\item\em utility method to get the index of parent node for any given node index \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap_a05ba9c60afcb74ad33e1792156104305}{find\+Idx\+To\+Be\+Propagated}} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em utilty function used by \mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify()}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap_a7f1bf6adc156167979634ad45f224a1b}{find\+Idx\+To\+Be\+Propagated\+For\+Numeric\+Heap}} (typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_a05ba9c60afcb74ad33e1792156104305}{find\+Idx\+To\+Be\+Propagated()}} implementation for numeric types \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHeap_af0ded1af29485d70a113fb0ae4d85a40}\label{classHeap_af0ded1af29485d70a113fb0ae4d85a40}} 
-T {\bfseries extract\+Top\+For\+Numeric\+Heap} ()
-\item 
-\mbox{\Hypertarget{classHeap_a5e8a4d1b880aa9a099588fca29081541}\label{classHeap_a5e8a4d1b880aa9a099588fca29081541}} 
-void {\bfseries build\+Heap} ()
-\item 
-\mbox{\Hypertarget{classHeap_a3315a05e70491f1c9932ce49c9065f87}\label{classHeap_a3315a05e70491f1c9932ce49c9065f87}} 
-void {\bfseries build\+Heap} ()
-\item 
-\mbox{\Hypertarget{classHeap_a8948d5305b5e802787cfde6dccf6ebb5}\label{classHeap_a8948d5305b5e802787cfde6dccf6ebb5}} 
-void {\bfseries build\+Heap} ()
-\item 
-\mbox{\Hypertarget{classHeap_ae11689116e2fe1feed11c85ce6df6fd5}\label{classHeap_ae11689116e2fe1feed11c85ce6df6fd5}} 
-void {\bfseries build\+Heap} ()
-\item 
-\mbox{\Hypertarget{classHeap_a69368c1e8ab521430eefb04d25431f51}\label{classHeap_a69368c1e8ab521430eefb04d25431f51}} 
-void {\bfseries build\+Heap} ()
-\end{DoxyCompactItemize}
+T \mbox{\hyperlink{classHeap_af0ded1af29485d70a113fb0ae4d85a40}{extract\+Top\+For\+Numeric\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} implementation for numeric types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_a5e8a4d1b880aa9a099588fca29081541}{build\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily int} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_a3315a05e70491f1c9932ce49c9065f87}{build\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_a8948d5305b5e802787cfde6dccf6ebb5}{build\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily double} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_ae11689116e2fe1feed11c85ce6df6fd5}{build\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily long} data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeap_a69368c1e8ab521430eefb04d25431f51}{build\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily long long} data type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classHeap_aaee776b06ea7198acce4b0608d3f5b33}\label{classHeap_aaee776b06ea7198acce4b0608d3f5b33}} 
-std\+::vector$<$ T $>$ {\bfseries heap}
-\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}
+\begin{DoxyCompactList}\small\item\em Vector which will store the heap nodes. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}\label{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}} 
-unsigned int {\bfseries sz}
-\end{DoxyCompactItemize}
+unsigned int \mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}}
+\begin{DoxyCompactList}\small\item\em Size of the heap. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}\label{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}} 
-static const \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::idx\+\_\+t {\bfseries T\+OP} = 0
-\end{DoxyCompactItemize}
+static const \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{T\+OP}} = 0
+\begin{DoxyCompactList}\small\item\em constant representing top index of the heap \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$\newline
 class Heap$<$ T $>$}
 
+\mbox{\hyperlink{classHeap}{Heap}} data structure. 
+
+\mbox{\hyperlink{classHeap}{Heap}} is a binary tree based data structure. A complete binary tree is one where all the levels (except perhaps the last) are completely filled and all the nodes are as far left as possible. A heap is a complete binary tree which satisfies the \mbox{\hyperlink{classHeap}{Heap}} Property (defined below).
+
+{\bfseries{\mbox{\hyperlink{classHeap}{Heap}} Property}}\+: A complete binary tree is said to satisfy the heap property if for any node, all the nodes in the subtree rooted at that node are less than the value at that node. In this case the heap is said to be a max heap. Similarly, if for any node, all the nodes in the subtree rooted at that node are greater than the value at that node -\/ then the heap is said to be a min heap.
+
+Heaps are commonly used to implement the heap-\/sort algorithm and priority queues
+
+Even though heaps are logically a nonlinear data structure, our implementation uses a linear vector to store the heap nodes. Each element of the vector represents a node in the heap. An element at position {\ttfamily i} has it\textquotesingle{}s left child at position {\ttfamily 2$\ast$i+1} and right child at {\ttfamily 2$\ast$i+2}. This representation works because heaps are complete binary trees. Of course, this representation is abstracted away from the users of this class.
+
+For complete details about heaps, and how they\textquotesingle{}re represented using arrays/vectors -\/ please refer any standard text on data structures (preferably Introduction to Algorithms by Cormen et al)
 
 
-Definition at line 7 of file heap.\+hpp.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Data type of the elements to be stored in the heap\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}} 
+\end{DoxySeeAlso}
 
+
+Definition at line 40 of file heap.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHeap_ae58ddd11cd62c7c9843558c7cf21590b}\label{classHeap_ae58ddd11cd62c7c9843558c7cf21590b}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap}{Heap}}}
+
+
+
+default \mbox{\hyperlink{classHeap}{Heap}} constructor 
+
+Initializes an empty max-\/heap 
+
+Definition at line 9 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                                     \{}
+\DoxyCodeLine{10   this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}} = std::vector<T>();}
+\DoxyCodeLine{11   this-\/>\mbox{\hyperlink{classHeap_a88acb3a350c161422b57479098076eb0}{type}} = HeapType::MaxHeap;}
+\DoxyCodeLine{12   this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} = 0;}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a50017459fbe1c7c226c1d6bb18d067f2}\label{classHeap_a50017459fbe1c7c226c1d6bb18d067f2}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap}{Heap}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classHeap}{Heap}} constructor. 
+
+Initializes a max-\/heap using the input param {\ttfamily list}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector to be used to initialize the heap \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                       \{}
+\DoxyCodeLine{18   LOG\_DEBUG << \textcolor{stringliteral}{"{}Input list: "{}} << logging::str(list);}
+\DoxyCodeLine{19   this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}} = std::vector<T>(list);}
+\DoxyCodeLine{20   this-\/>\mbox{\hyperlink{classHeap_a88acb3a350c161422b57479098076eb0}{type}} = HeapType::MaxHeap;}
+\DoxyCodeLine{21   this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}.size();}
+\DoxyCodeLine{22   \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{buildHeap}}();}
+\DoxyCodeLine{23   LOG\_DEBUG << \textcolor{stringliteral}{"{}buildHeap() completed: "{}} << logging::str(\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}});}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_afce3e292c37746df9cd08bebca6d1799}\label{classHeap_afce3e292c37746df9cd08bebca6d1799}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap}{Heap}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list,  }\item[{Heap\+Type}]{heap\+Type }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classHeap}{Heap}} constructor. 
+
+Initializes a heap using the input param {\ttfamily list} and heap type {\ttfamily heap\+Type}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector to be used to initialize the heap\\
+\hline
+{\em heap\+Type} & type of heap (Max Heap or Min Heap) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                                                                      \{}
+\DoxyCodeLine{27   LOG\_DEBUG << \textcolor{stringliteral}{"{}Input list: "{}} << logging::str(list);}
+\DoxyCodeLine{28   this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}} = std::vector<T>(list);}
+\DoxyCodeLine{29   this-\/>\mbox{\hyperlink{classHeap_a88acb3a350c161422b57479098076eb0}{type}} = \mbox{\hyperlink{classHeap_a88acb3a350c161422b57479098076eb0}{type}};}
+\DoxyCodeLine{30   this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}.size();}
+\DoxyCodeLine{31   \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{buildHeap}}();}
+\DoxyCodeLine{32   LOG\_DEBUG << \textcolor{stringliteral}{"{}buildHeap() completed: "{}} << logging::str(\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}});}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHeap_a5e8a4d1b880aa9a099588fca29081541}\label{classHeap_a5e8a4d1b880aa9a099588fca29081541}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!buildHeap@{buildHeap}}
+\index{buildHeap@{buildHeap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeap()}{buildHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classHeap}{Heap}}$<$ int $>$\+::build\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily int} data type 
+
+Calls private method \mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{build\+Heap\+Numeric()}} 
+
+Definition at line 14 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{ this-\/>\mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{buildHeapNumeric}}(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a3315a05e70491f1c9932ce49c9065f87}\label{classHeap_a3315a05e70491f1c9932ce49c9065f87}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!buildHeap@{buildHeap}}
+\index{buildHeap@{buildHeap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeap()}{buildHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classHeap}{Heap}}$<$ float $>$\+::build\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily float} data type 
+
+Calls private method \mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{build\+Heap\+Numeric()}} 
+
+Definition at line 22 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{ this-\/>\mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{buildHeapNumeric}}(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a8948d5305b5e802787cfde6dccf6ebb5}\label{classHeap_a8948d5305b5e802787cfde6dccf6ebb5}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!buildHeap@{buildHeap}}
+\index{buildHeap@{buildHeap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeap()}{buildHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classHeap}{Heap}}$<$ double $>$\+::build\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily double} data type 
+
+Calls private method \mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{build\+Heap\+Numeric()}} 
+
+Definition at line 30 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \{ this-\/>\mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{buildHeapNumeric}}(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_ae11689116e2fe1feed11c85ce6df6fd5}\label{classHeap_ae11689116e2fe1feed11c85ce6df6fd5}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!buildHeap@{buildHeap}}
+\index{buildHeap@{buildHeap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeap()}{buildHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classHeap}{Heap}}$<$ long $>$\+::build\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily long} data type 
+
+Calls private method \mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{build\+Heap\+Numeric()}} 
+
+Definition at line 38 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{ this-\/>\mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{buildHeapNumeric}}(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a69368c1e8ab521430eefb04d25431f51}\label{classHeap_a69368c1e8ab521430eefb04d25431f51}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!buildHeap@{buildHeap}}
+\index{buildHeap@{buildHeap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeap()}{buildHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classHeap}{Heap}}$<$ long long $>$\+::build\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} function specialization for {\ttfamily long long} data type 
+
+Calls private method \mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{build\+Heap\+Numeric()}} 
+
+Definition at line 46 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \{ this-\/>\mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{buildHeapNumeric}}(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a64a5918663af12f9356d72a98ae25612}\label{classHeap_a64a5918663af12f9356d72a98ae25612}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!buildHeap@{buildHeap}}
+\index{buildHeap@{buildHeap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeap()}{buildHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::build\+Heap\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function initializes the heap from a given input vector when the \mbox{\hyperlink{classHeap}{Heap}} class is instantiated. 
+
+Called from the \mbox{\hyperlink{classHeap_ae58ddd11cd62c7c9843558c7cf21590b}{Heap\+::\+Heap()}}, Heap\+::\+Heap(std\+::vector), Heap\+::\+Heap(std\+::vector, Heap\+Type) constructors. This function implements the build heap process for a generic type. Please refer to the specialized versions in \mbox{\hyperlink{heap_8cpp}{heap.\+cpp}} for specific implementation for numeric types etc. 
+
+Definition at line 167 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167                                               \{}
+\DoxyCodeLine{168   \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}{empty}}()) \{}
+\DoxyCodeLine{169     \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} idx = (this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}}) / 2; idx > 0; idx-\/-\/) \{}
+\DoxyCodeLine{170       this-\/>\mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify}}(idx);}
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172     this-\/>\mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify}}(\mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}});}
+\DoxyCodeLine{173   \}}
+\DoxyCodeLine{174 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}\label{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!buildHeapNumeric@{buildHeapNumeric}}
+\index{buildHeapNumeric@{buildHeapNumeric}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeapNumeric()}{buildHeapNumeric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::build\+Heap\+Numeric\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} for numeric data types 
+
+Please see specialiations of \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{build\+Heap()}} present in \mbox{\hyperlink{heap_8cpp}{heap.\+cpp}} 
+
+Definition at line 176 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{176                                                      \{}
+\DoxyCodeLine{177   \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}{empty}}()) \{}
+\DoxyCodeLine{178     \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} idx = (this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}}) / 2; idx > 0; idx-\/-\/) \{}
+\DoxyCodeLine{179       this-\/>\mbox{\hyperlink{classHeap_a665c1dd788b5b10a0b6e6eb2913048ed}{heapifyNumeric}}(idx);}
+\DoxyCodeLine{180     \}}
+\DoxyCodeLine{181     this-\/>\mbox{\hyperlink{classHeap_a665c1dd788b5b10a0b6e6eb2913048ed}{heapifyNumeric}}(\mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}});}
+\DoxyCodeLine{182   \}}
+\DoxyCodeLine{183 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}\label{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::empty}
+
+
+
+Check if the heap is empty. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if heap is empty, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{157                                           \{}
+\DoxyCodeLine{158   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} == 0 \&\& this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}.size() == 0;}
+\DoxyCodeLine{159 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a468899082cc7fa8a8d582e1642c709aa}\label{classHeap_a468899082cc7fa8a8d582e1642c709aa}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!extractTop@{extractTop}}
+\index{extractTop@{extractTop}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extractTop()}{extractTop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{classHeap}{Heap}}$<$ int $>$\+::extract\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily int} data type 
+
+Calls private method extract\+Top\+Numeric() 
+
+Definition at line 54 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                       \{}
+\DoxyCodeLine{55   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_af0ded1af29485d70a113fb0ae4d85a40}{extractTopForNumericHeap}}();}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a89396a9d08922eab19bbe1c4410d927d}\label{classHeap_a89396a9d08922eab19bbe1c4410d927d}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!extractTop@{extractTop}}
+\index{extractTop@{extractTop}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extractTop()}{extractTop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily float \mbox{\hyperlink{classHeap}{Heap}}$<$ float $>$\+::extract\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily float} data type 
+
+Calls private method extract\+Top\+Numeric() 
+
+Definition at line 64 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                           \{}
+\DoxyCodeLine{65   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_af0ded1af29485d70a113fb0ae4d85a40}{extractTopForNumericHeap}}();}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_ab62024a5a6cbedb215d82da4ee38b650}\label{classHeap_ab62024a5a6cbedb215d82da4ee38b650}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!extractTop@{extractTop}}
+\index{extractTop@{extractTop}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extractTop()}{extractTop()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{classHeap}{Heap}}$<$ double $>$\+::extract\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily double} data type 
+
+Calls private method extract\+Top\+Numeric() 
+
+Definition at line 74 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                                             \{}
+\DoxyCodeLine{75   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_af0ded1af29485d70a113fb0ae4d85a40}{extractTopForNumericHeap}}();}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_ad41acd50a0a252adf43e37a685b11847}\label{classHeap_ad41acd50a0a252adf43e37a685b11847}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!extractTop@{extractTop}}
+\index{extractTop@{extractTop}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extractTop()}{extractTop()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily long \mbox{\hyperlink{classHeap}{Heap}}$<$ long $>$\+::extract\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily long} data type 
+
+Calls private method extract\+Top\+Numeric() 
+
+Definition at line 84 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                         \{}
+\DoxyCodeLine{85   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_af0ded1af29485d70a113fb0ae4d85a40}{extractTopForNumericHeap}}();}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a6486e34ae4deb0fa5d5fa349894e8d49}\label{classHeap_a6486e34ae4deb0fa5d5fa349894e8d49}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!extractTop@{extractTop}}
+\index{extractTop@{extractTop}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extractTop()}{extractTop()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily long long \mbox{\hyperlink{classHeap}{Heap}}$<$ long long $>$\+::extract\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{extract\+Top()}} function specialization for {\ttfamily long long} data type 
+
+Calls private method extract\+Top\+Numeric() 
+
+Definition at line 94 of file heap.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94                                                   \{}
+\DoxyCodeLine{95   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_af0ded1af29485d70a113fb0ae4d85a40}{extractTopForNumericHeap}}();}
+\DoxyCodeLine{96 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}\label{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!extractTop@{extractTop}}
+\index{extractTop@{extractTop}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extractTop()}{extractTop()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::extract\+Top}
+
+
+
+Remove the element at the top of the heap. 
+
+This is a generic implementation. Specific implementations (eg. for numeric types like {\ttfamily int}, {\ttfamily float} etc) can be found in \mbox{\hyperlink{heap_8cpp}{heap.\+cpp}}
+
+\begin{DoxyReturn}{Returns}
+Value at the top of the heap 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{185                                             \{}
+\DoxyCodeLine{186   \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}{empty}}()) \{}
+\DoxyCodeLine{187     T ret = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[\mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}}];}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189     \textcolor{comment}{// Move the last element to top of heap}}
+\DoxyCodeLine{190     this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[\mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}}] = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} -\/ 1];}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192     \textcolor{comment}{// reduce size of heap by one}}
+\DoxyCodeLine{193     this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}}-\/-\/;}
+\DoxyCodeLine{194     this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}.pop\_back();}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196     \textcolor{comment}{// heapify on root node}}
+\DoxyCodeLine{197     this-\/>\mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify}}(\mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}});}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{200   \}}
+\DoxyCodeLine{201 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a05ba9c60afcb74ad33e1792156104305}\label{classHeap_a05ba9c60afcb74ad33e1792156104305}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!findIdxToBePropagated@{findIdxToBePropagated}}
+\index{findIdxToBePropagated@{findIdxToBePropagated}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{findIdxToBePropagated()}{findIdxToBePropagated()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::find\+Idx\+To\+Be\+Propagated (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+utilty function used by \mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify()}} 
+
+\mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify()}} procedure works by moving a out-\/of-\/place node in the heap down a subtree till it reaches a state where all nodes of the heap satisfy the heap property again. This method compares the node present at index {\ttfamily idx} and it\textquotesingle{}s children; and returns the index of the node having max/min value (depending on whether the heap is a max heap or a min heap). This min/max node must now be propagated to index {\ttfamily idx} (if it already isn\textquotesingle{}t there)
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Node index at which to find the min/max considering its children \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                                         \{}
+\DoxyCodeLine{59   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} lIdx = \mbox{\hyperlink{classHeap_ab3203b124d8c5707bebae76b1cc03d25}{left}}(idx);}
+\DoxyCodeLine{60   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} rIdx = \mbox{\hyperlink{classHeap_a3b06fac9fc1d350a51753fd0abdded78}{right}}(idx);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} idxToBePropagated = idx;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   LOG\_ERROR << \textcolor{stringliteral}{"{}Generic findIdxToBePropagated not implemented"{}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   \textcolor{comment}{// TODO}}
+\DoxyCodeLine{67   \textcolor{comment}{// Handle case for MaxHeap}}
+\DoxyCodeLine{68   \textcolor{comment}{// if (type == HeapType::MaxHeap) \{}}
+\DoxyCodeLine{69   \textcolor{comment}{//   if (lIdx<this-\/>sz \& this-\/>heap[lIdx] > this-\/>heap[idxToBePropagated]) \{}}
+\DoxyCodeLine{70   \textcolor{comment}{//     idxToBePropagated = lIdx;}}
+\DoxyCodeLine{71   \textcolor{comment}{//   \}}}
+\DoxyCodeLine{72   \textcolor{comment}{//   if (rIdx < this-\/>sz \&\& this-\/>heap[rIdx] > this-\/>heap[idxToBePropagated])}}
+\DoxyCodeLine{73   \textcolor{comment}{//   \{}}
+\DoxyCodeLine{74   \textcolor{comment}{//     idxToBePropagated = rIdx;}}
+\DoxyCodeLine{75   \textcolor{comment}{//   \}}}
+\DoxyCodeLine{76   \textcolor{comment}{// \}}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78   \textcolor{comment}{// TODO}}
+\DoxyCodeLine{79   \textcolor{comment}{// Handle case for MinHeap}}
+\DoxyCodeLine{80   \textcolor{comment}{// if (type == HeapType::MinHeap) \{}}
+\DoxyCodeLine{81   \textcolor{comment}{//   if (lIdx < this-\/>sz \&\& this-\/>heap[lIdx] < this-\/>heap[idxToBePropagated])}}
+\DoxyCodeLine{82   \textcolor{comment}{//   \{}}
+\DoxyCodeLine{83   \textcolor{comment}{//     idxToBePropagated = lIdx;}}
+\DoxyCodeLine{84   \textcolor{comment}{//   \}}}
+\DoxyCodeLine{85   \textcolor{comment}{//   if (rIdx < this-\/>sz \&\& this-\/>heap[rIdx] < this-\/>heap[idxToBePropagated])}}
+\DoxyCodeLine{86   \textcolor{comment}{//   \{}}
+\DoxyCodeLine{87   \textcolor{comment}{//     idxToBePropagated = rIdx;}}
+\DoxyCodeLine{88   \textcolor{comment}{//   \}}}
+\DoxyCodeLine{89   \textcolor{comment}{// \}}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   \textcolor{keywordflow}{return} idxToBePropagated;}
+\DoxyCodeLine{92 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a7f1bf6adc156167979634ad45f224a1b}\label{classHeap_a7f1bf6adc156167979634ad45f224a1b}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!findIdxToBePropagatedForNumericHeap@{findIdxToBePropagatedForNumericHeap}}
+\index{findIdxToBePropagatedForNumericHeap@{findIdxToBePropagatedForNumericHeap}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{findIdxToBePropagatedForNumericHeap()}{findIdxToBePropagatedForNumericHeap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::find\+Idx\+To\+Be\+Propagated\+For\+Numeric\+Heap (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classHeap_a05ba9c60afcb74ad33e1792156104305}{find\+Idx\+To\+Be\+Propagated()}} implementation for numeric types 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Node index at which to find the min/max considering its children \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                                       \{}
+\DoxyCodeLine{97   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} lIdx = \mbox{\hyperlink{classHeap_ab3203b124d8c5707bebae76b1cc03d25}{left}}(idx);}
+\DoxyCodeLine{98   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} rIdx = \mbox{\hyperlink{classHeap_a3b06fac9fc1d350a51753fd0abdded78}{right}}(idx);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} idxToBePropagated = idx;}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102   \textcolor{comment}{// Handle case for MaxHeap}}
+\DoxyCodeLine{103   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classHeap_a88acb3a350c161422b57479098076eb0}{type}} == HeapType::MaxHeap) \{}
+\DoxyCodeLine{104     \textcolor{keywordflow}{if} (lIdx<this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} \& this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[lIdx]> this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated]) \{}
+\DoxyCodeLine{105       idxToBePropagated = lIdx;}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107     \textcolor{keywordflow}{if} (rIdx < this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} \&\& this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[rIdx] > this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated]) \{}
+\DoxyCodeLine{108       idxToBePropagated = rIdx;}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110   \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   \textcolor{comment}{// Handle case for MinHeap}}
+\DoxyCodeLine{113   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classHeap_a88acb3a350c161422b57479098076eb0}{type}} == HeapType::MinHeap) \{}
+\DoxyCodeLine{114     \textcolor{keywordflow}{if} (lIdx < this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} \&\& this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[lIdx] < this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated]) \{}
+\DoxyCodeLine{115       idxToBePropagated = lIdx;}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (rIdx < this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}} \&\& this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[rIdx] < this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated]) \{}
+\DoxyCodeLine{118       idxToBePropagated = rIdx;}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120   \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122   \textcolor{keywordflow}{return} idxToBePropagated;}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_af692b26aa051fd64a451987ff8540a14}\label{classHeap_af692b26aa051fd64a451987ff8540a14}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!heapify@{heapify}}
+\index{heapify@{heapify}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{heapify()}{heapify()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::heapify (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Heapify method to restore the heap property after a node has been modified. 
+
+Please refer Introduction to Algorithms by Cormen et al for complete details about heapify. This is an implementation for generic data type. It is used internally by \mbox{\hyperlink{classHeap_a64a5918663af12f9356d72a98ae25612}{Heap\+::build\+Heap}} and \mbox{\hyperlink{classHeap_ace8e7c804fa6bb6175e0665ad108feb8}{Heap\+::extract\+Top}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & heap node to run heapify on \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125                                                                      \{}
+\DoxyCodeLine{126   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} idxToBePropagated = \mbox{\hyperlink{classHeap_a05ba9c60afcb74ad33e1792156104305}{findIdxToBePropagated}}(idx);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128   \textcolor{keywordflow}{if} (idxToBePropagated == idx)}
+\DoxyCodeLine{129     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131   \textcolor{comment}{// Swap value at idx with value at idxToBePropagated}}
+\DoxyCodeLine{132   T tmp = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idx];}
+\DoxyCodeLine{133   this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idx] = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated];}
+\DoxyCodeLine{134   this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated] = tmp;}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   \textcolor{comment}{// Call heapfiy on idxToBePropagated}}
+\DoxyCodeLine{137   \mbox{\hyperlink{classHeap_af692b26aa051fd64a451987ff8540a14}{heapify}}(idxToBePropagated);}
+\DoxyCodeLine{138 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a665c1dd788b5b10a0b6e6eb2913048ed}\label{classHeap_a665c1dd788b5b10a0b6e6eb2913048ed}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!heapifyNumeric@{heapifyNumeric}}
+\index{heapifyNumeric@{heapifyNumeric}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{heapifyNumeric()}{heapifyNumeric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::heapify\+Numeric (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Heapify method to restore the heap property after a node has been modified. 
+
+Please refer Introduction to Algorithms by Cormen et al for complete details about heapify. This is an implementation for numeric data types (ie. {\ttfamily int}s, {\ttfamily float}s etc). It is used internally by \mbox{\hyperlink{classHeap_aaae49d29fe5f892875a3faa240f4a4d2}{Heap\+::build\+Heap\+Numeric}} and Heap\+::extract\+Top\+Numeric.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & heap node to run heapify on \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 141 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141                                                       \{}
+\DoxyCodeLine{142   \textcolor{keyword}{typename} \mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{Heap<T>::idx\_t}} idxToBePropagated =}
+\DoxyCodeLine{143       \mbox{\hyperlink{classHeap_a7f1bf6adc156167979634ad45f224a1b}{findIdxToBePropagatedForNumericHeap}}(idx);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145   \textcolor{keywordflow}{if} (idxToBePropagated == idx)}
+\DoxyCodeLine{146     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148   \textcolor{comment}{// Swap value at idx with value at idxToBePropagated}}
+\DoxyCodeLine{149   T tmp = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idx];}
+\DoxyCodeLine{150   this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idx] = this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated];}
+\DoxyCodeLine{151   this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[idxToBePropagated] = tmp;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153   \textcolor{comment}{// Call heapify on idxToBePropagated}}
+\DoxyCodeLine{154   \mbox{\hyperlink{classHeap_a665c1dd788b5b10a0b6e6eb2913048ed}{heapifyNumeric}}(idxToBePropagated);}
+\DoxyCodeLine{155 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_ae43d12b9c7a42d723e7af3df895e5a1a}\label{classHeap_ae43d12b9c7a42d723e7af3df895e5a1a}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T \&}]{elem }\end{DoxyParamCaption})}
+
+
+
+Insert a new element into the heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & New element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHeap_ab3203b124d8c5707bebae76b1cc03d25}\label{classHeap_ab3203b124d8c5707bebae76b1cc03d25}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!left@{left}}
+\index{left@{left}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{left()}{left()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::left (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+utility method to get the index of left child for any given node index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & index of node whose left child is required\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of left child 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                                                     \{}
+\DoxyCodeLine{41   \textcolor{keywordflow}{return} 2 * idx + 1;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a3d492005d15ea5f9c391e639cef36aac}\label{classHeap_a3d492005d15ea5f9c391e639cef36aac}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!parent@{parent}}
+\index{parent@{parent}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::parent (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+utility method to get the index of parent node for any given node index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & index of node whose parent is required\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of parent node 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                                                       \{}
+\DoxyCodeLine{51   \textcolor{keywordflow}{if} (idx == \mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}})}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}};}
+\DoxyCodeLine{53   \textcolor{keywordflow}{return} (idx -\/ 1) / 2;}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a3b06fac9fc1d350a51753fd0abdded78}\label{classHeap_a3b06fac9fc1d350a51753fd0abdded78}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!right@{right}}
+\index{right@{right}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{right()}{right()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::right (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+utility method to get the index of right child for any given node index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & index of node whose right child is required\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of right child 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                                      \{}
+\DoxyCodeLine{46   \textcolor{keywordflow}{return} 2 * idx + 2;}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_ac435b6349ffe7f7a8bd8559bd54f10f1}\label{classHeap_ac435b6349ffe7f7a8bd8559bd54f10f1}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!size@{size}}
+\index{size@{size}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::\mbox{\hyperlink{classHeap_a3e9f63d95149f4457455cc75f6e3f317}{idx\+\_\+t}} \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::size}
+
+
+
+number of elements in the heap 
+
+\begin{DoxyReturn}{Returns}
+size of heap 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                           \{}
+\DoxyCodeLine{36   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_a0fdacc05180e5688eeb3239e9b33ebe9}{sz}};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHeap_a2da139404a3aff912ae8853fd84c19a6}\label{classHeap_a2da139404a3aff912ae8853fd84c19a6}} 
+\index{Heap$<$ T $>$@{Heap$<$ T $>$}!top@{top}}
+\index{top@{top}!Heap$<$ T $>$@{Heap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classHeap}{Heap}}$<$ T $>$\+::top}
+
+
+
+View the element at the top of the heap (that is, at the root node) 
+
+\begin{DoxyReturn}{Returns}
+value of the root node of the heap 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file heap.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161                                       \{}
+\DoxyCodeLine{162   \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classHeap_a6a834380cd605cb07e89b7cb1fa8abe9}{empty}}())}
+\DoxyCodeLine{163     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classHeap_aaee776b06ea7198acce4b0608d3f5b33}{heap}}[\mbox{\hyperlink{classHeap_a0e73ea85e67ea7bfa226e9b4f5268dcc}{TOP}}];}
+\DoxyCodeLine{164   LOG\_ERROR << \textcolor{stringliteral}{"{}Attempting to call top() on empty heap!"{}};}
+\DoxyCodeLine{165 \}}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

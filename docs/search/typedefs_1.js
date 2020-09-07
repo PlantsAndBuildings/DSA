@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['heapsorter_191',['HeapSorter',['../namespacesorting.html#a2990133fa96b28c156a21efa6206e9bd',1,'sorting']]]
+  ['sorter_112',['Sorter',['../namespacesorting.html#aac47bffab829ac8bce6f28ef93cf91c2',1,'sorting']]]
 ];

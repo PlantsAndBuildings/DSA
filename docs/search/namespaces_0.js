@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sorting_47',['sorting',['../namespacesorting.html',1,'']]]
+  ['sorting_68',['sorting',['../namespacesorting.html',1,'']]]
 ];
