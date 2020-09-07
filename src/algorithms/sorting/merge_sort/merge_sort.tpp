@@ -12,7 +12,7 @@ void sorting::MergeSorter_t<T>::sortUtilNumeric(vector<T> &list, int begIdx,
   if (endIdx <= begIdx)
     return;
 
-  // We want to divide the range[begIdx..endIdx] into two enqual halves:
+  // We want to divide the range[begIdx..endIdx] into two equal halves:
   // list[begIdx..midIdx] and list[midIdx+1..endIdx]
   int midIdx = (begIdx + endIdx) / 2;
 

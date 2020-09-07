@@ -1,5 +1,14 @@
 \hypertarget{classsorting_1_1HeapSorter__t}{}\doxysection{sorting\+::Heap\+Sorter\+\_\+t$<$ T $>$ Class Template Reference}
 \label{classsorting_1_1HeapSorter__t}\index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
+
+
+Sorter that implements heap sort.  
+
+
+
+
+{\ttfamily \#include $<$heap\+\_\+sort.\+hpp$>$}
+
 Inheritance diagram for sorting\+::Heap\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,7 +19,7 @@ Inheritance diagram for sorting\+::Heap\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Implementation of heap sort for generic type. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a81049b1b2d877ef4c4b330ce9d54e72c}{sort}} (vector$<$ float $>$ \&list)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a1b051d56024a50e6563fc45abcc5da5d}{sort}} (vector$<$ double $>$ \&list)
@@ -24,18 +33,28 @@ void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a25273020e599623f52853599979
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}\label{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}} 
-void {\bfseries sort\+Util\+Numeric} (vector$<$ T $>$ \&, int, int)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sort\+Util\+Numeric}} (vector$<$ T $>$ \&, int, int)
+\begin{DoxyCompactList}\small\item\em utility method to sort a vector containing numeric data types using heap sort \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$\newline
 class sorting\+::\+Heap\+Sorter\+\_\+t$<$ T $>$}
 
+Sorter that implements heap sort. 
+
+\mbox{\hyperlink{classHeap}{Heap}} sort is a popular sorting algorithm which runs in O(\+N$\ast$lg(\+N)) time where N represents the length of the array. The idea is to create a \mbox{\hyperlink{classHeap}{Heap}} data structure using the input array. Then repeatedly extract the top of the heap (till it is empty) to obtain the elements in sorted order. Building a heap can be achieved in O(\+N) time. Repeatedly extracting till the heap is empty takes O(\+N$\ast$lg(\+N)) time. Thus the overall time complexity is O(\+N$\ast$lg(\+N)). Please refer to any text on algorithms (preferably Introduction to Algorithms by Cormen et al) for complete details.
+
+This class extends from the \mbox{\hyperlink{classsorting_1_1Sorter__t}{Sorter}} abstract class and implements the \mbox{\hyperlink{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}{sort()}} pure function.
 
 
-Definition at line 13 of file heap\+\_\+sort.\+hpp.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 30 of file heap\+\_\+sort.\+hpp.
 
 
 
@@ -50,7 +69,7 @@ Definition at line 13 of file heap\+\_\+sort.\+hpp.
 
 \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily double} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -66,7 +85,7 @@ Definition at line 32 of file heap\+\_\+sort.\+cpp.
 \DoxyCodeLine{32                                                                        \{}
 \DoxyCodeLine{33   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{34     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{35   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{35   \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sorting::HeapSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
@@ -80,7 +99,7 @@ Definition at line 32 of file heap\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily float} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -96,7 +115,7 @@ Definition at line 17 of file heap\+\_\+sort.\+cpp.
 \DoxyCodeLine{17                                                                      \{}
 \DoxyCodeLine{18   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{19     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sorting::HeapSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{21 \}}
 
 \end{DoxyCode}
@@ -110,7 +129,7 @@ Definition at line 17 of file heap\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily int} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -126,7 +145,7 @@ Definition at line 47 of file heap\+\_\+sort.\+cpp.
 \DoxyCodeLine{47                                                                  \{}
 \DoxyCodeLine{48   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{49     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{50   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{50   \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sorting::HeapSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{51 \}}
 
 \end{DoxyCode}
@@ -140,7 +159,7 @@ Definition at line 47 of file heap\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily long} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -156,7 +175,7 @@ Definition at line 62 of file heap\+\_\+sort.\+cpp.
 \DoxyCodeLine{62                                                                    \{}
 \DoxyCodeLine{63   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{64     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{65   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{65   \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sorting::HeapSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{66 \}}
 
 \end{DoxyCode}
@@ -170,7 +189,7 @@ Definition at line 62 of file heap\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} function specialization for {\ttfamily long long} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -186,7 +205,7 @@ Definition at line 78 of file heap\+\_\+sort.\+cpp.
 \DoxyCodeLine{78                                                                  \{}
 \DoxyCodeLine{79   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{80     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{81   \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting::HeapSorter\_t<long long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{81   \mbox{\hyperlink{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}{sorting::HeapSorter\_t<long long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{82 \}}
 
 \end{DoxyCode}
@@ -195,17 +214,22 @@ Definition at line 78 of file heap\+\_\+sort.\+cpp.
 \index{sort@{sort}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Sort virtual method. 
+Implementation of heap sort for generic type. 
 
-This is implemented in various concrete sorter child classes like \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}}, \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter}} etc. The passed vector is expected to be sorted in place.
+Please check \mbox{\hyperlink{heap__sort_8cpp}{heap\+\_\+sort.\+cpp}} for specializations of this function.
 
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted\\
+\hline
+\end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em list} & vector to be sorted \\
+{\em list} & input list to be sorted \\
 \hline
 \end{DoxyParams}
 
@@ -229,6 +253,45 @@ Definition at line 7 of file heap\+\_\+sort.\+tpp.
 \DoxyCodeLine{15   \textcolor{comment}{//   list[idx-\/-\/] = top;}}
 \DoxyCodeLine{16   \textcolor{comment}{// \}}}
 \DoxyCodeLine{17 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}\label{classsorting_1_1HeapSorter__t_a11c15963a11999d384bccce4395ed1d8}} 
+\index{sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}!sortUtilNumeric@{sortUtilNumeric}}
+\index{sortUtilNumeric@{sortUtilNumeric}!sorting::HeapSorter\_t$<$ T $>$@{sorting::HeapSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sortUtilNumeric()}{sortUtilNumeric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{sorting\+::\+Heap\+Sorter\+\_\+t}}$<$ T $>$\+::sort\+Util\+Numeric (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list,  }\item[{int}]{beg\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+utility method to sort a vector containing numeric data types using heap sort 
+
+The \mbox{\hyperlink{classsorting_1_1HeapSorter__t_ab112e5c676332b3a663a370c969f12ab}{sort()}} public method has a number of template specializations present in \mbox{\hyperlink{heap__sort_8cpp}{heap\+\_\+sort.cpp}}. All the specializations for numeric data types like {\ttfamily int}, {\ttfamily long}, {\ttfamily float}, {\ttfamily double} etc will have the exact same implementation of heap sort. This method caters to all such template specializations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & input list to be sorted using heap sort\\
+\hline
+{\em beg\+Idx} & beginning index for the range of input list that needs to be sorted\\
+\hline
+{\em end\+Idx} & end index for the range of input list that needs to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file heap\+\_\+sort.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                                            \{}
+\DoxyCodeLine{22   \mbox{\hyperlink{classHeap}{Heap<T>}} heap(list);}
+\DoxyCodeLine{23   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} idx = endIdx;}
+\DoxyCodeLine{24   \textcolor{keywordflow}{while} (!heap.empty()) \{}
+\DoxyCodeLine{25     T top = heap.extractTop();}
+\DoxyCodeLine{26     LOG\_DEBUG << \textcolor{stringliteral}{"{}Heap top: "{}} << top;}
+\DoxyCodeLine{27     list[idx-\/-\/] = top;}
+\DoxyCodeLine{28   \}}
+\DoxyCodeLine{29 \}}
 
 \end{DoxyCode}
 

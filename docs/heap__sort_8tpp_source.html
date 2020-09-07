@@ -89,12 +89,12 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1HeapSorter__t.html">sorting::HeapSorter_t&lt;T&gt;::sortUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsorting_1_1HeapSorter__t.html#a11c15963a11999d384bccce4395ed1d8">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1HeapSorter__t.html#a11c15963a11999d384bccce4395ed1d8">sorting::HeapSorter_t&lt;T&gt;::sortUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                               <span class="keywordtype">int</span> endIdx) {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classHeap.html">Heap&lt;T&gt;</a> heap(list);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> idx = endIdx;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">while</span> (!heap.empty()) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    T top = heap.extractTop();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">while</span> (!heap.<a class="code" href="classHeap.html#a6a834380cd605cb07e89b7cb1fa8abe9">empty</a>()) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    T top = heap.<a class="code" href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">extractTop</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    LOG_DEBUG &lt;&lt; <span class="stringliteral">&quot;Heap top: &quot;</span> &lt;&lt; top;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    list[idx--] = top;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
@@ -102,9 +102,11 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html">sorting::HeapSorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8hpp_source.html#l00013">heap_sort.hpp:13</a></div></div>
-<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html_ab112e5c676332b3a663a370c969f12ab"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html#ab112e5c676332b3a663a370c969f12ab">sorting::HeapSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Sort virtual method.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8tpp_source.html#l00007">heap_sort.tpp:7</a></div></div>
+<div class="ttc" id="aclassHeap_html_a6a834380cd605cb07e89b7cb1fa8abe9"><div class="ttname"><a href="classHeap.html#a6a834380cd605cb07e89b7cb1fa8abe9">Heap::empty</a></div><div class="ttdeci">bool empty()</div><div class="ttdoc">Check if the heap is empty.</div><div class="ttdef"><b>Definition:</b> <a href="heap_8tpp_source.html#l00157">heap.tpp:157</a></div></div>
+<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html_ab112e5c676332b3a663a370c969f12ab"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html#ab112e5c676332b3a663a370c969f12ab">sorting::HeapSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Implementation of heap sort for generic type.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8tpp_source.html#l00007">heap_sort.tpp:7</a></div></div>
 <div class="ttc" id="aclassHeap_html"><div class="ttname"><a href="classHeap.html">Heap</a></div><div class="ttdoc">Heap data structure.</div><div class="ttdef"><b>Definition:</b> <a href="heap_8hpp_source.html#l00040">heap.hpp:40</a></div></div>
+<div class="ttc" id="aclassHeap_html_ace8e7c804fa6bb6175e0665ad108feb8"><div class="ttname"><a href="classHeap.html#ace8e7c804fa6bb6175e0665ad108feb8">Heap::extractTop</a></div><div class="ttdeci">T extractTop()</div><div class="ttdoc">Remove the element at the top of the heap.</div><div class="ttdef"><b>Definition:</b> <a href="heap_8tpp_source.html#l00185">heap.tpp:185</a></div></div>
+<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html_a11c15963a11999d384bccce4395ed1d8"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html#a11c15963a11999d384bccce4395ed1d8">sorting::HeapSorter_t::sortUtilNumeric</a></div><div class="ttdeci">void sortUtilNumeric(vector&lt; T &gt; &amp;, int, int)</div><div class="ttdoc">utility method to sort a vector containing numeric data types using heap sort</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8tpp_source.html#l00020">heap_sort.tpp:20</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

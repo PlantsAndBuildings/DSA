@@ -82,25 +82,26 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesorting.html">sorting</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classsorting_1_1HeapSorter__t.html">   13</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classsorting_1_1HeapSorter__t.html">HeapSorter_t</a> : <span class="keyword">public</span> <a class="code" href="classsorting_1_1Sorter__t.html">Sorter_t</a>&lt;T&gt; {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1HeapSorter__t.html#ab112e5c676332b3a663a370c969f12ab">sort</a>(vector&lt;T&gt; &amp;);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">void</span> sortUtilNumeric(vector&lt;T&gt; &amp;, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">using</span> <a class="code" href="classsorting_1_1HeapSorter__t.html">HeapSorter</a> = <a class="code" href="classsorting_1_1HeapSorter__t.html">HeapSorter_t&lt;T&gt;</a> &amp;;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;} <span class="comment">// namespace sorting</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;heap_sort.tpp&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsorting_1_1HeapSorter__t.html">   30</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classsorting_1_1HeapSorter__t.html">HeapSorter_t</a> : <span class="keyword">public</span> <a class="code" href="classsorting_1_1Sorter__t.html">Sorter_t</a>&lt;T&gt; {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1HeapSorter__t.html#ab112e5c676332b3a663a370c969f12ab">sort</a>(vector&lt;T&gt; &amp;);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1HeapSorter__t.html#a11c15963a11999d384bccce4395ed1d8">sortUtilNumeric</a>(vector&lt;T&gt; &amp;, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">using</span> <a class="code" href="classsorting_1_1HeapSorter__t.html">HeapSorter</a> = <a class="code" href="classsorting_1_1HeapSorter__t.html">HeapSorter_t&lt;T&gt;</a> &amp;;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// namespace sorting</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#include &quot;heap_sort.tpp&quot;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacesorting_html"><div class="ttname"><a href="namespacesorting.html">sorting</a></div><div class="ttdoc">Namespace to contain sorters and sorter factory.</div><div class="ttdef"><b>Definition:</b> <a href="bubble__sort_8hpp_source.html#l00008">bubble_sort.hpp:8</a></div></div>
-<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html">sorting::HeapSorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8hpp_source.html#l00013">heap_sort.hpp:13</a></div></div>
-<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html_ab112e5c676332b3a663a370c969f12ab"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html#ab112e5c676332b3a663a370c969f12ab">sorting::HeapSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Sort virtual method.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8tpp_source.html#l00007">heap_sort.tpp:7</a></div></div>
+<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html">sorting::HeapSorter_t</a></div><div class="ttdoc">Sorter that implements heap sort.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8hpp_source.html#l00030">heap_sort.hpp:30</a></div></div>
+<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html_ab112e5c676332b3a663a370c969f12ab"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html#ab112e5c676332b3a663a370c969f12ab">sorting::HeapSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Implementation of heap sort for generic type.</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8tpp_source.html#l00007">heap_sort.tpp:7</a></div></div>
+<div class="ttc" id="aclasssorting_1_1HeapSorter__t_html_a11c15963a11999d384bccce4395ed1d8"><div class="ttname"><a href="classsorting_1_1HeapSorter__t.html#a11c15963a11999d384bccce4395ed1d8">sorting::HeapSorter_t::sortUtilNumeric</a></div><div class="ttdeci">void sortUtilNumeric(vector&lt; T &gt; &amp;, int, int)</div><div class="ttdoc">utility method to sort a vector containing numeric data types using heap sort</div><div class="ttdef"><b>Definition:</b> <a href="heap__sort_8tpp_source.html#l00020">heap_sort.tpp:20</a></div></div>
 <div class="ttc" id="aclasssorting_1_1Sorter__t_html"><div class="ttname"><a href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a></div><div class="ttdoc">Abstract base class for various sorting implementations.</div><div class="ttdef"><b>Definition:</b> <a href="sorter_8hpp_source.html#l00026">sorter.hpp:26</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
