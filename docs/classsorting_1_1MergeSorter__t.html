@@ -74,6 +74,11 @@ $(function() {
 <div class="title">sorting::MergeSorter_t&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>&#x202A;Sorter that implements merge sort.  
+ <a href="classsorting_1_1MergeSorter__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="merge__sort_8hpp_source.html">merge_sort.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sorting::MergeSorter_t&lt; T &gt;:</div>
 <div class="dyncontent">
@@ -87,25 +92,129 @@ Inheritance diagram for sorting::MergeSorter_t&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ff5d6783c66f714fdc3ce0ec46b4aba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">sort</a> (vector&lt; T &gt; &amp;)</td></tr>
-<tr class="memdesc:a0ff5d6783c66f714fdc3ce0ec46b4aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Sort virtual method.  <a href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">More...</a><br /></td></tr>
+<tr class="memdesc:a0ff5d6783c66f714fdc3ce0ec46b4aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Implementation of merge sort for generic type.  <a href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">More...</a><br /></td></tr>
 <tr class="separator:a0ff5d6783c66f714fdc3ce0ec46b4aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a4bde5b8bee1a28e76d3e2059400109bb"><td class="memItemLeft" align="right" valign="top"><a id="a4bde5b8bee1a28e76d3e2059400109bb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sortUtilNumeric</b> (vector&lt; T &gt; &amp;, int, int)</td></tr>
-<tr class="separator:a4bde5b8bee1a28e76d3e2059400109bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae15aba916d7c3c218acf2c49f0d0c44"><td class="memItemLeft" align="right" valign="top"><a id="aae15aba916d7c3c218acf2c49f0d0c44"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>mergeUtilNumeric</b> (vector&lt; T &gt; &amp;, int, int, int)</td></tr>
-<tr class="separator:aae15aba916d7c3c218acf2c49f0d0c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb2caef0542ecba25d11be6e8c4afea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sortUtilNumeric</a> (vector&lt; T &gt; &amp;list, int begIdx, int endIdx)</td></tr>
+<tr class="memdesc:a7fb2caef0542ecba25d11be6e8c4afea"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;utility method to sort a vector containing numeric data types using merge sort  <a href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">More...</a><br /></td></tr>
+<tr class="separator:a7fb2caef0542ecba25d11be6e8c4afea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17e1acecdbe1ef4dd2b4e95579304e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">mergeUtilNumeric</a> (vector&lt; T &gt; &amp;list, int begIdx, int midIdx, int endIdx)</td></tr>
+<tr class="memdesc:aa17e1acecdbe1ef4dd2b4e95579304e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;utility method for merging two sorted arrays containing nuric data  <a href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">More...</a><br /></td></tr>
+<tr class="separator:aa17e1acecdbe1ef4dd2b4e95579304e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class sorting::MergeSorter_t&lt; T &gt;</h3>
 
+<p class="DocNodeLTR">Sorter that implements merge sort. </p>
+<p class="DocNodeLTR">Merge sort is a popular sorting algorithm which runs in O(N*lg(N)) time where N represents the length of the array. The idea is that merging two already sorted arrays can be done in linear time as follows: Compare the first elements of both arrays and remove whichever one is smallest and add it to the result array. Repeat this till both arrays are empty. In mergesort, we leverage this linear time merge subroutine. We divide our input array into two halves and recursively call merge sort on each half. Then we use the merge subroutine to merge both halves. Therefore, T(N) = 2*T(N/2) + O(N). This recurrence can be solved to give the overall time complexity of mergesort as O(N*lg(N)). Please refer to any text on algorithms (preferably Introduction to Algorithms by Cormen et al) for complete details.</p>
+<p class="DocNodeLTR">This class extends from the <a class="el" href="classsorting_1_1Sorter__t.html">Sorter</a> abstract class and implements the <a class="el" href="classsorting_1_1Sorter__t.html#a678c820dbe686d9ce840f15f6ddc63bf">sort()</a> pure function.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>&#x202A;type of data to be sorted </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="merge__sort_8hpp_source.html#l00010">10</a> of file <a class="el" href="merge__sort_8hpp_source.html">merge_sort.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="merge__sort_8hpp_source.html#l00030">30</a> of file <a class="el" href="merge__sort_8hpp_source.html">merge_sort.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa17e1acecdbe1ef4dd2b4e95579304e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17e1acecdbe1ef4dd2b4e95579304e4">&#9670;&nbsp;</a></span>mergeUtilNumeric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t</a>&lt; T &gt;::mergeUtilNumeric </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>begIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>midIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIdx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&#x202A;utility method for merging two sorted arrays containing nuric data </p>
+<p class="DocNodeLTR">As noted in the description of the <a class="el" href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">sort()</a> method, merge sort algorithm relies on the fact that two sorted arrays can be merged in linear time. This method implements that merge subroutine for numeric types. This method is called to merge the sorted ranges list[begIdx..midIdx] and list[midIdx+1..endIdx]</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>&#x202A;vector to be sorted</td></tr>
+    <tr><td class="paramname">begIdx</td><td>&#x202A;beginning of first range</td></tr>
+    <tr><td class="paramname">midIdx</td><td>&#x202A;end of first range. Second range starts from midIdx+1</td></tr>
+    <tr><td class="paramname">endIdx</td><td>&#x202A;end of second range </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="merge__sort_8tpp_source.html#l00030">30</a> of file <a class="el" href="merge__sort_8tpp_source.html">merge_sort.tpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// Copy out the ranges into vectors first and last</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  vector&lt;T&gt; first(list.begin() + begIdx, list.begin() + midIdx + 1);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  vector&lt;T&gt; last(list.begin() + midIdx + 1, list.begin() + endIdx + 1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// firstIdx will iterate over first</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> firstIdx = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// lastIdx will iterate over last</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">int</span> lastIdx = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// idx will be used to index the result range</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">int</span> idx = begIdx;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">while</span> (firstIdx &lt; first.size() &amp;&amp; lastIdx &lt; last.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Compare values present at first[firstIdx] and last[lastIdx]</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Place the smaller value at list[idx]</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (first[firstIdx] &lt; last[lastIdx]) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      list[idx++] = first[firstIdx++];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      list[idx++] = last[lastIdx++];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">while</span> (firstIdx &lt; first.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    list[idx++] = first[firstIdx++];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">while</span> (lastIdx &lt; last.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    list[idx++] = last[lastIdx++];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a0ff5d6783c66f714fdc3ce0ec46b4aba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ff5d6783c66f714fdc3ce0ec46b4aba">&#9670;&nbsp;</a></span>sort()</h2>
 
@@ -121,7 +230,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">void <a class="el" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t</a>&lt; T &gt;::sort </td>
           <td>(</td>
           <td class="paramtype">vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -132,11 +241,17 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>&#x202A;Sort virtual method. </p>
-<p class="DocNodeLTR">This is implemented in various concrete sorter child classes like <a class="el" href="classsorting_1_1BubbleSorter__t.html">BubbleSorter</a>, <a class="el" href="classsorting_1_1HeapSorter__t.html">HeapSorter</a> etc. The passed vector is expected to be sorted in place.</p>
+<p>&#x202A;Implementation of merge sort for generic type. </p>
+<p class="DocNodeLTR">Please check <a class="el" href="merge__sort_8cpp.html">merge_sort.cpp</a> for specializations of this function.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>&#x202A;type of data to be sorted</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">list</td><td>&#x202A;vector to be sorted </td></tr>
+    <tr><td class="paramname">list</td><td>&#x202A;input list to be sorted </td></tr>
   </table>
   </dd>
 </dl>
@@ -150,11 +265,88 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a7fb2caef0542ecba25d11be6e8c4afea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb2caef0542ecba25d11be6e8c4afea">&#9670;&nbsp;</a></span>sortUtilNumeric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t</a>&lt; T &gt;::sortUtilNumeric </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>begIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIdx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&#x202A;utility method to sort a vector containing numeric data types using merge sort </p>
+<p class="DocNodeLTR">The <a class="el" href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">sort()</a> public method has a number of template specializations present in <a class="el" href="merge__sort_8cpp.html">merge_sort.cpp</a>. All the specializations for numeric data types like <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code> etc will have the exact same implementation of merge sort. This method caters to all such template specializations.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>&#x202A;input list to be sorted using merge sort</td></tr>
+    <tr><td class="paramname">begIdx</td><td>&#x202A;beginning index for the range of input list that needs to be sorted</td></tr>
+    <tr><td class="paramname">endIdx</td><td>&#x202A;end index for the range of input list that needs to be sorted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="merge__sort_8tpp_source.html#l00009">9</a> of file <a class="el" href="merge__sort_8tpp_source.html">merge_sort.tpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                                            {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">// base case</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span> (endIdx &lt;= begIdx)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// We want to divide the range[begIdx..endIdx] into two enqual halves:</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="comment">// list[begIdx..midIdx] and list[midIdx+1..endIdx]</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">int</span> midIdx = (begIdx + endIdx) / 2;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// Sort the first range</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(list, begIdx, midIdx);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">// Sort the second range</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(list, midIdx + 1, endIdx);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// Merge the ranges. This should be done in linear time</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">sorting::MergeSorter_t&lt;T&gt;::mergeUtilNumeric</a>(list, begIdx, midIdx, endIdx);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/algorithms/sorting/merge_sort/<a class="el" href="merge__sort_8hpp_source.html">merge_sort.hpp</a></li>
 <li>src/algorithms/sorting/merge_sort/<a class="el" href="merge__sort_8tpp_source.html">merge_sort.tpp</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclasssorting_1_1MergeSorter__t_html_a7fb2caef0542ecba25d11be6e8c4afea"><div class="ttname"><a href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sorting::MergeSorter_t::sortUtilNumeric</a></div><div class="ttdeci">void sortUtilNumeric(vector&lt; T &gt; &amp;list, int begIdx, int endIdx)</div><div class="ttdoc">utility method to sort a vector containing numeric data types using merge sort</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8tpp_source.html#l00009">merge_sort.tpp:9</a></div></div>
+<div class="ttc" id="aclasssorting_1_1MergeSorter__t_html_aa17e1acecdbe1ef4dd2b4e95579304e4"><div class="ttname"><a href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">sorting::MergeSorter_t::mergeUtilNumeric</a></div><div class="ttdeci">void mergeUtilNumeric(vector&lt; T &gt; &amp;list, int begIdx, int midIdx, int endIdx)</div><div class="ttdoc">utility method for merging two sorted arrays containing nuric data</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8tpp_source.html#l00030">merge_sort.tpp:30</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

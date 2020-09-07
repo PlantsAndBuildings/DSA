@@ -1,5 +1,14 @@
 \hypertarget{classsorting_1_1MergeSorter__t}{}\doxysection{sorting\+::Merge\+Sorter\+\_\+t$<$ T $>$ Class Template Reference}
 \label{classsorting_1_1MergeSorter__t}\index{sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}}
+
+
+Sorter that implements merge sort.  
+
+
+
+
+{\ttfamily \#include $<$merge\+\_\+sort.\+hpp$>$}
+
 Inheritance diagram for sorting\+::Merge\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,45 +19,122 @@ Inheritance diagram for sorting\+::Merge\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementation of merge sort for generic type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_a4bde5b8bee1a28e76d3e2059400109bb}\label{classsorting_1_1MergeSorter__t_a4bde5b8bee1a28e76d3e2059400109bb}} 
-void {\bfseries sort\+Util\+Numeric} (vector$<$ T $>$ \&, int, int)
-\item 
-\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_aae15aba916d7c3c218acf2c49f0d0c44}\label{classsorting_1_1MergeSorter__t_aae15aba916d7c3c218acf2c49f0d0c44}} 
-void {\bfseries merge\+Util\+Numeric} (vector$<$ T $>$ \&, int, int, int)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a7fb2caef0542ecba25d11be6e8c4afea}{sort\+Util\+Numeric}} (vector$<$ T $>$ \&list, int beg\+Idx, int end\+Idx)
+\begin{DoxyCompactList}\small\item\em utility method to sort a vector containing numeric data types using merge sort \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsorting_1_1MergeSorter__t_aa17e1acecdbe1ef4dd2b4e95579304e4}{merge\+Util\+Numeric}} (vector$<$ T $>$ \&list, int beg\+Idx, int mid\+Idx, int end\+Idx)
+\begin{DoxyCompactList}\small\item\em utility method for merging two sorted arrays containing nuric data \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$\newline
 class sorting\+::\+Merge\+Sorter\+\_\+t$<$ T $>$}
 
+Sorter that implements merge sort. 
+
+Merge sort is a popular sorting algorithm which runs in O(\+N$\ast$lg(\+N)) time where N represents the length of the array. The idea is that merging two already sorted arrays can be done in linear time as follows\+: Compare the first elements of both arrays and remove whichever one is smallest and add it to the result array. Repeat this till both arrays are empty. In mergesort, we leverage this linear time merge subroutine. We divide our input array into two halves and recursively call merge sort on each half. Then we use the merge subroutine to merge both halves. Therefore, T(\+N) = 2$\ast$T(N/2) + O(\+N). This recurrence can be solved to give the overall time complexity of mergesort as O(\+N$\ast$lg(\+N)). Please refer to any text on algorithms (preferably Introduction to Algorithms by Cormen et al) for complete details.
+
+This class extends from the \mbox{\hyperlink{classsorting_1_1Sorter__t}{Sorter}} abstract class and implements the \mbox{\hyperlink{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}{sort()}} pure function.
 
 
-Definition at line 10 of file merge\+\_\+sort.\+hpp.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 30 of file merge\+\_\+sort.\+hpp.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_aa17e1acecdbe1ef4dd2b4e95579304e4}\label{classsorting_1_1MergeSorter__t_aa17e1acecdbe1ef4dd2b4e95579304e4}} 
+\index{sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}!mergeUtilNumeric@{mergeUtilNumeric}}
+\index{mergeUtilNumeric@{mergeUtilNumeric}!sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mergeUtilNumeric()}{mergeUtilNumeric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{sorting\+::\+Merge\+Sorter\+\_\+t}}$<$ T $>$\+::merge\+Util\+Numeric (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list,  }\item[{int}]{beg\+Idx,  }\item[{int}]{mid\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+utility method for merging two sorted arrays containing nuric data 
+
+As noted in the description of the \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}{sort()}} method, merge sort algorithm relies on the fact that two sorted arrays can be merged in linear time. This method implements that merge subroutine for numeric types. This method is called to merge the sorted ranges list\mbox{[}beg\+Idx..mid\+Idx\mbox{]} and list\mbox{[}mid\+Idx+1..end\+Idx\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & vector to be sorted\\
+\hline
+{\em beg\+Idx} & beginning of first range\\
+\hline
+{\em mid\+Idx} & end of first range. Second range starts from mid\+Idx+1\\
+\hline
+{\em end\+Idx} & end of second range \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file merge\+\_\+sort.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                                                          \{}
+\DoxyCodeLine{32   \textcolor{comment}{// Copy out the ranges into vectors first and last}}
+\DoxyCodeLine{33   vector<T> first(list.begin() + begIdx, list.begin() + midIdx + 1);}
+\DoxyCodeLine{34   vector<T> last(list.begin() + midIdx + 1, list.begin() + endIdx + 1);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36   \textcolor{comment}{// firstIdx will iterate over first}}
+\DoxyCodeLine{37   \textcolor{keywordtype}{int} firstIdx = 0;}
+\DoxyCodeLine{38   \textcolor{comment}{// lastIdx will iterate over last}}
+\DoxyCodeLine{39   \textcolor{keywordtype}{int} lastIdx = 0;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41   \textcolor{comment}{// idx will be used to index the result range}}
+\DoxyCodeLine{42   \textcolor{keywordtype}{int} idx = begIdx;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44   \textcolor{keywordflow}{while} (firstIdx < first.size() \&\& lastIdx < last.size() \&\& idx < endIdx + 1) \{}
+\DoxyCodeLine{45     \textcolor{comment}{// Compare values present at first[firstIdx] and last[lastIdx]}}
+\DoxyCodeLine{46     \textcolor{comment}{// Place the smaller value at list[idx]}}
+\DoxyCodeLine{47     \textcolor{keywordflow}{if} (first[firstIdx] < last[lastIdx]) \{}
+\DoxyCodeLine{48       list[idx++] = first[firstIdx++];}
+\DoxyCodeLine{49     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{50       list[idx++] = last[lastIdx++];}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52   \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{keywordflow}{while} (firstIdx < first.size() \&\& idx < endIdx + 1) \{}
+\DoxyCodeLine{55     list[idx++] = first[firstIdx++];}
+\DoxyCodeLine{56   \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58   \textcolor{keywordflow}{while} (lastIdx < last.size() \&\& idx < endIdx + 1) \{}
+\DoxyCodeLine{59     list[idx++] = last[lastIdx++];}
+\DoxyCodeLine{60   \}}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}\label{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}} 
 \index{sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}!sort@{sort}}
 \index{sort@{sort}!sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{sort()}{sort()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{sorting\+::\+Merge\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+void \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{sorting\+::\+Merge\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Sort virtual method. 
+Implementation of merge sort for generic type. 
 
-This is implemented in various concrete sorter child classes like \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}}, \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter}} etc. The passed vector is expected to be sorted in place.
+Please check \mbox{\hyperlink{merge__sort_8cpp}{merge\+\_\+sort.\+cpp}} for specializations of this function.
 
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted\\
+\hline
+\end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em list} & vector to be sorted \\
+{\em list} & input list to be sorted \\
 \hline
 \end{DoxyParams}
 
@@ -64,6 +150,54 @@ Definition at line 4 of file merge\+\_\+sort.\+tpp.
 \DoxyCodeLine{4                                                                         \{}
 \DoxyCodeLine{5   LOG\_ERROR << \textcolor{stringliteral}{"{}Sorting vector<T> using merge sort not implemented!"{}};}
 \DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1MergeSorter__t_a7fb2caef0542ecba25d11be6e8c4afea}\label{classsorting_1_1MergeSorter__t_a7fb2caef0542ecba25d11be6e8c4afea}} 
+\index{sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}!sortUtilNumeric@{sortUtilNumeric}}
+\index{sortUtilNumeric@{sortUtilNumeric}!sorting::MergeSorter\_t$<$ T $>$@{sorting::MergeSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sortUtilNumeric()}{sortUtilNumeric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsorting_1_1MergeSorter__t}{sorting\+::\+Merge\+Sorter\+\_\+t}}$<$ T $>$\+::sort\+Util\+Numeric (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list,  }\item[{int}]{beg\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+utility method to sort a vector containing numeric data types using merge sort 
+
+The \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a0ff5d6783c66f714fdc3ce0ec46b4aba}{sort()}} public method has a number of template specializations present in \mbox{\hyperlink{merge__sort_8cpp}{merge\+\_\+sort.cpp}}. All the specializations for numeric data types like {\ttfamily int}, {\ttfamily long}, {\ttfamily float}, {\ttfamily double} etc will have the exact same implementation of merge sort. This method caters to all such template specializations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & input list to be sorted using merge sort\\
+\hline
+{\em beg\+Idx} & beginning index for the range of input list that needs to be sorted\\
+\hline
+{\em end\+Idx} & end index for the range of input list that needs to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file merge\+\_\+sort.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                                             \{}
+\DoxyCodeLine{11   \textcolor{comment}{// base case}}
+\DoxyCodeLine{12   \textcolor{keywordflow}{if} (endIdx <= begIdx)}
+\DoxyCodeLine{13     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15   \textcolor{comment}{// We want to divide the range[begIdx..endIdx] into two enqual halves:}}
+\DoxyCodeLine{16   \textcolor{comment}{// list[begIdx..midIdx] and list[midIdx+1..endIdx]}}
+\DoxyCodeLine{17   \textcolor{keywordtype}{int} midIdx = (begIdx + endIdx) / 2;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19   \textcolor{comment}{// Sort the first range}}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a7fb2caef0542ecba25d11be6e8c4afea}{sorting::MergeSorter\_t<T>::sortUtilNumeric}}(list, begIdx, midIdx);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22   \textcolor{comment}{// Sort the second range}}
+\DoxyCodeLine{23   \mbox{\hyperlink{classsorting_1_1MergeSorter__t_a7fb2caef0542ecba25d11be6e8c4afea}{sorting::MergeSorter\_t<T>::sortUtilNumeric}}(list, midIdx + 1, endIdx);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25   \textcolor{comment}{// Merge the ranges. This should be done in linear time}}
+\DoxyCodeLine{26   \mbox{\hyperlink{classsorting_1_1MergeSorter__t_aa17e1acecdbe1ef4dd2b4e95579304e4}{sorting::MergeSorter\_t<T>::mergeUtilNumeric}}(list, begIdx, midIdx, endIdx);}
+\DoxyCodeLine{27 \}}
 
 \end{DoxyCode}
 

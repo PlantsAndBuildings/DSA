@@ -78,47 +78,65 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                                <span class="keywordtype">int</span> endIdx) {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">if</span> (endIdx &lt;= begIdx)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">int</span> midIdx = (begIdx + endIdx) / 2;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(list, begIdx, midIdx);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(list, midIdx + 1, endIdx);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t&lt;T&gt;::mergeUtilNumeric</a>(list, begIdx, midIdx, endIdx);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">// base case</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span> (endIdx &lt;= begIdx)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// We want to divide the range[begIdx..endIdx] into two enqual halves:</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="comment">// list[begIdx..midIdx] and list[midIdx+1..endIdx]</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">int</span> midIdx = (begIdx + endIdx) / 2;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t&lt;T&gt;::mergeUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                                 <span class="keywordtype">int</span> midIdx, <span class="keywordtype">int</span> endIdx) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  vector&lt;T&gt; first(list.begin() + begIdx, list.begin() + midIdx + 1);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  vector&lt;T&gt; last(list.begin() + midIdx + 1, list.begin() + endIdx + 1);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// Sort the first range</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(list, begIdx, midIdx);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">// Sort the second range</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sorting::MergeSorter_t&lt;T&gt;::sortUtilNumeric</a>(list, midIdx + 1, endIdx);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> firstIdx = 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> lastIdx = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">int</span> idx = begIdx;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// Merge the ranges. This should be done in linear time</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">sorting::MergeSorter_t&lt;T&gt;::mergeUtilNumeric</a>(list, begIdx, midIdx, endIdx);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">while</span> (firstIdx &lt; first.size() &amp;&amp; lastIdx &lt; last.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (first[firstIdx] &lt; last[lastIdx]) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      list[idx++] = first[firstIdx++];</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      list[idx++] = last[lastIdx++];</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">while</span> (firstIdx &lt; first.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    list[idx++] = first[firstIdx++];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">sorting::MergeSorter_t&lt;T&gt;::mergeUtilNumeric</a>(vector&lt;T&gt; &amp;list, <span class="keywordtype">int</span> begIdx,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                 <span class="keywordtype">int</span> midIdx, <span class="keywordtype">int</span> endIdx) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// Copy out the ranges into vectors first and last</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  vector&lt;T&gt; first(list.begin() + begIdx, list.begin() + midIdx + 1);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  vector&lt;T&gt; last(list.begin() + midIdx + 1, list.begin() + endIdx + 1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// firstIdx will iterate over first</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> firstIdx = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// lastIdx will iterate over last</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">int</span> lastIdx = 0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">while</span> (lastIdx &lt; last.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    list[idx++] = last[lastIdx++];</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// idx will be used to index the result range</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">int</span> idx = begIdx;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">while</span> (firstIdx &lt; first.size() &amp;&amp; lastIdx &lt; last.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Compare values present at first[firstIdx] and last[lastIdx]</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Place the smaller value at list[idx]</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (first[firstIdx] &lt; last[lastIdx]) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      list[idx++] = first[firstIdx++];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      list[idx++] = last[lastIdx++];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">while</span> (firstIdx &lt; first.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    list[idx++] = first[firstIdx++];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">while</span> (lastIdx &lt; last.size() &amp;&amp; idx &lt; endIdx + 1) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    list[idx++] = last[lastIdx++];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssorting_1_1MergeSorter__t_html"><div class="ttname"><a href="classsorting_1_1MergeSorter__t.html">sorting::MergeSorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8hpp_source.html#l00010">merge_sort.hpp:10</a></div></div>
-<div class="ttc" id="aclasssorting_1_1MergeSorter__t_html_a0ff5d6783c66f714fdc3ce0ec46b4aba"><div class="ttname"><a href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">sorting::MergeSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Sort virtual method.</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8tpp_source.html#l00004">merge_sort.tpp:4</a></div></div>
+<div class="ttc" id="aclasssorting_1_1MergeSorter__t_html_a7fb2caef0542ecba25d11be6e8c4afea"><div class="ttname"><a href="classsorting_1_1MergeSorter__t.html#a7fb2caef0542ecba25d11be6e8c4afea">sorting::MergeSorter_t::sortUtilNumeric</a></div><div class="ttdeci">void sortUtilNumeric(vector&lt; T &gt; &amp;list, int begIdx, int endIdx)</div><div class="ttdoc">utility method to sort a vector containing numeric data types using merge sort</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8tpp_source.html#l00009">merge_sort.tpp:9</a></div></div>
+<div class="ttc" id="aclasssorting_1_1MergeSorter__t_html_a0ff5d6783c66f714fdc3ce0ec46b4aba"><div class="ttname"><a href="classsorting_1_1MergeSorter__t.html#a0ff5d6783c66f714fdc3ce0ec46b4aba">sorting::MergeSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Implementation of merge sort for generic type.</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8tpp_source.html#l00004">merge_sort.tpp:4</a></div></div>
+<div class="ttc" id="aclasssorting_1_1MergeSorter__t_html_aa17e1acecdbe1ef4dd2b4e95579304e4"><div class="ttname"><a href="classsorting_1_1MergeSorter__t.html#aa17e1acecdbe1ef4dd2b4e95579304e4">sorting::MergeSorter_t::mergeUtilNumeric</a></div><div class="ttdeci">void mergeUtilNumeric(vector&lt; T &gt; &amp;list, int begIdx, int midIdx, int endIdx)</div><div class="ttdoc">utility method for merging two sorted arrays containing nuric data</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8tpp_source.html#l00030">merge_sort.tpp:30</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0
