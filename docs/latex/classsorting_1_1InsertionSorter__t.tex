@@ -1,5 +1,14 @@
 \hypertarget{classsorting_1_1InsertionSorter__t}{}\doxysection{sorting\+::Insertion\+Sorter\+\_\+t$<$ T $>$ Class Template Reference}
 \label{classsorting_1_1InsertionSorter__t}\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
+
+
+Sorter that implements insertion sort.  
+
+
+
+
+{\ttfamily \#include $<$insertion\+\_\+sort.\+hpp$>$}
+
 Inheritance diagram for sorting\+::Insertion\+Sorter\+\_\+t$<$ T $>$\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,7 +19,7 @@ Inheritance diagram for sorting\+::Insertion\+Sorter\+\_\+t$<$ T $>$\+:\begin{fi
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort}} (vector$<$ T $>$ \&)
-\begin{DoxyCompactList}\small\item\em Sort virtual method. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Implementation of insertion sort for generic type. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a8d9f0637b9a6d85f63b75cca053eed28}{sort}} (vector$<$ float $>$ \&list)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily float} data type \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_ac7d3c1b3d7125d9ea9d2e37ab33b82c9}{sort}} (vector$<$ double $>$ \&list)
@@ -24,18 +33,28 @@ void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_ae02e23ff571578a3c0f63d
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}\label{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}} 
-void {\bfseries sort\+Util\+Numeric} (vector$<$ T $>$ \&, int, int)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sort\+Util\+Numeric}} (vector$<$ T $>$ \&, int, int)
+\begin{DoxyCompactList}\small\item\em utility method to sort a vector containing numeric data types using insertion sort \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$\newline
 class sorting\+::\+Insertion\+Sorter\+\_\+t$<$ T $>$}
 
+Sorter that implements insertion sort. 
+
+Insertion sort is a popular sorting algorithm which runs in O(\+N$^\wedge$2) time where N represents the length of the array. The idea behind insertion sort is to iterate over the input array while maintaining the invariant that all the elements seen up to a specific iteration are in sorted order. At every iteration, we \char`\"{}insert\char`\"{} the element being considered into the correct position in the already sorted part of the array. Please refer to any text on algorithms (preferably Introduction to Algorithms by Cormen et al) for complete details.
+
+This class extends from the \mbox{\hyperlink{classsorting_1_1Sorter__t}{Sorter}} abstract class and implements the \mbox{\hyperlink{classsorting_1_1Sorter__t_a678c820dbe686d9ce840f15f6ddc63bf}{sort()}} pure function.
 
 
-Definition at line 10 of file insertion\+\_\+sort.\+hpp.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 27 of file insertion\+\_\+sort.\+hpp.
 
 
 
@@ -50,7 +69,7 @@ Definition at line 10 of file insertion\+\_\+sort.\+hpp.
 
 \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily double} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -66,7 +85,7 @@ Definition at line 33 of file insertion\+\_\+sort.\+cpp.
 \DoxyCodeLine{33                                                                 \{}
 \DoxyCodeLine{34   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{35     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{36   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{36   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sorting::InsertionSorter\_t<double>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{37 \}}
 
 \end{DoxyCode}
@@ -80,7 +99,7 @@ Definition at line 33 of file insertion\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily float} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -96,7 +115,7 @@ Definition at line 17 of file insertion\+\_\+sort.\+cpp.
 \DoxyCodeLine{17                                                                           \{}
 \DoxyCodeLine{18   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{19     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{20   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sorting::InsertionSorter\_t<float>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{21 \}}
 
 \end{DoxyCode}
@@ -110,7 +129,7 @@ Definition at line 17 of file insertion\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily int} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -126,7 +145,7 @@ Definition at line 48 of file insertion\+\_\+sort.\+cpp.
 \DoxyCodeLine{48                                                                       \{}
 \DoxyCodeLine{49   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{50     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{51   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{51   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sorting::InsertionSorter\_t<int>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{52 \}}
 
 \end{DoxyCode}
@@ -140,7 +159,7 @@ Definition at line 48 of file insertion\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily long} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -156,7 +175,7 @@ Definition at line 63 of file insertion\+\_\+sort.\+cpp.
 \DoxyCodeLine{63                                                                         \{}
 \DoxyCodeLine{64   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{65     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{66   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
+\DoxyCodeLine{66   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sorting::InsertionSorter\_t<long>::sortUtilNumeric}}(list, 0, list.size() -\/ 1);}
 \DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
@@ -170,7 +189,7 @@ Definition at line 63 of file insertion\+\_\+sort.\+cpp.
 
 \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} function specialization for {\ttfamily long long} data type 
 
-Calls private method sort\+Util\+Numeric()
+Calls private method \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sort\+Util\+Numeric()}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -186,7 +205,7 @@ Definition at line 79 of file insertion\+\_\+sort.\+cpp.
 \DoxyCodeLine{79                                                                       \{}
 \DoxyCodeLine{80   \textcolor{keywordflow}{if} (list.empty())}
 \DoxyCodeLine{81     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{82   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting::InsertionSorter\_t<long long>::sortUtilNumeric}}(list, 0,}
+\DoxyCodeLine{82   \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}{sorting::InsertionSorter\_t<long long>::sortUtilNumeric}}(list, 0,}
 \DoxyCodeLine{83                                                          list.size() -\/ 1);}
 \DoxyCodeLine{84 \}}
 
@@ -196,17 +215,22 @@ Definition at line 79 of file insertion\+\_\+sort.\+cpp.
 \index{sort@{sort}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Sort virtual method. 
+Implementation of insertion sort for generic type. 
 
-This is implemented in various concrete sorter child classes like \mbox{\hyperlink{classsorting_1_1BubbleSorter__t}{Bubble\+Sorter}}, \mbox{\hyperlink{classsorting_1_1HeapSorter__t}{Heap\+Sorter}} etc. The passed vector is expected to be sorted in place.
+Please check \mbox{\hyperlink{insertion__sort_8cpp}{insertion\+\_\+sort.\+cpp}} for specializations of this function.
 
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data to be sorted\\
+\hline
+\end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em list} & vector to be sorted \\
+{\em list} & input list to be sorted \\
 \hline
 \end{DoxyParams}
 
@@ -222,6 +246,46 @@ Definition at line 7 of file insertion\+\_\+sort.\+tpp.
 \DoxyCodeLine{7                                                       \{}
 \DoxyCodeLine{8   LOG\_ERROR << \textcolor{stringliteral}{"{}Sorting vector<T> using insertion sort not implemented!"{}};}
 \DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}\label{classsorting_1_1InsertionSorter__t_a74a193290ae92d132ebecf735ecc854f}} 
+\index{sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}!sortUtilNumeric@{sortUtilNumeric}}
+\index{sortUtilNumeric@{sortUtilNumeric}!sorting::InsertionSorter\_t$<$ T $>$@{sorting::InsertionSorter\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sortUtilNumeric()}{sortUtilNumeric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsorting_1_1InsertionSorter__t}{sorting\+::\+Insertion\+Sorter\+\_\+t}}$<$ T $>$\+::sort\+Util\+Numeric (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ \&}]{list,  }\item[{int}]{beg\+Idx,  }\item[{int}]{end\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+utility method to sort a vector containing numeric data types using insertion sort 
+
+The \mbox{\hyperlink{classsorting_1_1InsertionSorter__t_a6ad4d218991cd2b5c5fa9031a9455440}{sort()}} public method has a number of template specializations present in \mbox{\hyperlink{insertion__sort_8cpp}{insertion\+\_\+sort.cpp}}. All the specializations for numeric data types like {\ttfamily int}, {\ttfamily long}, {\ttfamily float}, {\ttfamily double} etc will have the exact same implementation of insertion sort. This method caters to all such template specializations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & input list to be sorted using insertion sort\\
+\hline
+{\em beg\+Idx} & beginning index for the range of input list that needs to be sorted\\
+\hline
+{\em end\+Idx} & end index for the range of input list that needs to be sorted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file insertion\+\_\+sort.\+tpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                                 \{}
+\DoxyCodeLine{14   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = begIdx; i < endIdx; i++) \{}
+\DoxyCodeLine{15     T curr = list[i + 1];}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{17     \textcolor{keywordflow}{for} (j = i; j >= begIdx \&\& list[j] > curr; j-\/-\/) \{}
+\DoxyCodeLine{18       list[j + 1] = list[j];}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20     list[j + 1] = curr;}
+\DoxyCodeLine{21   \}}
+\DoxyCodeLine{22 \}}
 
 \end{DoxyCode}
 

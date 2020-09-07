@@ -79,25 +79,26 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesorting.html">sorting</a> {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classsorting_1_1SelectionSorter__t.html">   10</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classsorting_1_1SelectionSorter__t.html">SelectionSorter_t</a> : <span class="keyword">public</span> <a class="code" href="classsorting_1_1Sorter__t.html">Sorter_t</a>&lt;T&gt; {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1SelectionSorter__t.html#ade3f13b1e82775bcea8a108d4cb1d5e6">sort</a>(vector&lt;T&gt; &amp;);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">void</span> sortUtilNumeric(vector&lt;T&gt; &amp;, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">using</span> <a class="code" href="classsorting_1_1SelectionSorter__t.html">SelectionSorter</a> = <a class="code" href="classsorting_1_1SelectionSorter__t.html">SelectionSorter_t&lt;T&gt;</a> &amp;;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;} <span class="comment">// namespace sorting</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;selection_sort.tpp&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classsorting_1_1SelectionSorter__t.html">   27</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classsorting_1_1SelectionSorter__t.html">SelectionSorter_t</a> : <span class="keyword">public</span> <a class="code" href="classsorting_1_1Sorter__t.html">Sorter_t</a>&lt;T&gt; {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1SelectionSorter__t.html#ade3f13b1e82775bcea8a108d4cb1d5e6">sort</a>(vector&lt;T&gt; &amp;);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsorting_1_1SelectionSorter__t.html#abd0e06a4aa12dee7d4cbf8b5e0dd129b">sortUtilNumeric</a>(vector&lt;T&gt; &amp;, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">using</span> <a class="code" href="classsorting_1_1SelectionSorter__t.html">SelectionSorter</a> = <a class="code" href="classsorting_1_1SelectionSorter__t.html">SelectionSorter_t&lt;T&gt;</a> &amp;;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// namespace sorting</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &quot;selection_sort.tpp&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssorting_1_1SelectionSorter__t_html_ade3f13b1e82775bcea8a108d4cb1d5e6"><div class="ttname"><a href="classsorting_1_1SelectionSorter__t.html#ade3f13b1e82775bcea8a108d4cb1d5e6">sorting::SelectionSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Sort virtual method.</div><div class="ttdef"><b>Definition:</b> <a href="selection__sort_8tpp_source.html#l00007">selection_sort.tpp:7</a></div></div>
+<div class="ttc" id="aclasssorting_1_1SelectionSorter__t_html_ade3f13b1e82775bcea8a108d4cb1d5e6"><div class="ttname"><a href="classsorting_1_1SelectionSorter__t.html#ade3f13b1e82775bcea8a108d4cb1d5e6">sorting::SelectionSorter_t::sort</a></div><div class="ttdeci">void sort(vector&lt; T &gt; &amp;)</div><div class="ttdoc">Implementation of selection sort for generic type.</div><div class="ttdef"><b>Definition:</b> <a href="selection__sort_8tpp_source.html#l00007">selection_sort.tpp:7</a></div></div>
+<div class="ttc" id="aclasssorting_1_1SelectionSorter__t_html_abd0e06a4aa12dee7d4cbf8b5e0dd129b"><div class="ttname"><a href="classsorting_1_1SelectionSorter__t.html#abd0e06a4aa12dee7d4cbf8b5e0dd129b">sorting::SelectionSorter_t::sortUtilNumeric</a></div><div class="ttdeci">void sortUtilNumeric(vector&lt; T &gt; &amp;, int, int)</div><div class="ttdoc">utility method to sort a vector containing numeric data types using selection sort</div><div class="ttdef"><b>Definition:</b> <a href="selection__sort_8tpp_source.html#l00012">selection_sort.tpp:12</a></div></div>
 <div class="ttc" id="anamespacesorting_html"><div class="ttname"><a href="namespacesorting.html">sorting</a></div><div class="ttdoc">Namespace to contain sorters and sorter factory.</div><div class="ttdef"><b>Definition:</b> <a href="bubble__sort_8hpp_source.html#l00008">bubble_sort.hpp:8</a></div></div>
 <div class="ttc" id="aclasssorting_1_1Sorter__t_html"><div class="ttname"><a href="classsorting_1_1Sorter__t.html">sorting::Sorter_t</a></div><div class="ttdoc">Abstract base class for various sorting implementations.</div><div class="ttdef"><b>Definition:</b> <a href="sorter_8hpp_source.html#l00026">sorter.hpp:26</a></div></div>
-<div class="ttc" id="aclasssorting_1_1SelectionSorter__t_html"><div class="ttname"><a href="classsorting_1_1SelectionSorter__t.html">sorting::SelectionSorter_t</a></div><div class="ttdef"><b>Definition:</b> <a href="selection__sort_8hpp_source.html#l00010">selection_sort.hpp:10</a></div></div>
+<div class="ttc" id="aclasssorting_1_1SelectionSorter__t_html"><div class="ttname"><a href="classsorting_1_1SelectionSorter__t.html">sorting::SelectionSorter_t</a></div><div class="ttdoc">Sorter that implements selection sort.</div><div class="ttdef"><b>Definition:</b> <a href="selection__sort_8hpp_source.html#l00027">selection_sort.hpp:27</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0
