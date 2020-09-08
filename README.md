@@ -1,2 +1,7 @@
-## DSA
-Implementation of some standard Data Structures and Algorithms
+## Data Structures & Algorithms
+
+This repository contains my implementations of some standard data structures and algorithms which can be found in any introductory text on the subject. Personally, I refer extensively to "Introduction to Algorithms" by Cormen et al (CLRS henceforth) - as a result of which one may find that implementations provided here draw heavily from the explanations and intuitions given in CLRS. My recommendation to anyone looking at the code in this repository would be to go through the relevant sections in CLRS first.
+
+Primarily, this repository is intended to serve as a single, complete reference for me to revisit in the future and refresh my understanding of various DSA topics. As such, the code is heavily documented and written in a way that favors readability.
+
+Additionally, I also want to place some emphasis on good design and "the C++ way to do things" - that is, to keep in mind and adhere to best coding practices and standards as much as possible. The idea is to have features that you would expect any library implementation of these algorithms and data structures to have. Generics is a good example - we want our data structures to be implemented in a way that they can store any data type; or we want our sorting algorithms to be able to sort inputs over a wide array of data types such as `int`s, `float`s, `string`s etc. Generics are something that one would expect say, an STL implementation of sorting, to have. So yeah; generics, well designed class heirarchies and design patterns, API reference documentation, a cmake based build and test workflow, unit tests - these are all auxiliary goals that I hope to achieve in this repository.
