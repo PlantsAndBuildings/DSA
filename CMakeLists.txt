@@ -58,8 +58,8 @@ target_link_libraries(insertion_sort_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_L
 ######### DATA STRUCTURES
 
 # Heap
-add_executable(max_heap_basic ${EXAMPLES_BASE_DIR}/max_heap.cpp ${DATA_STRUCTURES_BASE_DIR}/heap/heap.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
-target_link_libraries(max_heap_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
+add_executable(heap_basic ${EXAMPLES_BASE_DIR}/heap_basic.cpp ${DATA_STRUCTURES_BASE_DIR}/heap/heap.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
+target_link_libraries(heap_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
 enable_testing()
 
