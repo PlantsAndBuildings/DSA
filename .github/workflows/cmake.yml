@@ -45,7 +45,7 @@ jobs:
       run: cmake --build . --config $BUILD_TYPE
     
     - name: Check LD_LIBRARY_PATH
-      run: echo "::set-env name=LD_LIBRARY_PATH::$BOOST_ROOT_LATEST:$BOOST_ROOT"
+      run: echo "::set-env name=LD_LIBRARY_PATH::$BOOST_ROOT_LATEST/lib:$BOOST_ROOT/lib"
 
     - name: Test
       working-directory: ${{runner.workspace}}/build
