@@ -17,7 +17,8 @@ jobs:
     name: Build
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout Source
+      uses: actions/checkout@v2
       
     - name: Set BOOST_ROOT
       run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
@@ -49,7 +50,7 @@ jobs:
     - name: Create Build TAR
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: tax -cvf build.tar ${{runner.workspace}}/build
+      run: tar -cvf build.tar ${{runner.workspace}}/build
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v2
