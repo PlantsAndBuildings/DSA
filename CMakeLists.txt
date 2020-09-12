@@ -13,7 +13,7 @@ set(SORTING_ALGORITHMS_BASE_DIR ${PROJECT_SOURCE_DIR}/src/algorithms/sorting)
 set(DATA_STRUCTURES_BASE_DIR ${PROJECT_SOURCE_DIR}/src/data_structures)
 set(EXAMPLES_BASE_DIR ${PROJECT_SOURCE_DIR}/examples)
 set(UTILS_BASE_DIR ${PROJECT_SOURCE_DIR}/utils)
-set(TESTS_BASE_DIR ${PROJECT_SOURCE_DIR}/test)
+set(TESTS_BASE_DIR ${PROJECT_SOURCE_DIR}/tests)
 
 # find boost logging and testing
 set(Boost_USE_STATIC_LIBS OFF)
@@ -64,7 +64,7 @@ target_link_libraries(heap_basic ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -l
 enable_testing()
 
 # set the directory to place examples executables in
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/test)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/tests)
 
 # add executables for tests
 
