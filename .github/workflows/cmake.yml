@@ -43,6 +43,9 @@ jobs:
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: cmake --build . --config $BUILD_TYPE
+    
+    - name: Check LD_LIBRARY_PATH
+      run: echo $LD_LIBRARY_PATH
 
     - name: Test
       working-directory: ${{runner.workspace}}/build
