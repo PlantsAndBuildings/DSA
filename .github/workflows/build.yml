@@ -43,9 +43,6 @@ jobs:
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: cmake --build . --config $BUILD_TYPE
-    
-    - name: Set LD_LIBRARY_PATH
-      run: echo "::set-env name=LD_LIBRARY_PATH::$BOOST_ROOT/lib"
       
     - name: Create Build TAR
       shell: bash
