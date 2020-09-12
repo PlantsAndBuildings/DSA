@@ -27,7 +27,7 @@ jobs:
         path: ${{runner.workspace}}
         
     - name: Extract tarball
-      run: tar -xvf build.tar ${{runnner.workspace}}/build
+      run: tar -xvf build.tar ${{runner.workspace}}/build
   
     - name: Set BOOST_ROOT
       run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
