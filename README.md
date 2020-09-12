@@ -6,7 +6,11 @@ Primarily, this repository is intended to serve as a single, complete reference 
 
 Additionally, I also want to place some emphasis on good design and "the C++ way to do things" - that is, to keep in mind and adhere to best coding practices, standards and tools as much as possible. The idea is to have features that you would expect any library implementation of these algorithms and data structures to have. Generics is a good example - we want our data structures to be implemented in a way that they can store any data type; or we want our sorting algorithms to be able to sort inputs over a wide array of data types such as `int`, `float`, `string` etc. Generics are something that one would expect say, an STL implementation of sorting, to have. So yeah; generics, well designed class heirarchies and design patterns, an API reference documentation, a `cmake` based build and test workflow, unit tests - these are all auxiliary goals that I hope to achieve in this repository.
 
-### System Requirements and Steps to Build the Project
+### API Documentation
+
+Complete API documentation for the project can be found [here](https://plantsandbuildings.github.io/DSA/).
+
+### System Requirements (for Building and Running the Project)
 
 The code is this repository has been tested on a 64 bit (x86) machine running Ubuntu 18.04. The code should build and run on most architectures and recent versions/distributions of Linux. The following tools will, however, need to be installed in order to build and run the code examples and tests:
 * gcc >= 7.5
@@ -14,6 +18,8 @@ The code is this repository has been tested on a 64 bit (x86) machine running Ub
 * GNU Make >= 4.1
 * Boost log and unit test libaries (version >= 1.65)
 * Doxygen >= 1.9
+
+### Steps to Build and Run Tests and Examples
 
 Given that the above tools and libraries are installed, the project can be built as follows:
 
@@ -53,14 +59,11 @@ All the tests can be run at once by executing:
 ctest
 ```
 
-**Step 5 (Optional):** Generating the API docs
+**Step 5 (Optional):** Generating the API docs locally
 
 ``` bash
 doxygen Doxyfile
 ```
 The docs should be accessible by navigating to `file:///some/convenient/location/DSA/docs/index.html` in a web browser
 
-### API Documentation
-
-Complete API documentation for the project can be found [here](https://plantsandbuildings.github.io/DSA/).
 
