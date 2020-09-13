@@ -72,6 +72,11 @@ jobs:
       with:
         name: build-tarball
         path: ${{runner.workspace}}
+
+    - name: Checking Contents of Workspace
+      shell: bash
+      working-directory: ${{runner.workspace}}
+      run: ls -ltra
         
     - name: Extract Tarball
       shell: bash
