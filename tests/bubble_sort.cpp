@@ -85,11 +85,18 @@ BOOST_FIXTURE_TEST_CASE(bubble_sort_small_input_int, BubbleSortTestFixture) {
  * Small input: vector<float>
  */
 BOOST_FIXTURE_TEST_CASE(bubble_sort_small_input_float, BubbleSortTestFixture) {
-  vector<float> vFloat = {5.01, 23.97, 230.1234, 123.89, 1.37, 3234.444, 1.556, -1.2, -32, 234};
-  vector<float> vFloatSorted = {-32, -1.2, 1.37, 1.556, 5.01, 23.97, 123.89, 230.1234, 234, 3234.444};
+  vector<float> vFloat = {5.01,     23.97, 230.1234, 123.89, 1.37,
+                          3234.444, 1.556, -1.2,     -32,    234};
+  vector<float> vFloatSorted = {-32,   -1.2,   1.37,     1.556, 5.01,
+                                23.97, 123.89, 230.1234, 234,   3234.444};
   BOOST_REQUIRE_EQUAL(vFloat.size(), 10);
   floatSorter.sort(vFloat);
   BOOST_REQUIRE_EQUAL(vFloat.size(), 10);
   BOOST_REQUIRE_EQUAL_COLLECTIONS(vFloat.begin(), vFloat.end(),
                                   vFloatSorted.begin(), vFloatSorted.end());
 }
+
+/**
+ * Medium sized input: vector<in>
+ */
+// TODO
