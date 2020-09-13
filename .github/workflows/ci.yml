@@ -72,17 +72,17 @@ jobs:
         
     - name: Extract Tarball
       shell: bash
-      working_directory: ${{runner.workspace}}
+      working-directory: ${{runner.workspace}}
       run: tar -xvf build.tar ${{runner.workspace}}/build
   
     - name: Set BOOST_ROOT
       shell: bash
-      working_directory: ${{runner.workspace}}
+      working-directory: ${{runner.workspace}}
       run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
 
     - name: Set LD_LIBRARY_PATH
       shell: bash
-      working_directory: ${{runner.workspace}}
+      working-directory: ${{runner.workspace}}
       run: echo "::set-env name=LD_LIBRARY_PATH::$BOOST_ROOT/lib"
 
     - name: Test
