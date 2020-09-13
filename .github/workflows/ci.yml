@@ -1,4 +1,4 @@
-name: Build
+name: CI
 
 on: [push]
 
@@ -55,15 +55,39 @@ jobs:
         name: build-tarball
         path: ${{runner.workspace}}/build.tar
 
-    - name: Build Complete Repository Dispatch
-      uses: peter-evans/repository-dispatch@v1
-      with:
-        token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        event-type: build_complete
+  run_tests:
+    runs-on: ubuntu-18.04
+    
+    name: Run Tests
 
-#     - name: Test
-#       working-directory: ${{runner.workspace}}/build
-#       shell: bash
-#       # Execute tests defined by the CMake configuration.  
-#       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-#       run: ctest -C $BUILD_TYPE --verbose
+    steps:
+    - name: Checkout Source
+      uses: actions/checkout@v2
+
+    - name: Download Build Artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: build-tarball
+        path: ${{runner.workspace}}
+        
+    - name: Extract Tarball
+      shell: bash
+      working_directory: ${{runner.workspace}}
+      run: tar -xvf build.tar ${{runner.workspace}}/build
+  
+    - name: Set BOOST_ROOT
+      shell: bash
+      working_directory: ${{runner.workspace}}
+      run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
+
+    - name: Set LD_LIBRARY_PATH
+      shell: bash
+      working_directory: ${{runner.workspace}}
+      run: echo "::set-env name=LD_LIBRARY_PATH::$BOOST_ROOT/lib"
+
+    - name: Test
+      working-directory: ${{runner.workspace}}/build
+      shell: bash
+      # Execute tests defined by the CMake configuration.  
+      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
+      run: ctest -C $BUILD_TYPE --verbose
