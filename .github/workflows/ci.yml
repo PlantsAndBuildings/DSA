@@ -22,7 +22,7 @@ jobs:
 
     - name: Install Boost
       # Use the boost-1.72.0-linux-16.04-gcc-x64.tar.gz for Ubuntu 16.04
-      run: |
+      script: |
         $url = "https://github.com/actions/boost-versions/releases/download/1.72.0-20200608.4/boost-1.72.0-linux-18.04-gcc-x64.tar.gz"
         (New-Object System.Net.WebClient).DownloadFile($url, "/tmp/boost.tar.gz")
         mkdir "/tmp/boost"
@@ -96,7 +96,7 @@ jobs:
 
     - name: Install Boost
       # Use the boost-1.72.0-linux-16.04-gcc-x64.tar.gz for Ubuntu 16.04
-      run: |
+      script: |
         $url = "https://github.com/actions/boost-versions/releases/download/1.72.0-20200608.4/boost-1.72.0-linux-18.04-gcc-x64.tar.gz"
         (New-Object System.Net.WebClient).DownloadFile($url, "/tmp/boost.tar.gz")
         mkdir "/tmp/boost"
