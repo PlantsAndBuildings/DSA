@@ -3,6 +3,8 @@
 
 #include <unordered_map>
 #include <vector>
+#include "../../../utils/boost/logging_utils.hpp"
+
 
 namespace graph {
 
@@ -11,6 +13,7 @@ protected:
   std::unordered_map<T, std::vector<T>> adjacencyList;
   std::vector<std::pair<T, T>> edges;
   std::vector<T> vertices;
+  void print();
 
 public:
   Graph(){};
@@ -21,6 +24,8 @@ public:
 
   virtual ~Graph(){};
 };
+
+#include "graph.tpp"
 
 } // namespace graph
 
