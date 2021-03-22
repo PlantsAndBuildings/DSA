@@ -87,12 +87,17 @@ jobs:
     - name: Checking Contents of Workspace
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: ls -ltra
+      run: |
+        pwd
+        ls -ltra
+        ls -ltra ./DSA/*
         
     - name: Extract Tarball
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: tar -xvf build.tar -C ${{runner.workspace}}/build
+      run: |
+        mkdir ./DSA/build
+        tar -xvf build.tar -C ${{runner.workspace}}/build
 
     - name: Install Boost
       # Use the boost-1.72.0-linux-16.04-gcc-x64.tar.gz for Ubuntu 16.04
