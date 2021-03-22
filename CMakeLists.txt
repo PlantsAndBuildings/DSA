@@ -84,7 +84,12 @@ target_link_libraries(bubble_sort_test ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${Bo
 add_executable(insertion_sort_test ${TESTS_BASE_DIR}/insertion_sort.cpp ${SORTING_ALGORITHMS_BASE_DIR}/insertion_sort/insertion_sort.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
 target_link_libraries(insertion_sort_test ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
 
+# Graph
+add_executable(graph_test ${TESTS_BASE_DIR}/graph.cpp ${UTILS_BASE_DIR}/boost/logging_utils.cpp)
+target_link_libraries(graph_test ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_LOG_LIBRARY} -lpthread)
+
 add_test(NAME merge_sort_test COMMAND merge_sort_test)
 add_test(NAME selection_sort_test COMMAND selection_sort_test)
 add_test(NAME bubble_sort_test COMMAND bubble_sort_test)
 add_test(NAME insertion_sort_test COMMAND insertion_sort_test)
+add_test(NAME graph_test COMMAND graph_test)
