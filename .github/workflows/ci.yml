@@ -92,7 +92,7 @@ jobs:
     - name: Extract Tarball
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: tar -xvf build.tar ${{runner.workspace}}/build
+      run: tar -xzf build.tar -C ${{runner.workspace}}/build
 
     - name: Install Boost
       # Use the boost-1.72.0-linux-16.04-gcc-x64.tar.gz for Ubuntu 16.04
