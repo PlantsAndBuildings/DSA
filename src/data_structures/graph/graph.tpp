@@ -4,7 +4,7 @@
 #include "graph.hpp"
 
 template <typename T>
-std::unordered_map<T, std::vector<T>>& graph::Graph<T>::getAdjacencyList() {
+std::unordered_map<T, std::vector<T>> &graph::Graph<T>::getAdjacencyList() {
   return this->adjacencyList;
 }
 

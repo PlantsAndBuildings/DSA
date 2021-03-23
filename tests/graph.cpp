@@ -1,11 +1,13 @@
 #define BOOST_TEST_MODULE graph
-#include "../src/data_structures/graph/undirected_graph.hpp"
 #include "../src/algorithms/graph/dfs/dfs.hpp"
 #include "../src/data_structures/graph/directed_graph.hpp"
+#include "../src/data_structures/graph/undirected_graph.hpp"
 #include <boost/test/unit_test.hpp>
 
 struct GraphTestFixture {
-  GraphTestFixture() : undirectedIntGraph(graph::UndirectedGraph<int>()), directedIntGraph(graph::DirectedGraph<int>()) {}
+  GraphTestFixture()
+      : undirectedIntGraph(graph::UndirectedGraph<int>()),
+        directedIntGraph(graph::DirectedGraph<int>()) {}
 
   ~GraphTestFixture() {}
 

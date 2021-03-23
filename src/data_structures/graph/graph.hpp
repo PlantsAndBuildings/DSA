@@ -21,7 +21,7 @@ public:
 
   virtual void addEdge(T v1, T v2) = 0;
 
-  std::unordered_map<T, std::vector<T>>& getAdjacencyList();
+  std::unordered_map<T, std::vector<T>> &getAdjacencyList();
 
   std::vector<T> getVertices();
 

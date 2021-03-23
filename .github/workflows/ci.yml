@@ -21,7 +21,6 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install Boost
-      # Use the boost-1.72.0-linux-16.04-gcc-x64.tar.gz for Ubuntu 16.04
       run: |
         url="https://github.com/actions/boost-versions/releases/download/1.72.0-20200608.4/boost-1.72.0-linux-18.04-gcc-x64.tar.gz"
         wget -O /tmp/boost.tar.gz $url
@@ -31,7 +30,6 @@ jobs:
         bash ./setup.sh
 
     - name: Set BOOST_ROOT
-      # run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
       run: echo "BOOST_ROOT=/opt/hostedtoolcache/boost/1.72.0/x64" >> $GITHUB_ENV
 
     - name: Create Build Environment
@@ -100,7 +98,6 @@ jobs:
         tar -xvf build.tar -C ${{runner.workspace}}/DSA/build
 
     - name: Install Boost
-      # Use the boost-1.72.0-linux-16.04-gcc-x64.tar.gz for Ubuntu 16.04
       run: |
         url="https://github.com/actions/boost-versions/releases/download/1.72.0-20200608.4/boost-1.72.0-linux-18.04-gcc-x64.tar.gz"
         wget -O /tmp/boost.tar.gz $url
@@ -112,13 +109,11 @@ jobs:
     - name: Set BOOST_ROOT
       shell: bash
       working-directory: ${{runner.workspace}}
-      # run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
       run: echo "BOOST_ROOT=/opt/hostedtoolcache/boost/1.72.0/x64" >> $GITHUB_ENV
 
     - name: Set LD_LIBRARY_PATH
       shell: bash
       working-directory: ${{runner.workspace}}
-      # run: echo "::set-env name=LD_LIBRARY_PATH::$BOOST_ROOT/lib"
       run: echo "LD_LIBRARY_PATH=$BOOST_ROOT/lib" >> $GITHUB_ENV
 
     - name: Test
