@@ -1,7 +1,9 @@
 #define BOOST_TEST_MODULE graph
 #include "../src/algorithms/graph/dfs/dfs.hpp"
+#include "../src/algorithms/graph/topological_sort/topological_sort.hpp"
 #include "../src/data_structures/graph/directed_graph.hpp"
 #include "../src/data_structures/graph/undirected_graph.hpp"
+#include "../utils/boost/logging_utils.hpp"
 #include <boost/test/unit_test.hpp>
 
 struct GraphTestFixture {
@@ -44,4 +46,19 @@ BOOST_FIXTURE_TEST_CASE(undirected_graph_dfs_test, GraphTestFixture) {
   graph::DepthFirstTraverser<int> depthFirstTraverser(undirectedIntGraph);
 
   depthFirstTraverser.traverse();
+}
+
+/**
+ * Trivial case: toposort on simple graph
+ */
+BOOST_FIXTURE_TEST_CASE(simple_graph_toposort_test, GraphTestFixture) {
+  directedIntGraph.addVertex(2);
+  directedIntGraph.addVertex(3);
+  directedIntGraph.addEdge(2, 3);
+
+  graph::TopologicalSorter<int> topoSorter(directedIntGraph);
+
+  std::vector<int> topoSort = topoSorter.sort();
+
+  LOG_INFO << logging::str(topoSort);
 }
