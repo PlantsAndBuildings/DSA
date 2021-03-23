@@ -19,9 +19,18 @@ jobs:
     steps:
     - name: Checkout Source
       uses: actions/checkout@v2
-      
+
+    - name: Install Boost
+      run: |
+        url="https://github.com/actions/boost-versions/releases/download/1.72.0-20200608.4/boost-1.72.0-linux-18.04-gcc-x64.tar.gz"
+        wget -O /tmp/boost.tar.gz $url
+        mkdir "/tmp/boost"
+        tar -xzf "/tmp/boost.tar.gz" -C "/tmp/boost"
+        cd /tmp/boost
+        bash ./setup.sh
+
     - name: Set BOOST_ROOT
-      run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
+      run: echo "BOOST_ROOT=/opt/hostedtoolcache/boost/1.72.0/x64" >> $GITHUB_ENV
 
     - name: Create Build Environment
       # Some projects don't allow in-source building, so create a separate build directory
@@ -76,25 +85,39 @@ jobs:
     - name: Checking Contents of Workspace
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: ls -ltra
+      run: |
+        pwd
+        ls -ltra
+        ls -ltra ${{runner.workspace}}/DSA/*
         
     - name: Extract Tarball
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: tar -xvf build.tar ${{runner.workspace}}/build
+      run: |
+        mkdir ${{runner.workspace}}/DSA/build
+        tar -xvf build.tar -C ${{runner.workspace}}/DSA/build
+
+    - name: Install Boost
+      run: |
+        url="https://github.com/actions/boost-versions/releases/download/1.72.0-20200608.4/boost-1.72.0-linux-18.04-gcc-x64.tar.gz"
+        wget -O /tmp/boost.tar.gz $url
+        mkdir "/tmp/boost"
+        tar -xzf "/tmp/boost.tar.gz" -C "/tmp/boost"
+        cd /tmp/boost
+        bash ./setup.sh
   
     - name: Set BOOST_ROOT
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
+      run: echo "BOOST_ROOT=/opt/hostedtoolcache/boost/1.72.0/x64" >> $GITHUB_ENV
 
     - name: Set LD_LIBRARY_PATH
       shell: bash
       working-directory: ${{runner.workspace}}
-      run: echo "::set-env name=LD_LIBRARY_PATH::$BOOST_ROOT/lib"
+      run: echo "LD_LIBRARY_PATH=$BOOST_ROOT/lib" >> $GITHUB_ENV
 
     - name: Test
-      working-directory: ${{runner.workspace}}/build
+      working-directory: ${{runner.workspace}}/DSA/build
       shell: bash
       # Execute tests defined by the CMake configuration.  
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
