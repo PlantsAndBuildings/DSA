@@ -7,6 +7,8 @@ project(dsa-implementations)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+# Uncomment below to build project with debug flag
+# set(CMAKE_BUILD_TYPE Debug)
 
 # some useful paths in the project tree
 set(SORTING_ALGORITHMS_BASE_DIR ${PROJECT_SOURCE_DIR}/src/algorithms/sorting)

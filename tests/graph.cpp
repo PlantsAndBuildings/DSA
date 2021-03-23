@@ -1,5 +1,6 @@
 #define BOOST_TEST_MODULE graph
 #include "../src/data_structures/graph/undirected_graph.hpp"
+#include "../src/algorithms/graph/dfs/dfs.hpp"
 #include "../src/data_structures/graph/directed_graph.hpp"
 #include <boost/test/unit_test.hpp>
 
@@ -28,4 +29,17 @@ BOOST_FIXTURE_TEST_CASE(directed_int_graph_add_vertex, GraphTestFixture) {
   directedIntGraph.addVertex(2);
   directedIntGraph.addVertex(3);
   directedIntGraph.addEdge(2, 3);
+}
+
+/**
+ * Trivial Case: Perform DFS on a simple graph (two vertices, one edge)
+ */
+BOOST_FIXTURE_TEST_CASE(undirected_graph_dfs_test, GraphTestFixture) {
+  undirectedIntGraph.addVertex(2);
+  undirectedIntGraph.addVertex(3);
+  undirectedIntGraph.addEdge(2, 3);
+
+  graph::DepthFirstTraverser<int> depthFirstTraverser(undirectedIntGraph);
+
+  depthFirstTraverser.traverse();
 }

@@ -3,6 +3,15 @@
 
 #include "graph.hpp"
 
+template <typename T>
+std::unordered_map<T, std::vector<T>>& graph::Graph<T>::getAdjacencyList() {
+  return this->adjacencyList;
+}
+
+template <typename T> std::vector<T> graph::Graph<T>::getVertices() {
+  return this->vertices;
+}
+
 template <typename T> void graph::Graph<T>::print() {
   LOG_DEBUG << "=================";
   LOG_DEBUG << "Graph(V: " << this->vertices.size()
