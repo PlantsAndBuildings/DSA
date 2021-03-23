@@ -25,6 +25,8 @@ public:
 
   std::vector<T> getVertices();
 
+  std::vector<std::pair<T, T>> getEdges();
+
   virtual ~Graph(){};
 };
 

@@ -27,7 +27,9 @@ void graph::DirectedGraph<T>::addEdge(T vertex1, T vertex2) {
 
   this->adjacencyList[vertex1].push_back(vertex2);
   this->edges.push_back(std::pair<T, T>(vertex1, vertex2));
-  this->print();
+
+  // Uncomment for debug log
+  // this->print();
 }
 
 #endif

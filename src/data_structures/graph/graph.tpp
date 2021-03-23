@@ -12,6 +12,10 @@ template <typename T> std::vector<T> graph::Graph<T>::getVertices() {
   return this->vertices;
 }
 
+template <typename T> std::vector<std::pair<T, T>> graph::Graph<T>::getEdges() {
+  return this->edges;
+}
+
 template <typename T> void graph::Graph<T>::print() {
   LOG_DEBUG << "=================";
   LOG_DEBUG << "Graph(V: " << this->vertices.size()
