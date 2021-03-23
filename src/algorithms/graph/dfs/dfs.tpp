@@ -19,7 +19,6 @@ template <typename T> void graph::DepthFirstTraverser<T>::traverse() {
 template <typename T>
 void graph::DepthFirstTraverser<T>::traverse(
     const std::function<void(T)> &operation) {
-  this->graph.print();
   std::unordered_map<T, bool> visited;
   for (T vertex : (this->graph.getVertices())) {
     if (!visited[vertex]) {
