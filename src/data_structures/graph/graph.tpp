@@ -18,12 +18,7 @@ template <typename T> void graph::Graph<T>::print() {
             << ", E: " << this->edges.size() << ")";
   LOG_DEBUG << "";
   for (auto vertex : this->vertices) {
-    std::string curLog = std::to_string(vertex) + " -> (";
-    for (auto adjVertex : this->adjacencyList[vertex]) {
-      curLog.append(std::to_string(adjVertex) + ", ");
-    }
-    curLog.append(")");
-    LOG_DEBUG << curLog;
+    LOG_DEBUG << vertex << " -> " << logging::str(adjacencyList[vertex]);
   }
   LOG_DEBUG << "=================";
 }
